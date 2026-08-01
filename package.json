@@ -1,0 +1,16 @@
+{
+  "name": "broking-demo",
+  "version": "0.1.0",
+  "description": "Demo broking dashboard - synthetic data, built live",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

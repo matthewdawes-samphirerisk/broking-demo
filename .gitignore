@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Secrets — never commit
+.env
+.env.local
+*.key
+*.pem
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# NOTE: the data files in data/ are deliberately committed.
+# They are wholly synthetic and safe to publish.

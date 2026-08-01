@@ -19,3 +19,6 @@ desktop.ini
 
 # NOTE: the data files in data/ are deliberately committed.
 # They are wholly synthetic and safe to publish.
+
+# generated from the spreadsheet by tools/build-data.py
+public/data.js

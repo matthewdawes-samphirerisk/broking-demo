@@ -45,10 +45,31 @@
   .bar-row .fill { background: var(--slate); height: 18px; border-radius: 3px; }
   .bar-row .val { width: 90px; flex: none; text-align: right; color: var(--muted); }
 
-  table { border-collapse: collapse; font-size: 13px; width: 100%; }
-  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); }
-  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; }
-  td.num, th.num { text-align: right; }
+  /* data quality / reconciliation panel */
+  .dq { margin-top: 26px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .dq h2 { margin: 0; padding: 14px 18px; font-size: 15px; background: var(--ink); color: #fff; }
+  .dq table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  .dq td { padding: 8px 18px; border-bottom: 1px solid var(--line); }
+  .dq td.num { text-align: right; width: 160px; font-variant-numeric: tabular-nums; }
+  .dq tr.total td { font-weight: 600; border-top: 2px solid var(--ink); border-bottom: none; }
+  .dq tr.note td { color: var(--muted); font-size: 12px; }
+  .dq .adj { color: var(--muted); }
+  .dq-scroll { overflow-x: auto; }
+
+  /* Phones. Half the audience opens this on one, so it has to work.
+     Fixed-width label + value columns leave a zero-width bar below ~720px,
+     so stack the bar underneath its label instead. */
+  @media (max-width: 720px) {
+    main { padding: 18px 16px 40px; }
+    .grid { grid-template-columns: 1fr; gap: 16px; margin-top: 20px; }
+    .bar-row { flex-wrap: wrap; gap: 6px 10px; margin-bottom: 12px; }
+    .bar-row .name { width: auto; flex: 1 1 auto; font-weight: 600; }
+    .bar-row .val { width: auto; flex: 0 0 auto; }
+    .bar-row .track { flex: 1 1 100%; order: 3; height: 14px; }
+    .bar-row .fill { height: 14px; }
+    .dq td { padding: 8px 12px; }
+    .dq td.num { width: auto; white-space: nowrap; }
+  }
 </style>
 </head>
 <body>
@@ -82,14 +103,133 @@
       <div id="chart-clients"></div>
     </div>
   </div>
+
+  <div class="dq">
+    <h2>Data quality — what was changed, and what it moved</h2>
+    <div class="dq-scroll"><table id="dq-table"></table></div>
+  </div>
 </main>
 
 <script src="data.js"></script>
 <script>
-// ---------------------------------------------------------------- helpers
-const num = v => parseFloat(v);
-const gbp = v => "£" + Math.round(v).toLocaleString("en-GB");
+// ================================================================ cleaning
+// Everything below exists because the source extract is not trustworthy.
+// Each step is reported in the reconciliation panel at the foot of the page.
 
+// sign goes before the currency symbol, not after it
+const gbp  = v => (v < 0 ? "−£" : "£") + Math.abs(Math.round(v)).toLocaleString("en-GB");
+const gbp2 = v => (v < 0 ? "−£" : "£") + Math.abs(v).toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+// money arrives as a number OR as text with thousand separators ("12,450.00").
+// parseFloat on the latter silently returns 12, so strip separators first.
+const money = v => {
+  if (typeof v === "number") return v;
+  if (v == null) return 0;
+  const n = parseFloat(String(v).replace(/,/g, ""));
+  return Number.isFinite(n) ? n : 0;
+};
+// what a naive read would have produced - kept so we can show the movement
+const naiveMoney = v => {
+  const n = parseFloat(v);
+  return Number.isFinite(n) ? n : 0;
+};
+
+// dates arrive as ISO (2024-01-01) or as UK text (23/06/2025).
+// new Date("23/06/2025") is Invalid, so parse day-first explicitly.
+const parseDate = v => {
+  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(String(v));
+  return m ? new Date(+m[3], +m[2] - 1, +m[1]) : new Date(v);
+};
+
+const PRODUCT_MAP = {
+  "Kidnap and Ransom": "Kidnap & Ransom",
+  "K&R": "Kidnap & Ransom",
+  "Prof Indemnity": "Professional Indemnity",
+  "PI": "Professional Indemnity",
+};
+const COUNTRY_MAP = { "USA": "United States", "US": "United States", "UK": "United Kingdom" };
+const OWNER_MAP = { "E Voss": "Eleanor Voss" };
+
+const tidy = s => String(s ?? "").replace(/\s+/g, " ").trim();
+const titleCase = s => tidy(s).toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+
+const MIN_YEAR = 2023, MAX_YEAR = 2027;
+
+function clean(raw) {
+  const audit = {
+    rowsIn: raw.length,
+    revenueAsRead: raw.reduce((a, r) => a + naiveMoney(r["Revenue (GBP)"]), 0),
+  };
+
+  // 1. parse properly
+  const parsed = raw.map(r => {
+    const owner = titleCase(r["Account Owner"]);
+    return {
+      id: r["Policy ID"],
+      client: tidy(r["Client"]),
+      owner: OWNER_MAP[owner] || owner,
+      product: PRODUCT_MAP[tidy(r["Product Line"])] || tidy(r["Product Line"]),
+      country: COUNTRY_MAP[tidy(r["Country"])] || tidy(r["Country"]),
+      region: tidy(r["Region"]),
+      dist: titleCase(r["Distribution"]),
+      broker: r["Retail Broker"] ? tidy(r["Retail Broker"]) : null,
+      currency: tidy(r["Currency"]).toUpperCase().replace("US$", "USD"),
+      date: parseDate(r["Inception Date"]),
+      gwp: money(r["GWP (GBP)"]),
+      rev: money(r["Revenue (GBP)"]),
+    };
+  });
+
+  const revenueParsed = parsed.reduce((a, r) => a + r.rev, 0);
+  audit.textRecovered = revenueParsed - audit.revenueAsRead;
+  audit.textRows = raw.filter(r => typeof r["Revenue (GBP)"] === "string"
+                                || typeof r["GWP (GBP)"] === "string").length;
+
+  // 2. quarantine impossible dates rather than deleting them
+  const inWindow = r => {
+    const y = r.date.getFullYear();
+    return Number.isFinite(y) && y >= MIN_YEAR && y <= MAX_YEAR;
+  };
+  const quarantined = parsed.filter(r => !inWindow(r));
+  const dated = parsed.filter(inWindow);
+  audit.quarantinedRows = quarantined.length;
+  audit.quarantinedValue = quarantined.reduce((a, r) => a + r.rev, 0);
+  audit.quarantinedIds = quarantined.map(r => r.id);
+
+  // 3. de-duplicate on Policy ID, keeping the corrected (higher) row
+  const best = new Map();
+  for (const r of dated) {
+    const prev = best.get(r.id);
+    if (!prev || r.rev > prev.rev) best.set(r.id, r);
+  }
+  const rows = [...best.values()];
+  audit.duplicateRows = dated.length - rows.length;
+  audit.duplicateValue = dated.reduce((a, r) => a + r.rev, 0) - rows.reduce((a, r) => a + r.rev, 0);
+
+  audit.rowsOut = rows.length;
+  audit.revenueAfter = rows.reduce((a, r) => a + r.rev, 0);
+
+  // return premiums are legitimate - reported, never removed
+  const returns = rows.filter(r => r.rev < 0);
+  audit.returnRows = returns.length;
+  audit.returnValue = returns.reduce((a, r) => a + r.rev, 0);
+
+  // fail loudly rather than quietly showing a wrong number
+  const expected = audit.revenueAsRead + audit.textRecovered
+                 - audit.quarantinedValue - audit.duplicateValue;
+  if (Math.abs(expected - audit.revenueAfter) > 0.01) {
+    throw new Error(`Reconciliation failed: ${expected} vs ${audit.revenueAfter}`);
+  }
+  if (rows.some(r => !Number.isFinite(r.rev) || !Number.isFinite(r.gwp))) {
+    throw new Error("Non-numeric value survived cleaning");
+  }
+
+  return { rows, audit };
+}
+
+const { rows: DATA, audit: AUDIT } = clean(POLICIES);
+
+// ================================================================ helpers
 function sumBy(rows, keyFn, valFn) {
   const out = new Map();
   for (const r of rows) {
@@ -98,8 +238,9 @@ function sumBy(rows, keyFn, valFn) {
   }
   return out;
 }
+const desc = m => [...m.entries()].sort((a, b) => b[1] - a[1]);
 
-function barChart(el, entries, opts = {}) {
+function barChart(el, entries) {
   const max = Math.max(...entries.map(e => e[1]), 0);
   el.innerHTML = entries.map(([name, val]) => `
     <div class="bar-row">
@@ -109,28 +250,26 @@ function barChart(el, entries, opts = {}) {
     </div>`).join("");
 }
 
-// ---------------------------------------------------------------- KPIs
-const totalGwp = POLICIES.reduce((a, r) => a + num(r["GWP (GBP)"]), 0);
-const totalRev = POLICIES.reduce((a, r) => a + num(r["Revenue (GBP)"]), 0);
+// ================================================================ KPIs
+const totalGwp = DATA.reduce((a, r) => a + r.gwp, 0);
+const totalRev = DATA.reduce((a, r) => a + r.rev, 0);
 
 document.getElementById("kpis").innerHTML = [
   ["Total GWP", gbp(totalGwp)],
   ["Total revenue", gbp(totalRev)],
-  ["Policies", POLICIES.length.toLocaleString("en-GB")],
+  ["Policies", DATA.length.toLocaleString("en-GB")],
   ["Average rate", (totalRev / totalGwp * 100).toFixed(1) + "%"],
 ].map(([l, v]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div></div>`).join("");
 
-// ---------------------------------------------------------------- revenue by month
-// build a continuous month axis so gaps in trading show as gaps
-const dates = POLICIES.map(r => new Date(r["Inception Date"]));
-const minD = new Date(Math.min(...dates));
-const maxD = new Date(Math.max(...dates));
-
+// ================================================================ revenue by month
 const monthKey = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
-const byMonth = sumBy(POLICIES, r => monthKey(new Date(r["Inception Date"])), r => num(r["Revenue (GBP)"]));
+const byMonth = sumBy(DATA, r => monthKey(r.date), r => r.rev);
 
+const minD = new Date(Math.min(...DATA.map(r => r.date)));
+const maxD = new Date(Math.max(...DATA.map(r => r.date)));
 const months = [];
-for (let y = minD.getFullYear(), m = minD.getMonth(); y < maxD.getFullYear() || (y === maxD.getFullYear() && m <= maxD.getMonth()); ) {
+for (let y = minD.getFullYear(), m = minD.getMonth();
+     y < maxD.getFullYear() || (y === maxD.getFullYear() && m <= maxD.getMonth()); ) {
   months.push(y + "-" + String(m + 1).padStart(2, "0"));
   m++; if (m > 11) { m = 0; y++; }
 }
@@ -142,7 +281,7 @@ for (let y = minD.getFullYear(), m = minD.getMonth(); y < maxD.getFullYear() || 
   const bw = (w - pad.l - pad.r) / months.length;
   const bars = months.map((k, i) => {
     const bh = (h - pad.t - pad.b) * (vals[i] / max);
-    return `<rect x="${pad.l + i * bw}" y="${h - pad.b - bh}" width="${Math.max(bw - 1, 0.5)}" height="${bh}" fill="#3e6b7a"></rect>`;
+    return `<rect x="${pad.l + i * bw}" y="${h - pad.b - bh}" width="${Math.max(bw - 2, 1)}" height="${bh}" fill="#3e6b7a"></rect>`;
   }).join("");
   const step = Math.ceil(months.length / 14);
   const labels = months.map((k, i) => i % step ? "" :
@@ -156,20 +295,29 @@ for (let y = minD.getFullYear(), m = minD.getMonth(); y < maxD.getFullYear() || 
      <p style="font-size:12px;color:#6b7a82;margin:8px 0 0">${months.length} months, ${months[0]} to ${months[months.length - 1]}</p>`;
 })();
 
-// ---------------------------------------------------------------- category charts
-const desc = m => [...m.entries()].sort((a, b) => b[1] - a[1]);
+// ================================================================ category charts
+barChart(document.getElementById("chart-product"), desc(sumBy(DATA, r => r.product, r => r.rev)));
+barChart(document.getElementById("chart-owner"),   desc(sumBy(DATA, r => r.owner,   r => r.rev)));
+barChart(document.getElementById("chart-dist"),    desc(sumBy(DATA, r => r.dist,    r => r.rev)));
+barChart(document.getElementById("chart-clients"), desc(sumBy(DATA, r => r.client,  r => r.rev)).slice(0, 10));
 
-barChart(document.getElementById("chart-product"),
-  desc(sumBy(POLICIES, r => r["Product Line"], r => num(r["Revenue (GBP)"]))));
+// ================================================================ reconciliation panel
+(function drawAudit() {
+  const a = AUDIT;
+  const row = (label, count, value, cls = "") =>
+    `<tr class="${cls}"><td>${label}</td><td class="num">${count ?? ""}</td><td class="num">${value ?? ""}</td></tr>`;
 
-barChart(document.getElementById("chart-owner"),
-  desc(sumBy(POLICIES, r => r["Account Owner"], r => num(r["Revenue (GBP)"]))));
-
-barChart(document.getElementById("chart-dist"),
-  desc(sumBy(POLICIES, r => r["Distribution"], r => num(r["Revenue (GBP)"]))));
-
-barChart(document.getElementById("chart-clients"),
-  desc(sumBy(POLICIES, r => r["Client"], r => num(r["Revenue (GBP)"]))).slice(0, 10));
+  document.getElementById("dq-table").innerHTML = [
+    `<tr><td></td><td class="num" style="color:#6b7a82;font-size:12px">ROWS</td><td class="num" style="color:#6b7a82;font-size:12px">REVENUE</td></tr>`,
+    row("As first read from the extract", a.rowsIn.toLocaleString("en-GB"), gbp2(a.revenueAsRead)),
+    row("Values stored as text, recovered", `${a.textRows} rows`, `<span class="adj">+ ${gbp2(a.textRecovered)}</span>`),
+    row("Duplicate rows removed (corrected row kept)", `− ${a.duplicateRows}`, `<span class="adj">− ${gbp2(a.duplicateValue)}</span>`),
+    row(`Held for review — inception date outside ${MIN_YEAR}–${MAX_YEAR}`, `− ${a.quarantinedRows}`, `<span class="adj">− ${gbp2(a.quarantinedValue)}</span>`),
+    row("<strong>After cleaning</strong>", `<strong>${a.rowsOut.toLocaleString("en-GB")}</strong>`, `<strong>${gbp2(a.revenueAfter)}</strong>`, "total"),
+    `<tr class="note"><td colspan="3">Held for review: ${a.quarantinedIds.join(", ")} — not deleted.
+      Includes ${a.returnRows} return premiums totalling ${gbp2(a.returnValue)}, which are legitimate and left in.</td></tr>`,
+  ].join("");
+})();
 </script>
 </body>
 </html>

@@ -56,6 +56,10 @@
   .dq .adj { color: var(--muted); }
   .dq-scroll { overflow-x: auto; }
 
+  .status { padding: 14px 18px; border-radius: 6px; background: var(--panel);
+            font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+  .status.error { background: #fbeae6; color: #8a2f16; border: 1px solid #e8c0b3; }
+
   /* Phones. Half the audience opens this on one, so it has to work.
      Fixed-width label + value columns leave a zero-width bar below ~720px,
      so stack the bar underneath its label instead. */
@@ -79,6 +83,7 @@
 </header>
 
 <main>
+  <div class="status" id="status">Loading…</div>
   <div class="kpis" id="kpis"></div>
 
   <div class="grid">
@@ -110,7 +115,6 @@
   </div>
 </main>
 
-<script src="data.js"></script>
 <script>
 // ================================================================ cleaning
 // Everything below exists because the source extract is not trustworthy.
@@ -227,7 +231,8 @@ function clean(raw) {
   return { rows, audit };
 }
 
-const { rows: DATA, audit: AUDIT } = clean(POLICIES);
+function render(raw) {
+const { rows: DATA, audit: AUDIT } = clean(raw);
 
 // ================================================================ helpers
 function sumBy(rows, keyFn, valFn) {
@@ -318,6 +323,32 @@ barChart(document.getElementById("chart-clients"), desc(sumBy(DATA, r => r.clien
       Includes ${a.returnRows} return premiums totalling ${gbp2(a.returnValue)}, which are legitimate and left in.</td></tr>`,
   ].join("");
 })();
+}
+
+// ================================================================ load
+// Data now comes from Supabase, via our own server. The browser never sees
+// the database key - it only ever talks to /api/policies on this origin.
+async function init() {
+  const status = document.getElementById("status");
+  try {
+    const res = await fetch("/api/policies");
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      throw new Error(body.detail || body.error || `HTTP ${res.status}`);
+    }
+    const rows = await res.json();
+    if (!Array.isArray(rows) || rows.length === 0) {
+      throw new Error("The policies table returned no rows. Has the data been loaded?");
+    }
+    status.style.display = "none";
+    render(rows);
+  } catch (e) {
+    status.className = "status error";
+    status.textContent = "Could not load the data — " + e.message;
+  }
+}
+
+init();
 </script>
 </body>
 </html>

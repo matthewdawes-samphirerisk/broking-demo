@@ -4,7 +4,7 @@ Run:  python tools/build-data.py
 """
 import openpyxl, json, datetime, os
 
-SRC = os.path.join("data", "Demo Broking Data (MESSY).xlsx")
+SRC = os.path.join("data", "Demo Broking Data (RAW).xlsx")
 OUT = os.path.join("public", "data.js")
 
 wb = openpyxl.load_workbook(SRC, read_only=True, data_only=True)

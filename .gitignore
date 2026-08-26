@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Secrets — never commit
+.env
+.env.local
+*.key
+*.pem
+
+# Backstop: never stage anything that looks like a credential, whatever it is
+# called or wherever it is dropped. Added after a near-miss - a Word document of
+# API keys was sitting in the working folder during a session-two build.
+*secret*
+*Secret*
+*SECRET*
+*credential*
+*password*
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# NOTE: the data files in data/ are deliberately committed.
+# They are wholly synthetic and safe to publish.

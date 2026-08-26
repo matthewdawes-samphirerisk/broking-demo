@@ -60,6 +60,25 @@
             font-size: 14px; color: var(--muted); margin-bottom: 18px; }
   .status.error { background: #fbeae6; color: #8a2f16; border: 1px solid #e8c0b3; }
 
+  /* sign-in */
+  #gate { display: none; max-width: 380px; margin: 60px auto; }
+  #gate h2 { margin: 0 0 6px; font-size: 19px; }
+  #gate p.sub { margin: 0 0 22px; font-size: 13px; color: var(--muted); }
+  #gate label { display: block; font-size: 12px; color: var(--muted);
+                text-transform: uppercase; letter-spacing: .5px; margin-bottom: 5px; }
+  #gate input { width: 100%; padding: 10px 12px; font-size: 15px; margin-bottom: 14px;
+                border: 1px solid var(--line); border-radius: 5px;
+                font-family: inherit; color: var(--ink); }
+  #gate input:focus { outline: 2px solid var(--slate); outline-offset: -1px; }
+  #gate button { width: 100%; padding: 11px; font-size: 15px; font-weight: 600;
+                 background: var(--ink); color: #fff; border: 0; border-radius: 5px;
+                 cursor: pointer; font-family: inherit; }
+  #gate button:disabled { opacity: .55; cursor: default; }
+  #gate .err { font-size: 13px; color: #8a2f16; margin: 0 0 12px; display: none; }
+  #whoami { float: right; font-size: 12px; color: #aebdc4; }
+  #whoami button { background: none; border: 0; color: #aebdc4; cursor: pointer;
+                   text-decoration: underline; font-size: 12px; font-family: inherit; padding: 0 0 0 8px; }
+
   /* Phones. Half the audience opens this on one, so it has to work.
      Fixed-width label + value columns leave a zero-width bar below ~720px,
      so stack the bar underneath its label instead. */
@@ -78,11 +97,23 @@
 </head>
 <body>
 <header>
+  <span id="whoami"></span>
   <h1>Broking dashboard</h1>
   <p>Synthetic demonstration data</p>
 </header>
 
-<main>
+<form id="gate" autocomplete="on">
+  <h2>Sign in</h2>
+  <p class="sub">This dashboard is no longer open to anyone with the link.</p>
+  <p class="err" id="gate-err"></p>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" autocomplete="username" required>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" autocomplete="current-password" required>
+  <button type="submit" id="gate-go">Sign in</button>
+</form>
+
+<main id="app">
   <div class="status" id="status">Loading…</div>
   <div class="kpis" id="kpis"></div>
 
@@ -329,12 +360,38 @@ barChart(document.getElementById("chart-clients"), desc(sumBy(DATA, r => r.clien
 }
 
 // ================================================================ load
-// Data now comes from Supabase, via our own server. The browser never sees
-// the database key - it only ever talks to /api/policies on this origin.
-async function init() {
-  const status = document.getElementById("status");
+// Data comes from Supabase via our own server. The browser never sees the
+// database key, and never holds a token - the session lives in an httpOnly
+// cookie it cannot read.
+const gate = document.getElementById("gate");
+const appEl = document.getElementById("app");
+const status = document.getElementById("status");
+
+function showGate(message) {
+  appEl.style.display = "none";
+  gate.style.display = "block";
+  const err = document.getElementById("gate-err");
+  if (message) { err.textContent = message; err.style.display = "block"; }
+  else { err.style.display = "none"; }
+  document.getElementById("email").focus();
+}
+
+function showApp(user) {
+  gate.style.display = "none";
+  appEl.style.display = "block";
+  document.getElementById("whoami").innerHTML = user
+    ? `${user.email}<button type="button" id="signout">Sign out</button>` : "";
+  const out = document.getElementById("signout");
+  if (out) out.onclick = async () => {
+    await fetch("/api/logout", { method: "POST" });
+    location.reload();
+  };
+}
+
+async function loadData() {
   try {
     const res = await fetch("/api/policies");
+    if (res.status === 401) { showGate(); return; }
     if (!res.ok) {
       const body = await res.json().catch(() => ({}));
       throw new Error(body.detail || body.error || `HTTP ${res.status}`);
@@ -351,7 +408,34 @@ async function init() {
   }
 }
 
-init();
+gate.addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const go = document.getElementById("gate-go");
+  go.disabled = true; go.textContent = "Signing in…";
+  try {
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+      }),
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) { showGate(body.error || `Sign-in failed (${res.status})`); return; }
+    showApp(body);
+    await loadData();
+  } finally {
+    go.disabled = false; go.textContent = "Sign in";
+  }
+});
+
+(async function init() {
+  const me = await (await fetch("/api/me")).json().catch(() => ({}));
+  if (me.authRequired && !me.user) { showGate(); return; }
+  showApp(me.user);
+  await loadData();
+})();
 </script>
 </body>
 </html>

@@ -1,10 +1,33 @@
 const express = require('express');
+const session = require('express-session');
+const crypto = require('crypto');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 
 require('./tools/load-env');
 
 const app = express();
+app.set('trust proxy', 1);          // Railway terminates TLS in front of us
+app.use(express.json());
+
+// Signing key for the session cookie. Set SESSION_SECRET in production, or
+// every restart silently logs everybody out.
+const SESSION_SECRET = process.env.SESSION_SECRET || crypto.randomBytes(32).toString('hex');
+if (!process.env.SESSION_SECRET) {
+  console.warn('SESSION_SECRET not set - using a random one. Sessions will not survive a restart.');
+}
+
+app.use(session({
+  secret: SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,                                        // JavaScript cannot read it
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',         // Railway sets this
+    maxAge: 8 * 60 * 60 * 1000,
+  },
+}));
 
 // serve only the public folder - never the repo root
 app.use(express.static(path.join(__dirname, 'public')));
@@ -42,7 +65,40 @@ const FIELDS = {
   revenue_gbp: 'Revenue (GBP)',
 };
 
-app.get('/api/policies', async (req, res) => {
+// ---------------------------------------------------------------- sign-in
+// Supabase checks the credentials; we keep the result in an httpOnly cookie.
+// The browser never holds a token it could leak, and the swap to Microsoft
+// sign-in later is one call - signInWithPassword becomes an OAuth redirect.
+const AUTH_REQUIRED = process.env.AUTH_REQUIRED !== 'false';
+
+app.post('/api/login', async (req, res) => {
+  if (!configured) return res.status(503).json({ error: 'Not configured' });
+  const { email, password } = req.body || {};
+  if (!email || !password) return res.status(400).json({ error: 'Email and password required' });
+
+  const { data, error } = await db.auth.signInWithPassword({ email, password });
+  if (error) {
+    // Deliberately vague: never reveal whether the address exists.
+    return res.status(401).json({ error: 'Those details were not recognised' });
+  }
+  req.session.user = { email: data.user.email, id: data.user.id };
+  res.json({ email: data.user.email });
+});
+
+app.post('/api/logout', (req, res) => {
+  req.session.destroy(() => res.json({ ok: true }));
+});
+
+app.get('/api/me', (req, res) => {
+  res.json({ authRequired: AUTH_REQUIRED, user: req.session.user || null });
+});
+
+function requireAuth(req, res, next) {
+  if (!AUTH_REQUIRED || req.session.user) return next();
+  res.status(401).json({ error: 'Sign in required' });
+}
+
+app.get('/api/policies', requireAuth, async (req, res) => {
   if (!configured) {
     // Deliberately explicit. An app that fails silently in production is worse
     // than one that says exactly which setting is missing.
@@ -89,4 +145,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(configured
     ? 'Supabase: configured'
     : 'Supabase: NOT configured - /api/policies will return 503');
+  console.log(AUTH_REQUIRED
+    ? 'Sign-in: required'
+    : 'Sign-in: DISABLED (AUTH_REQUIRED=false) - anyone with the URL can read everything');
 });

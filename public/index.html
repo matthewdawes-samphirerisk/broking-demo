@@ -39,11 +39,31 @@
   .card.wide { grid-column: 1 / -1; }
   .card h2 { margin: 0 0 14px; font-size: 15px; font-weight: 600; }
 
-  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; font-size: 13px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; font-size: 13px;
+             border-radius: 4px; padding: 2px 4px; margin-left: -4px; }
   .bar-row .name { width: 190px; flex: none; color: var(--ink); }
   .bar-row .track { flex: 1; background: var(--panel); height: 18px; border-radius: 3px; }
-  .bar-row .fill { background: var(--slate); height: 18px; border-radius: 3px; }
+  .bar-row .fill { background: var(--slate); height: 18px; border-radius: 3px; transition: width .18s ease; }
   .bar-row .val { width: 90px; flex: none; text-align: right; color: var(--muted); }
+
+  /* click a bar to filter everything else by it */
+  .bar-row.clickable { cursor: pointer; }
+  .bar-row.clickable:hover { background: #eef2f4; }
+  .bar-row.selected { background: #fbeee1; }
+  .bar-row.selected .fill { background: var(--amber); }
+  .bar-row.selected .name { font-weight: 600; }
+  #chart-month .mbar { cursor: pointer; }
+  .kpi .value .of { font-size: 15px; font-weight: 400; color: var(--muted); }
+
+  /* active-filter bar */
+  #filters { display: none; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px; }
+  #filters .flabel { font-size: 12px; color: var(--muted);
+                     text-transform: uppercase; letter-spacing: .5px; }
+  #filters .chip { font: inherit; font-size: 13px; cursor: pointer; padding: 5px 11px;
+                   border: 1px solid var(--line); border-radius: 14px;
+                   background: #fbeee1; color: var(--ink); }
+  #filters .chip:hover { border-color: var(--amber); }
+  #filters .chip.clear { background: var(--ink); color: #fff; border-color: var(--ink); }
 
   /* data quality / reconciliation panel */
   .dq { margin-top: 26px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
@@ -115,6 +135,7 @@
 
 <main id="app">
   <div class="status" id="status">Loading…</div>
+  <div id="filters"></div>
   <div class="kpis" id="kpis"></div>
 
   <div class="grid">
@@ -279,31 +300,67 @@ function sumBy(rows, keyFn, valFn) {
 }
 const desc = m => [...m.entries()].sort((a, b) => b[1] - a[1]);
 
-function barChart(el, entries) {
+function barChart(el, entries, field) {
   const max = Math.max(...entries.map(e => e[1]), 0);
-  el.innerHTML = entries.map(([name, val]) => `
-    <div class="bar-row">
+  el.innerHTML = entries.map(([name, val]) => {
+    const on = FILTERS[field] === name;
+    return `
+    <div class="bar-row${field ? " clickable" : ""}${on ? " selected" : ""}"
+         ${field ? `data-field="${field}" data-value="${esc(name)}"` : ""}>
       <div class="name">${name}</div>
       <div class="track"><div class="fill" style="width:${max ? (val / max * 100) : 0}%"></div></div>
       <div class="val">${gbp(val)}</div>
-    </div>`).join("");
+    </div>`;
+  }).join("");
 }
 
-// ================================================================ KPIs
-const totalGwp = DATA.reduce((a, r) => a + r.gwp, 0);
-const totalRev = DATA.reduce((a, r) => a + r.rev, 0);
+// ================================================================ filtering
+// Click any bar to filter everything else by it; click again to clear.
+// Each chart is filtered by every OTHER active filter but not its own, so the
+// chart you clicked keeps its full range with your choice highlighted.
+const FILTERS = {};
+const esc = s => String(s).replace(/"/g, "&quot;");
 
-document.getElementById("kpis").innerHTML = [
-  ["Total GWP", gbp(totalGwp)],
-  ["Total revenue", gbp(totalRev)],
-  ["Policies", DATA.length.toLocaleString("en-GB")],
-  ["Average rate", (totalRev / totalGwp * 100).toFixed(1) + "%"],
-].map(([l, v]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div></div>`).join("");
+const LABELS = { product: "Product line", owner: "Account owner",
+                 dist: "Distribution", client: "Client", month: "Month" };
 
-// ================================================================ revenue by month
+const matches = (r, key) =>
+  Object.entries(FILTERS).every(([k, v]) =>
+    k === key || (k === "month" ? monthKey(r.date) === v : r[k] === v));
+
+const viewExcept = key => DATA.filter(r => matches(r, key));
+const view = () => DATA.filter(r => matches(r, null));
+
+function toggleFilter(field, value) {
+  if (FILTERS[field] === value) delete FILTERS[field];
+  else FILTERS[field] = value;
+  draw();
+}
+
+document.addEventListener("click", ev => {
+  const row = ev.target.closest(".bar-row.clickable");
+  if (row) { toggleFilter(row.dataset.field, row.dataset.value); return; }
+  const chip = ev.target.closest("[data-clear]");
+  if (chip) {
+    if (chip.dataset.clear === "*") Object.keys(FILTERS).forEach(k => delete FILTERS[k]);
+    else delete FILTERS[chip.dataset.clear];
+    draw();
+  }
+});
+
+function drawFilterBar() {
+  const el = document.getElementById("filters");
+  const keys = Object.keys(FILTERS);
+  if (!keys.length) { el.style.display = "none"; return; }
+  el.style.display = "flex";
+  el.innerHTML =
+    `<span class="flabel">Filtered by</span>` +
+    keys.map(k => `<button class="chip" data-clear="${k}">${LABELS[k]}: <b>${FILTERS[k]}</b> ×</button>`).join("") +
+    `<button class="chip clear" data-clear="*">Clear all</button>`;
+}
+
+// the month axis is fixed to the whole dataset so bars don't jump when filtered
 const monthKey = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
-const byMonth = sumBy(DATA, r => monthKey(r.date), r => r.rev);
-
 const minD = new Date(Math.min(...DATA.map(r => r.date)));
 const maxD = new Date(Math.max(...DATA.map(r => r.date)));
 const months = [];
@@ -313,14 +370,19 @@ for (let y = minD.getFullYear(), m = minD.getMonth();
   m++; if (m > 11) { m = 0; y++; }
 }
 
-(function drawMonths() {
+function drawMonths(rows) {
+  const byMonth = sumBy(rows, r => monthKey(r.date), r => r.rev);
   const w = 1300, h = 260, pad = { l: 60, r: 10, t: 10, b: 40 };
   const vals = months.map(k => byMonth.get(k) || 0);
   const max = Math.max(...vals, 1);
   const bw = (w - pad.l - pad.r) / months.length;
   const bars = months.map((k, i) => {
     const bh = (h - pad.t - pad.b) * (vals[i] / max);
-    return `<rect x="${pad.l + i * bw}" y="${h - pad.b - bh}" width="${Math.max(bw - 2, 1)}" height="${bh}" fill="#3e6b7a"></rect>`;
+    const on = FILTERS.month === k;
+    return `<rect class="mbar" data-month="${k}" x="${pad.l + i * bw}" y="${pad.t}"
+                  width="${Math.max(bw - 2, 1)}" height="${h - pad.t - pad.b}" fill="transparent"></rect>
+            <rect class="mbar" data-month="${k}" x="${pad.l + i * bw}" y="${h - pad.b - bh}"
+                  width="${Math.max(bw - 2, 1)}" height="${bh}" fill="${on ? "#e08a3c" : "#3e6b7a"}"></rect>`;
   }).join("");
   const step = Math.ceil(months.length / 14);
   const labels = months.map((k, i) => i % step ? "" :
@@ -331,14 +393,35 @@ for (let y = minD.getFullYear(), m = minD.getMonth();
        <line x1="${pad.l}" y1="${h - pad.b}" x2="${w - pad.r}" y2="${h - pad.b}" stroke="#dde3e6"></line>
        ${bars}${labels}
      </svg>
-     <p style="font-size:12px;color:#6b7a82;margin:8px 0 0">${months.length} months, ${months[0]} to ${months[months.length - 1]}</p>`;
-})();
+     <p style="font-size:12px;color:#6b7a82;margin:8px 0 0">${months.length} months, ${months[0]} to ${months[months.length - 1]} — click a month to filter</p>`;
+  document.querySelectorAll("#chart-month .mbar").forEach(el =>
+    el.addEventListener("click", () => toggleFilter("month", el.dataset.month)));
+}
 
-// ================================================================ category charts
-barChart(document.getElementById("chart-product"), desc(sumBy(DATA, r => r.product, r => r.rev)));
-barChart(document.getElementById("chart-owner"),   desc(sumBy(DATA, r => r.owner,   r => r.rev)));
-barChart(document.getElementById("chart-dist"),    desc(sumBy(DATA, r => r.dist,    r => r.rev)));
-barChart(document.getElementById("chart-clients"), desc(sumBy(DATA, r => r.client,  r => r.rev)).slice(0, 10));
+// ================================================================ draw
+function draw() {
+  const rows = view();
+  const gwp = rows.reduce((a, r) => a + r.gwp, 0);
+  const rev = rows.reduce((a, r) => a + r.rev, 0);
+  const all = DATA.length;
+
+  document.getElementById("kpis").innerHTML = [
+    ["Total GWP", gbp(gwp)],
+    ["Total revenue", gbp(rev)],
+    ["Policies", rows.length.toLocaleString("en-GB")
+      + (rows.length !== all ? ` <span class="of">of ${all.toLocaleString("en-GB")}</span>` : "")],
+    ["Average rate", gwp ? (rev / gwp * 100).toFixed(1) + "%" : "—"],
+  ].map(([l, v]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div></div>`).join("");
+
+  drawFilterBar();
+  drawMonths(FILTERS.month ? rows : viewExcept("month"));
+  barChart(document.getElementById("chart-product"), desc(sumBy(viewExcept("product"), r => r.product, r => r.rev)), "product");
+  barChart(document.getElementById("chart-owner"),   desc(sumBy(viewExcept("owner"),   r => r.owner,   r => r.rev)), "owner");
+  barChart(document.getElementById("chart-dist"),    desc(sumBy(viewExcept("dist"),    r => r.dist,    r => r.rev)), "dist");
+  barChart(document.getElementById("chart-clients"), desc(sumBy(viewExcept("client"),  r => r.client,  r => r.rev)).slice(0, 10), "client");
+}
+
+draw();
 
 // ================================================================ reconciliation panel
 (function drawAudit() {

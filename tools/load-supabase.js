@@ -3,7 +3,7 @@
  *
  *   node tools/load-supabase.js
  *
- * Reads data/demo_broking_data_MESSY.csv and replaces the contents of the
+ * Reads data/demo_broking_data_RAW.csv and replaces the contents of the
  * `policies` table. Run tools/supabase-schema.sql first.
  *
  * Needs SUPABASE_URL and SUPABASE_SERVICE_KEY in the environment. Put them in
@@ -63,7 +63,7 @@ function parseCsv(text) {
 }
 
 async function main() {
-  const csvPath = path.join(__dirname, '..', 'data', 'demo_broking_data_MESSY.csv');
+  const csvPath = path.join(__dirname, '..', 'data', 'demo_broking_data_RAW.csv');
   const rows = parseCsv(fs.readFileSync(csvPath, 'utf8')).filter(r => r.some(c => c !== ''));
   const headers = rows[0].map(h => h.trim());
 

@@ -76,7 +76,16 @@ app.post('/api/login', async (req, res) => {
   const { email, password } = req.body || {};
   if (!email || !password) return res.status(400).json({ error: 'Email and password required' });
 
-  const { data, error } = await db.auth.signInWithPassword({ email, password });
+  // A FRESH client, never the one used for data.
+  // signInWithPassword stores the session on whichever client makes the call,
+  // so reusing `db` would leave every later query authenticating as this user
+  // instead of as the service role - and with RLS on and no policies attached,
+  // that user can read nothing. Isolating the call keeps the two apart.
+  const authClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+
+  const { data, error } = await authClient.auth.signInWithPassword({ email, password });
   if (error) {
     // Deliberately vague: never reveal whether the address exists.
     return res.status(401).json({ error: 'Those details were not recognised' });

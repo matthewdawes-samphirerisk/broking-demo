@@ -1,11 +1,25 @@
 # Dependencies
 node_modules/
 
-# Secrets — never commit
+# Secrets — never commit. THIS REPOSITORY IS PUBLIC.
 .env
-.env.local
+.env.*
+!.env.example
 *.key
 *.pem
+
+# Backstop: anything whose name suggests it carries credentials. This is a
+# safety net for an accidental "git add -A", not a filing system — secrets
+# should not be in the repo folder at all. A near miss on 26 Aug 2026, when a
+# Word document holding the Supabase secret key was saved in here, is why
+# these lines exist.
+*secret*
+*Secret*
+*SECRET*
+*credential*
+*Credential*
+*password*
+*Password*
 
 # OS junk
 .DS_Store

@@ -25,3 +25,15 @@ if (fs.existsSync(envPath)) {
     if (!(key in process.env)) process.env[key] = value;
   }
 }
+
+// Supabase's dashboard shows the REST endpoint (https://ref.supabase.co/rest/v1/)
+// but the client wants the project root and appends the path itself. Copying the
+// displayed value is the obvious thing to do, so accept it and trim.
+if (process.env.SUPABASE_URL) {
+  const original = process.env.SUPABASE_URL.trim();
+  const cleaned = original.replace(/\/rest\/v1\/?$/, '').replace(/\/+$/, '');
+  if (cleaned !== original) {
+    console.warn(`note: trimmed SUPABASE_URL to ${cleaned}`);
+  }
+  process.env.SUPABASE_URL = cleaned;
+}

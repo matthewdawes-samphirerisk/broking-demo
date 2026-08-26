@@ -186,8 +186,11 @@ function clean(raw) {
 
   const revenueParsed = parsed.reduce((a, r) => a + r.rev, 0);
   audit.textRecovered = revenueParsed - audit.revenueAsRead;
-  audit.textRows = raw.filter(r => typeof r["Revenue (GBP)"] === "string"
-                                || typeof r["GWP (GBP)"] === "string").length;
+  // Count rows a naive read would have got WRONG, not rows that happen to be
+  // text. Everything arriving from the database is text, so testing the type
+  // would flag all of them.
+  const misread = v => naiveMoney(v) !== money(v);
+  audit.textRows = raw.filter(r => misread(r["Revenue (GBP)"]) || misread(r["GWP (GBP)"])).length;
 
   // 2. quarantine impossible dates rather than deleting them
   const inWindow = r => {

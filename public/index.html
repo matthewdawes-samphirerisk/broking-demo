@@ -1,0 +1,338 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broking dashboard</title>
+<script>
+  // Runs before the page paints, so a dark-mode user never sees a white flash.
+  try {
+    const saved = localStorage.getItem('theme');
+    document.documentElement.dataset.theme =
+      saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  } catch { document.documentElement.dataset.theme = 'light'; }
+</script>
+<style>
+  /* Every colour in the page is a token, so the theme switch is one attribute
+     on <html> and nothing has to be re-rendered — the SVG chart included. */
+  :root {
+    color-scheme: light;
+    --bg: #f6f7f8;      --card: #fff;        --border: #e1e4e8;
+    --text: #1b1f23;    --muted: #6a737d;    --num: #444;        --dim-text: #98a1ab;
+    --bar: #2f6feb;     --bar-on: #14459e;   --bar-off: #c2d4f2;
+    --hl: #d1343f;      --hl-on: #96121c;    --hl-off: #f0bfc3;
+    --grid: #e1e4e8;    --axis: #d1d5da;     --rule: #f0f2f4;    --hover: #f2f5f9;
+    --accent: #14459e;  --chip-bg: #e8f0fe;  --chip-bd: #c7dafc; --chip-hover: #d6e4fd;
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0f1116;      --card: #181b22;     --border: #2a2f3a;
+    --text: #e6e9ef;    --muted: #98a2b3;    --num: #c5ccd8;     --dim-text: #6c7583;
+    --bar: #4d8bf5;     --bar-on: #93bbff;   --bar-off: #2c3648;
+    --hl: #ef5b64;      --hl-on: #ff9ba1;    --hl-off: #4b2b31;
+    --grid: #2a2f3a;    --axis: #3a4150;     --rule: #232833;    --hover: #1e232d;
+    --accent: #9dc0ff;  --chip-bg: #1b2942;  --chip-bd: #2f4670; --chip-hover: #243758;
+  }
+
+  body { font: 14px/1.5 system-ui, sans-serif; margin: 0; padding: 32px; background: var(--bg); color: var(--text);
+         -webkit-text-size-adjust: 100%; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 20px; }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 16px; }
+
+  /* header + theme switch */
+  header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+  #theme { font: inherit; font-size: 13px; background: var(--card); color: var(--text);
+           border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer;
+           white-space: nowrap; flex-shrink: 0; }
+  #theme:hover { background: var(--hover); }
+
+  /* filter bar */
+  #filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+             background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+             padding: 12px 16px; margin-bottom: 20px; min-height: 28px; }
+  #filters .lead { color: var(--muted); }
+  .chip { font: inherit; font-size: 13px; background: var(--chip-bg); color: var(--accent); border: 1px solid var(--chip-bd);
+          border-radius: 14px; padding: 3px 10px; cursor: pointer; }
+  .chip:hover { background: var(--chip-hover); }
+  .chip .x { margin-left: 6px; opacity: .6; font-weight: 600; }
+  .chip .dim { opacity: .65; }
+  #clear-all { font: inherit; font-size: 13px; margin-left: auto; background: none; border: none;
+               color: var(--accent); text-decoration: underline; cursor: pointer; padding: 3px 4px; }
+
+  .kpis { display: flex; gap: 20px; margin-bottom: 20px; }
+  .kpi { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 20px; }
+  .kpi .label { font-size: 13px; color: var(--muted); }
+  .kpi .value { font-size: 32px; font-weight: 600; margin-top: 6px; }
+  .kpi .note { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  table { border-collapse: collapse; width: 100%; }
+  tr.row { cursor: pointer; }
+  tr.row:hover td { background: var(--hover); }
+  td { padding: 5px 0; vertical-align: middle; }
+  td.name { width: 190px; padding-left: 8px; }
+  td.num { width: 110px; text-align: right; color: var(--num); font-variant-numeric: tabular-nums; padding-right: 8px; }
+  tr.on td.name { font-weight: 600; }
+  tr.off td { color: var(--dim-text); }
+  .bar { height: 16px; background: var(--bar); border-radius: 2px; min-width: 1px; }
+  tr.on .bar { background: var(--bar-on); }
+  tr.off .bar { background: var(--bar-off); }
+  /* highlighted rows keep the red through all three selection states */
+  tr.hl .bar { background: var(--hl); }
+  tr.hl.on .bar { background: var(--hl-on); }
+  tr.hl.off .bar { background: var(--hl-off); }
+  .barcell { padding-left: 12px; }
+
+  /* chart, styled by class so it themes with everything else */
+  #months rect { cursor: pointer; }
+  #months .gridline { stroke: var(--grid); }
+  #months .axisline { stroke: var(--axis); }
+  #months .axislabel { fill: var(--muted); }
+  #months .mlabel { fill: var(--muted); }
+  #months .mlabel.on { fill: var(--accent); font-weight: 600; }
+  #months .mbar { fill: var(--bar); }
+  #months .mbar.on { fill: var(--bar-on); }
+  #months .mbar.off { fill: var(--bar-off); }
+  /* The chart keeps a minimum bar width so bars stay tappable; on a narrow
+     screen that means it scrolls sideways rather than shrinking to slivers. */
+  #months { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  @media (max-width: 640px) {
+    body { padding: 14px; }
+    h1 { font-size: 18px; }
+    .sub { margin-bottom: 14px; }
+    section, .kpi { padding: 14px; margin-bottom: 14px; }
+    h2 { margin-bottom: 12px; }
+
+    .kpis { flex-direction: column; gap: 12px; margin-bottom: 14px; }
+    .kpi .value { font-size: 28px; }
+
+    #filters { padding: 10px 12px; gap: 6px; margin-bottom: 14px; }
+    .chip { padding: 6px 12px; }                 /* bigger tap target */
+    #clear-all { margin-left: 0; padding: 6px 2px; }
+
+    /* Name and value on one line, bar on its own line underneath, so long
+       product names are not squeezed into a fixed-width column. */
+    table, tbody, tr, td { display: block; }
+    tr.row { display: grid; grid-template-columns: 1fr auto; align-items: baseline;
+             gap: 3px 10px; padding: 9px 2px; border-bottom: 1px solid #f0f2f4; }
+    tr.row:last-child { border-bottom: none; }
+    /* Placed explicitly: the bar sits after the value in the markup, but belongs
+       on the line below it. */
+    td { padding: 0; }
+    td.name { width: auto; padding: 0; grid-area: 1 / 1; }
+    td.num  { width: auto; padding: 0; grid-area: 1 / 2; }
+    td.barcell { grid-area: 2 / 1 / 3 / 3; padding-left: 0; }
+    .bar { height: 12px; }
+  }
+</style>
+
+<header>
+  <div>
+    <h1>Broking dashboard</h1>
+    <p class="sub">Synthetic demo data. Revenue and GWP by policy inception date.
+      Click any bar to filter; click it again to clear.</p>
+  </div>
+  <button id="theme" aria-pressed="false"></button>
+</header>
+
+<div id="filters"></div>
+
+<div class="kpis">
+  <div class="kpi"><div class="label">Total GWP</div><div class="value" id="kpi-gwp">&mdash;</div><div class="note" id="kpi-count"></div></div>
+  <div class="kpi"><div class="label">Total revenue</div><div class="value" id="kpi-rev">&mdash;</div><div class="note" id="kpi-rate"></div></div>
+</div>
+
+<section><h2>Revenue by month</h2><div id="months"></div></section>
+<section><h2>Revenue by product line</h2><table id="products"></table></section>
+<section><h2>Revenue by account owner</h2><table id="owners"></table></section>
+
+<script>
+// --- theme -------------------------------------------------------------
+// Follows the operating system until the button is used; after that the
+// choice sticks. Storage can throw (private browsing), so it is all guarded.
+const systemDark = matchMedia('(prefers-color-scheme: dark)');
+const store = {
+  get() { try { return localStorage.getItem('theme'); } catch { return null; } },
+  set(v) { try { localStorage.setItem('theme', v); } catch {} },
+};
+
+function applyTheme(mode) {
+  document.documentElement.dataset.theme = mode;
+  const btn = document.getElementById('theme');
+  const dark = mode === 'dark';
+  btn.textContent = dark ? '☀ Light' : '☾ Dark';
+  btn.setAttribute('aria-pressed', String(dark));
+  btn.title = `Switch to ${dark ? 'light' : 'dark'} mode`;
+}
+
+applyTheme(document.documentElement.dataset.theme || 'light');   // set in <head>, sync the button
+document.getElementById('theme').onclick = () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  store.set(next);
+  applyTheme(next);
+};
+// Track the system setting only while the user has not chosen for themselves.
+systemDark.addEventListener('change', e => {
+  if (!store.get()) applyTheme(e.matches ? 'dark' : 'light');
+});
+
+// --- dashboard ---------------------------------------------------------
+const money = n => '£' + Math.round(n).toLocaleString('en-GB');
+const short = n => n >= 1e6 ? '£' + (n / 1e6).toFixed(1) + 'm' : '£' + Math.round(n / 1e3) + 'k';
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const monthLabel = m => MONTHS[+m.slice(5, 7) - 1] + m.slice(2, 4);
+
+// The three filterable dimensions, keyed to the fields in data.json.
+const DIMS = { m: { label: 'Month', fmt: monthLabel },
+               p: { label: 'Product line', fmt: v => v },
+               o: { label: 'Account owner', fmt: v => v } };
+
+// Categories picked out in red rather than the default blue.
+const HIGHLIGHT = { o: ['Eleanor Voss'] };
+
+let DATA = [];                 // every policy
+const domain = {};             // dim -> full, stable list of categories
+const filters = { m: new Set(), p: new Set(), o: new Set() };
+
+// A row survives if it matches every dimension that has a selection. Passing
+// `skip` ignores one dimension, which is how a chart keeps all of its own bars
+// while still responding to selections made in the other charts.
+const matches = (row, skip) =>
+  Object.keys(DIMS).every(d => d === skip || !filters[d].size || filters[d].has(row[d]));
+
+const rowsFor = skip => DATA.filter(r => matches(r, skip));
+
+// Aggregate revenue over the dimension's full domain, so categories that fall to
+// zero under the current filters hold their place instead of disappearing.
+function agg(rows, dim) {
+  const totals = new Map(domain[dim].map(k => [k, 0]));
+  for (const r of rows) totals.set(r[dim], totals.get(r[dim]) + r.r);
+  return domain[dim].map(name => ({ name, value: totals.get(name) }));
+}
+
+function toggle(dim, value) {
+  const set = filters[dim];
+  set.has(value) ? set.delete(value) : set.add(value);
+  render();
+}
+
+function renderFilters() {
+  const el = document.getElementById('filters');
+  const active = Object.keys(DIMS).flatMap(d => [...filters[d]].map(v => ({ d, v })));
+
+  if (!active.length) {
+    el.innerHTML = '<span class="lead">No filters &mdash; showing all ' + DATA.length + ' policies.</span>';
+    return;
+  }
+  el.innerHTML = '<span class="lead">Filters:</span>' +
+    active.map(({ d, v }) =>
+      `<button class="chip" data-dim="${d}" data-value="${v}">` +
+      `<span class="dim">${DIMS[d].label}:</span> ${DIMS[d].fmt(v)}<span class="x">&times;</span></button>`
+    ).join('') +
+    '<button id="clear-all">Clear all</button>';
+
+  el.querySelectorAll('.chip').forEach(c =>
+    c.onclick = () => toggle(c.dataset.dim, c.dataset.value));
+  el.querySelector('#clear-all').onclick = () => {
+    Object.values(filters).forEach(s => s.clear());
+    render();
+  };
+}
+
+function barTable(el, items, dim) {
+  const sel = filters[dim];
+  const max = Math.max(1, ...items.map(i => i.value));
+  el.innerHTML = items.map(i => {
+    const state = !sel.size ? '' : sel.has(i.name) ? 'on' : 'off';
+    const hl = (HIGHLIGHT[dim] || []).includes(i.name) ? 'hl' : '';
+    return `<tr class="row ${state} ${hl}" data-value="${i.name}">
+      <td class="name">${i.name}</td>
+      <td class="barcell"><div class="bar" style="width:${(i.value / max * 100).toFixed(1)}%"></div></td>
+      <td class="num">${money(i.value)}</td>
+    </tr>`;
+  }).join('');
+  el.querySelectorAll('tr.row').forEach(tr =>
+    tr.onclick = () => toggle(dim, tr.dataset.value));
+}
+
+function monthChart(el, items, dim) {
+  const sel = filters[dim];
+  const narrow = window.innerWidth <= 640;
+  const MIN_BAR = narrow ? 28 : 22;         // keeps bars wide enough to tap
+  const H = narrow ? 210 : 260;
+  const PAD = { l: narrow ? 46 : 56, r: 8, t: 8, b: 58 };
+  // Draw at 1:1 with CSS pixels so type stays the size it is written, whatever
+  // the screen. Below the width 30 bars need, the container scrolls instead.
+  const W = Math.max(el.clientWidth || 900, items.length * MIN_BAR + PAD.l + PAD.r);
+  const max = Math.max(1, ...items.map(i => i.value));
+  const iw = W - PAD.l - PAD.r, ih = H - PAD.t - PAD.b;
+  const bw = iw / items.length;
+
+  const ticks = [0, max / 2, max].map(v => {
+    const y = PAD.t + ih - (v / max) * ih;
+    return `<line class="gridline" x1="${PAD.l}" y1="${y}" x2="${W - PAD.r}" y2="${y}"></line>
+            <text class="axislabel" x="${PAD.l - 8}" y="${y + 4}" text-anchor="end" font-size="11">${short(v)}</text>`;
+  }).join('');
+
+  const bars = items.map((i, n) => {
+    const h = (i.value / max) * ih;
+    const x = PAD.l + n * bw;
+    const lx = x + bw / 2, ly = PAD.t + ih + 14;
+    const on = sel.has(i.name);
+    const state = !sel.size ? '' : on ? 'on' : 'off';
+    const tip = `<title>${monthLabel(i.name)}: ${money(i.value)}</title>`;
+    const label = `<text class="mlabel ${state}" x="${lx}" y="${ly}" text-anchor="end" font-size="10"
+                     transform="rotate(-45 ${lx} ${ly})">${monthLabel(i.name)}</text>`;
+    // A full-height transparent rect keeps short and zero-value bars clickable.
+    return `<rect x="${x + 1}" y="${PAD.t}" width="${bw - 2}" height="${ih}" fill="transparent"
+                  data-value="${i.name}">${tip}</rect>
+            <rect class="mbar ${state}" x="${x + 1}" y="${PAD.t + ih - h}" width="${bw - 2}" height="${h}"
+                  data-value="${i.name}">${tip}</rect>
+            ${label}`;
+  }).join('');
+
+  el.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${ticks}${bars}
+    <line class="axisline" x1="${PAD.l}" y1="${PAD.t + ih}" x2="${W - PAD.r}" y2="${PAD.t + ih}"></line></svg>`;
+  el.querySelectorAll('rect[data-value]').forEach(r =>
+    r.onclick = () => toggle(dim, r.dataset.value));
+}
+
+function render() {
+  const shown = rowsFor(null);                       // every filter applied
+  const gwp = shown.reduce((a, p) => a + p.g, 0);
+  const rev = shown.reduce((a, p) => a + p.r, 0);
+
+  document.getElementById('kpi-gwp').textContent = money(gwp);
+  document.getElementById('kpi-rev').textContent = money(rev);
+  document.getElementById('kpi-count').textContent = shown.length === DATA.length
+    ? `${DATA.length} policies`
+    : `${shown.length} of ${DATA.length} policies`;
+  document.getElementById('kpi-rate').textContent = gwp ? (rev / gwp * 100).toFixed(1) + '% of GWP' : '—';
+
+  renderFilters();
+  monthChart(document.getElementById('months'), agg(rowsFor('m'), 'm'), 'm');
+  barTable(document.getElementById('products'), agg(rowsFor('p'), 'p'), 'p');
+  barTable(document.getElementById('owners'),   agg(rowsFor('o'), 'o'), 'o');
+}
+
+fetch('data.json').then(r => r.json()).then(({ policies }) => {
+  DATA = policies;
+  // Months run in date order; the other two are ranked by overall revenue so the
+  // rows stay put as you filter rather than re-sorting under the cursor.
+  domain.m = [...new Set(DATA.map(r => r.m))].sort();
+  for (const dim of ['p', 'o']) {
+    const totals = new Map();
+    for (const r of DATA) totals.set(r[dim], (totals.get(r[dim]) || 0) + r.r);
+    domain[dim] = [...totals.entries()].sort((a, b) => b[1] - a[1]).map(([k]) => k);
+  }
+  render();
+});
+
+// The month chart is sized to its container, so redraw it after a rotate or
+// resize. Filter state lives outside the render, so nothing is lost.
+let resizeTimer;
+addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => { if (DATA.length) render(); }, 150);
+});
+</script>

@@ -28,3 +28,6 @@ desktop.ini
 
 # NOTE: the data files in data/ are deliberately committed.
 # They are wholly synthetic and safe to publish.
+
+# Agent tooling, local to this machine
+.claude/

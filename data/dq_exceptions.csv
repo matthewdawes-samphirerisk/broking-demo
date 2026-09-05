@@ -1,0 +1,435 @@
+Row,Policy ID,Issue,Severity,Value,Proposed fix
+16,BTD-2024-00007,Duplicate Policy ID,High,BTD-2024-00007,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+29,BTD-2024-00041,Duplicate Policy ID,High,BTD-2024-00041,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+31,BTD-2025-00685,Duplicate Policy ID,High,BTD-2025-00685,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+113,BTD-2025-00400,Duplicate Policy ID,High,BTD-2025-00400,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+130,BTD-2025-00443,Duplicate Policy ID,High,BTD-2025-00443,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+223,BTD-2025-00685,Duplicate Policy ID,High,BTD-2025-00685,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+272,BTD-2025-00443,Duplicate Policy ID,High,BTD-2025-00443,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+447,BTD-2026-00951,Duplicate Policy ID,High,BTD-2026-00951,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+486,BTD-2026-00834,Duplicate Policy ID,High,BTD-2026-00834,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+619,BTD-2024-00102,Duplicate Policy ID,High,BTD-2024-00102,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+620,BTD-2025-00400,Duplicate Policy ID,High,BTD-2025-00400,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+622,BTD-2024-00041,Duplicate Policy ID,High,BTD-2024-00041,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+700,BTD-2026-00834,Duplicate Policy ID,High,BTD-2026-00834,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+734,BTD-2024-00102,Duplicate Policy ID,High,BTD-2024-00102,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+745,BTD-2025-00454,Duplicate Policy ID,High,BTD-2025-00454,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+882,BTD-2024-00007,Duplicate Policy ID,High,BTD-2024-00007,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+888,BTD-2025-00454,Duplicate Policy ID,High,BTD-2025-00454,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+896,BTD-2026-00951,Duplicate Policy ID,High,BTD-2026-00951,De-duplicate; keep the row whose GWP reconciles to Premium/FX
+94,BTD-2026-00743,Expiry on or before inception,High,2025-09-06,Manual review; likely year typo in expiry
+433,BTD-2025-00537,Expiry on or before inception,High,2025-05-07,Manual review; likely year typo in expiry
+900,BTD-2026-00786,Expiry on or before inception,High,2025-10-18,Manual review; likely year typo in expiry
+16,BTD-2024-00007,GWP != Premium / FX rate,High,28602.56,Recalculate GWP = Premium / FX; recompute Revenue
+29,BTD-2024-00041,GWP != Premium / FX rate,High,22233.33,Recalculate GWP = Premium / FX; recompute Revenue
+130,BTD-2025-00443,GWP != Premium / FX rate,High,10281.2,Recalculate GWP = Premium / FX; recompute Revenue
+10,BTD-2025-00364,GWP stored as text (thousands separator),High,"56,880.00","Strip commas, store as number"
+145,BTD-2025-00399,GWP stored as text (thousands separator),High,"17,010.00","Strip commas, store as number"
+235,BTD-2026-00724,GWP stored as text (thousands separator),High,"15,149.61","Strip commas, store as number"
+330,BTD-2025-00415,GWP stored as text (thousands separator),High,"22,448.82","Strip commas, store as number"
+344,BTD-2025-00579,GWP stored as text (thousands separator),High,"21,299.21","Strip commas, store as number"
+445,BTD-2026-00907,GWP stored as text (thousands separator),High,"26,790.00","Strip commas, store as number"
+457,BTD-2024-00165,GWP stored as text (thousands separator),High,"12,180.00","Strip commas, store as number"
+603,BTD-2024-00130,GWP stored as text (thousands separator),High,"19,220.47","Strip commas, store as number"
+606,BTD-2026-00913,GWP stored as text (thousands separator),High,"17,174.42","Strip commas, store as number"
+693,BTD-2025-00413,GWP stored as text (thousands separator),High,"46,780.00","Strip commas, store as number"
+767,BTD-2025-00608,GWP stored as text (thousands separator),High,"38,692.91","Strip commas, store as number"
+785,BTD-2024-00256,GWP stored as text (thousands separator),High,"14,685.04","Strip commas, store as number"
+859,BTD-2025-00632,GWP stored as text (thousands separator),High,"21,372.09","Strip commas, store as number"
+916,BTD-2024-00143,GWP stored as text (thousands separator),High,"9,905.98","Strip commas, store as number"
+8,BTD-2025-00512,Inception date in DD/MM/YYYY text format,High,23/06/2025,"Parse as UK day-first, store as ISO date"
+24,BTD-2024-00295,Inception date in DD/MM/YYYY text format,High,20/11/2024,"Parse as UK day-first, store as ISO date"
+97,BTD-2026-00854,Inception date in DD/MM/YYYY text format,High,19/04/2026,"Parse as UK day-first, store as ISO date"
+115,BTD-2026-00904,Inception date in DD/MM/YYYY text format,High,25/05/2026,"Parse as UK day-first, store as ISO date"
+163,BTD-2026-00816,Inception date in DD/MM/YYYY text format,High,01/02/2026,"Parse as UK day-first, store as ISO date"
+204,BTD-2025-00475,Inception date in DD/MM/YYYY text format,High,18/04/2025,"Parse as UK day-first, store as ISO date"
+206,BTD-2025-00416,Inception date in DD/MM/YYYY text format,High,24/02/2025,"Parse as UK day-first, store as ISO date"
+209,BTD-2024-00035,Inception date in DD/MM/YYYY text format,High,01/01/2024,"Parse as UK day-first, store as ISO date"
+270,BTD-2024-00277,Inception date in DD/MM/YYYY text format,High,01/10/2024,"Parse as UK day-first, store as ISO date"
+299,BTD-2025-00427,Inception date in DD/MM/YYYY text format,High,01/03/2025,"Parse as UK day-first, store as ISO date"
+301,BTD-2025-00403,Inception date in DD/MM/YYYY text format,High,17/02/2025,"Parse as UK day-first, store as ISO date"
+333,BTD-2024-00286,Inception date in DD/MM/YYYY text format,High,14/10/2024,"Parse as UK day-first, store as ISO date"
+355,BTD-2026-00746,Inception date in DD/MM/YYYY text format,High,01/01/2026,"Parse as UK day-first, store as ISO date"
+362,BTD-2024-00149,Inception date in DD/MM/YYYY text format,High,23/05/2024,"Parse as UK day-first, store as ISO date"
+375,BTD-2025-00514,Inception date in DD/MM/YYYY text format,High,01/06/2025,"Parse as UK day-first, store as ISO date"
+405,BTD-2024-00002,Inception date in DD/MM/YYYY text format,High,25/01/2024,"Parse as UK day-first, store as ISO date"
+471,BTD-2025-00401,Inception date in DD/MM/YYYY text format,High,15/02/2025,"Parse as UK day-first, store as ISO date"
+475,BTD-2026-00882,Inception date in DD/MM/YYYY text format,High,01/04/2026,"Parse as UK day-first, store as ISO date"
+499,BTD-2024-00201,Inception date in DD/MM/YYYY text format,High,22/07/2024,"Parse as UK day-first, store as ISO date"
+521,BTD-2026-00720,Inception date in DD/MM/YYYY text format,High,01/01/2026,"Parse as UK day-first, store as ISO date"
+525,BTD-2024-00312,Inception date in DD/MM/YYYY text format,High,01/12/2024,"Parse as UK day-first, store as ISO date"
+527,BTD-2024-00094,Inception date in DD/MM/YYYY text format,High,17/03/2024,"Parse as UK day-first, store as ISO date"
+563,BTD-2026-00886,Inception date in DD/MM/YYYY text format,High,18/04/2026,"Parse as UK day-first, store as ISO date"
+573,BTD-2025-00375,Inception date in DD/MM/YYYY text format,High,08/01/2025,"Parse as UK day-first, store as ISO date"
+585,BTD-2024-00047,Inception date in DD/MM/YYYY text format,High,19/01/2024,"Parse as UK day-first, store as ISO date"
+601,BTD-2026-00823,Inception date in DD/MM/YYYY text format,High,18/03/2026,"Parse as UK day-first, store as ISO date"
+605,BTD-2024-00119,Inception date in DD/MM/YYYY text format,High,23/04/2024,"Parse as UK day-first, store as ISO date"
+624,BTD-2024-00294,Inception date in DD/MM/YYYY text format,High,17/11/2024,"Parse as UK day-first, store as ISO date"
+666,BTD-2024-00270,Inception date in DD/MM/YYYY text format,High,06/10/2024,"Parse as UK day-first, store as ISO date"
+718,BTD-2024-00026,Inception date in DD/MM/YYYY text format,High,01/01/2024,"Parse as UK day-first, store as ISO date"
+730,BTD-2024-00212,Inception date in DD/MM/YYYY text format,High,20/07/2024,"Parse as UK day-first, store as ISO date"
+743,BTD-2025-00431,Inception date in DD/MM/YYYY text format,High,13/03/2025,"Parse as UK day-first, store as ISO date"
+765,BTD-2026-00925,Inception date in DD/MM/YYYY text format,High,16/06/2026,"Parse as UK day-first, store as ISO date"
+793,BTD-2024-00230,Inception date in DD/MM/YYYY text format,High,21/08/2024,"Parse as UK day-first, store as ISO date"
+848,BTD-2025-00476,Inception date in DD/MM/YYYY text format,High,21/04/2025,"Parse as UK day-first, store as ISO date"
+871,BTD-2025-00611,Inception date in DD/MM/YYYY text format,High,23/09/2025,"Parse as UK day-first, store as ISO date"
+876,BTD-2025-00412,Inception date in DD/MM/YYYY text format,High,25/02/2025,"Parse as UK day-first, store as ISO date"
+891,BTD-2025-00649,Inception date in DD/MM/YYYY text format,High,17/10/2025,"Parse as UK day-first, store as ISO date"
+902,BTD-2024-00269,Inception date in DD/MM/YYYY text format,High,15/10/2024,"Parse as UK day-first, store as ISO date"
+910,BTD-2024-00253,Inception date in DD/MM/YYYY text format,High,24/09/2024,"Parse as UK day-first, store as ISO date"
+155,BTD-2024-00135,Inception year contradicts Policy ID year,High,2042-05-01,Correct year to Policy ID year
+537,BTD-2025-00434,Inception year contradicts Policy ID year,High,2205-03-01,Correct year to Policy ID year
+382,BTD-2024-00043,Negative GWP (sign error),High,-15697.87,Take absolute value; confirm not a cancellation
+503,BTD-2025-00372,Negative GWP (sign error),High,-24550,Take absolute value; confirm not a cancellation
+592,BTD-2025-00456,Negative GWP (sign error),High,-12546.51,Take absolute value; confirm not a cancellation
+629,BTD-2025-00453,Negative GWP (sign error),High,-5270,Take absolute value; confirm not a cancellation
+10,BTD-2025-00364,Revenue stored as text (thousands separator),High,"11,324.81","Strip commas, store as number"
+145,BTD-2025-00399,Revenue stored as text (thousands separator),High,"3,580.60","Strip commas, store as number"
+235,BTD-2026-00724,Revenue stored as text (thousands separator),High,"3,928.29","Strip commas, store as number"
+330,BTD-2025-00415,Revenue stored as text (thousands separator),High,"2,604.06","Strip commas, store as number"
+344,BTD-2025-00579,Revenue stored as text (thousands separator),High,"2,325.87","Strip commas, store as number"
+445,BTD-2026-00907,Revenue stored as text (thousands separator),High,"5,033.84","Strip commas, store as number"
+457,BTD-2024-00165,Revenue stored as text (thousands separator),High,"2,621.14","Strip commas, store as number"
+603,BTD-2024-00130,Revenue stored as text (thousands separator),High,"2,848.47","Strip commas, store as number"
+606,BTD-2026-00913,Revenue stored as text (thousands separator),High,"3,635.82","Strip commas, store as number"
+693,BTD-2025-00413,Revenue stored as text (thousands separator),High,"8,864.81","Strip commas, store as number"
+767,BTD-2025-00608,Revenue stored as text (thousands separator),High,"4,333.61","Strip commas, store as number"
+785,BTD-2024-00256,Revenue stored as text (thousands separator),High,"2,183.67","Strip commas, store as number"
+859,BTD-2025-00632,Revenue stored as text (thousands separator),High,"3,994.44","Strip commas, store as number"
+916,BTD-2024-00143,Revenue stored as text (thousands separator),High,"2,005.96","Strip commas, store as number"
+6,BTD-2025-00544,Status Live but expiry in the past,High,2026-07-13,Re-status to Expired/Renewed from source system
+39,BTD-2025-00550,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+45,BTD-2025-00626,Status Live but expiry in the past,High,2026-09-04,Re-status to Expired/Renewed from source system
+47,BTD-2025-00601,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+51,BTD-2025-00583,Status Live but expiry in the past,High,2026-07-12,Re-status to Expired/Renewed from source system
+61,BTD-2025-00617,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+94,BTD-2026-00743,Status Live but expiry in the past,High,2025-09-06,Re-status to Expired/Renewed from source system
+95,BTD-2025-00575,Status Live but expiry in the past,High,2026-07-17,Re-status to Expired/Renewed from source system
+96,BTD-2025-00586,Status Live but expiry in the past,High,2026-07-14,Re-status to Expired/Renewed from source system
+126,BTD-2025-00604,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+128,BTD-2025-00580,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+136,BTD-2026-00751,Status Live but expiry in the past,High,2026-07-02,Re-status to Expired/Renewed from source system
+144,BTD-2025-00557,Status Live but expiry in the past,High,2026-07-04,Re-status to Expired/Renewed from source system
+153,BTD-2025-00565,Status Live but expiry in the past,High,2026-07-21,Re-status to Expired/Renewed from source system
+163,BTD-2026-00816,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+167,BTD-2026-00781,Status Live but expiry in the past,High,2026-07-16,Re-status to Expired/Renewed from source system
+170,BTD-2025-00627,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+189,BTD-2025-00631,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+190,BTD-2025-00600,Status Live but expiry in the past,High,2026-08-07,Re-status to Expired/Renewed from source system
+208,BTD-2026-00824,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+215,BTD-2026-00817,Status Live but expiry in the past,High,2026-08-24,Re-status to Expired/Renewed from source system
+216,BTD-2025-00570,Status Live but expiry in the past,High,2026-07-19,Re-status to Expired/Renewed from source system
+226,BTD-2025-00566,Status Live but expiry in the past,High,2026-07-08,Re-status to Expired/Renewed from source system
+230,BTD-2025-00543,Status Live but expiry in the past,High,2026-07-20,Re-status to Expired/Renewed from source system
+241,BTD-2025-00592,Status Live but expiry in the past,High,2026-08-19,Re-status to Expired/Renewed from source system
+256,BTD-2025-00597,Status Live but expiry in the past,High,2026-08-03,Re-status to Expired/Renewed from source system
+282,BTD-2025-00618,Status Live but expiry in the past,High,2026-09-04,Re-status to Expired/Renewed from source system
+284,BTD-2025-00563,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+285,BTD-2026-00792,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+291,BTD-2026-00779,Status Live but expiry in the past,High,2026-07-18,Re-status to Expired/Renewed from source system
+294,BTD-2025-00607,Status Live but expiry in the past,High,2026-08-03,Re-status to Expired/Renewed from source system
+297,BTD-2025-00535,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+317,BTD-2025-00582,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+328,BTD-2025-00594,Status Live but expiry in the past,High,2026-08-02,Re-status to Expired/Renewed from source system
+331,BTD-2025-00581,Status Live but expiry in the past,High,2026-07-09,Re-status to Expired/Renewed from source system
+332,BTD-2025-00610,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+339,BTD-2026-00829,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+353,BTD-2025-00593,Status Live but expiry in the past,High,2026-08-13,Re-status to Expired/Renewed from source system
+361,BTD-2024-00237,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+376,BTD-2025-00599,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+389,BTD-2025-00558,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+391,BTD-2025-00559,Status Live but expiry in the past,High,2026-07-14,Re-status to Expired/Renewed from source system
+410,BTD-2026-00828,Status Live but expiry in the past,High,2026-09-04,Re-status to Expired/Renewed from source system
+424,BTD-2025-00576,Status Live but expiry in the past,High,2026-07-12,Re-status to Expired/Renewed from source system
+435,BTD-2026-00762,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+458,BTD-2026-00830,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+463,BTD-2025-00556,Status Live but expiry in the past,High,2026-07-02,Re-status to Expired/Renewed from source system
+465,BTD-2025-00568,Status Live but expiry in the past,High,2026-07-05,Re-status to Expired/Renewed from source system
+466,BTD-2025-00551,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+470,BTD-2025-00549,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+496,BTD-2025-00588,Status Live but expiry in the past,High,2026-08-05,Re-status to Expired/Renewed from source system
+506,BTD-2025-00589,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+510,BTD-2025-00634,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+515,BTD-2025-00567,Status Live but expiry in the past,High,2026-07-21,Re-status to Expired/Renewed from source system
+529,BTD-2026-00718,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+546,BTD-2025-00538,Status Live but expiry in the past,High,2026-07-27,Re-status to Expired/Renewed from source system
+547,BTD-2025-00616,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+552,BTD-2025-00574,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+554,BTD-2025-00552,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+567,BTD-2025-00545,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+571,BTD-2025-00602,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+596,BTD-2025-00569,Status Live but expiry in the past,High,2026-07-15,Re-status to Expired/Renewed from source system
+600,BTD-2024-00181,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+612,BTD-2025-00603,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+627,BTD-2025-00560,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+633,BTD-2024-00244,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+635,BTD-2025-00572,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+670,BTD-2026-00742,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+672,BTD-2025-00561,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+686,BTD-2025-00540,Status Live but expiry in the past,High,2026-07-15,Re-status to Expired/Renewed from source system
+688,BTD-2025-00609,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+695,BTD-2025-00539,Status Live but expiry in the past,High,2026-07-07,Re-status to Expired/Renewed from source system
+697,BTD-2025-00541,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+713,BTD-2025-00595,Status Live but expiry in the past,High,2026-08-23,Re-status to Expired/Renewed from source system
+716,BTD-2025-00564,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+730,BTD-2024-00212,Status Live but expiry in the past,High,2026-07-20,Re-status to Expired/Renewed from source system
+737,BTD-2025-00625,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+741,BTD-2025-00548,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+752,BTD-2025-00555,Status Live but expiry in the past,High,2026-07-06,Re-status to Expired/Renewed from source system
+773,BTD-2025-00596,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+776,BTD-2025-00571,Status Live but expiry in the past,High,2026-07-15,Re-status to Expired/Renewed from source system
+794,BTD-2025-00591,Status Live but expiry in the past,High,2026-08-01,Re-status to Expired/Renewed from source system
+798,BTD-2025-00605,Status Live but expiry in the past,High,2026-08-04,Re-status to Expired/Renewed from source system
+802,BTD-2025-00633,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+820,BTD-2024-00206,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+845,BTD-2025-00587,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+846,BTD-2025-00546,Status Live but expiry in the past,High,2026-07-10,Re-status to Expired/Renewed from source system
+900,BTD-2026-00786,Status Live but expiry in the past,High,2025-10-18,Re-status to Expired/Renewed from source system
+903,BTD-2025-00562,Status Live but expiry in the past,High,2026-07-22,Re-status to Expired/Renewed from source system
+905,BTD-2025-00598,Status Live but expiry in the past,High,2026-08-22,Re-status to Expired/Renewed from source system
+919,BTD-2025-00573,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+951,BTD-2025-00536,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+955,BTD-2025-00630,Status Live but expiry in the past,High,2026-09-01,Re-status to Expired/Renewed from source system
+958,BTD-2025-00577,Status Live but expiry in the past,High,2026-07-19,Re-status to Expired/Renewed from source system
+960,BTD-2025-00542,Status Live but expiry in the past,High,2026-07-01,Re-status to Expired/Renewed from source system
+56,BTD-2026-00763,Account Owner name variant,Medium,E Voss,Map to canonical name
+67,BTD-2024-00100,Account Owner name variant,Medium,E Voss,Map to canonical name
+165,BTD-2026-00912,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+166,BTD-2024-00281,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+193,BTD-2024-00183,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+197,BTD-2025-00511,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+233,BTD-2024-00045,Account Owner name variant,Medium,E Voss,Map to canonical name
+248,BTD-2024-00208,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+316,BTD-2024-00133,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+359,BTD-2025-00622,Account Owner name variant,Medium,E Voss,Map to canonical name
+367,BTD-2026-00906,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+369,BTD-2024-00305,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+407,BTD-2025-00700,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+453,BTD-2024-00053,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+519,BTD-2024-00254,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+526,BTD-2025-00331,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+544,BTD-2025-00411,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+550,BTD-2024-00154,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+615,BTD-2024-00224,Account Owner name variant,Medium,E Voss,Map to canonical name
+651,BTD-2024-00108,Account Owner name variant,Medium,E Voss,Map to canonical name
+723,BTD-2024-00179,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+732,BTD-2024-00145,Account Owner name variant,Medium,E Voss,Map to canonical name
+736,BTD-2025-00438,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+815,BTD-2025-00492,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+825,BTD-2024-00188,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+829,BTD-2026-00732,Account Owner name variant,Medium,marcus ridley,Map to canonical name
+927,BTD-2024-00191,Account Owner name variant,Medium,Eleanor  Voss,Map to canonical name
+17,BTD-2026-00766,Country alias,Medium,UK,Map to canonical value
+28,BTD-2025-00370,Country alias,Medium,UK,Map to canonical value
+35,BTD-2024-00235,Country alias,Medium,USA,Map to canonical value
+36,BTD-2024-00048,Country alias,Medium,UK,Map to canonical value
+40,BTD-2025-00553,Country alias,Medium,UK,Map to canonical value
+65,BTD-2024-00192,Country alias,Medium,UK,Map to canonical value
+72,BTD-2024-00171,Country alias,Medium,UK,Map to canonical value
+77,BTD-2024-00029,Country alias,Medium,US,Map to canonical value
+96,BTD-2025-00586,Country alias,Medium,USA,Map to canonical value
+107,BTD-2026-00872,Country alias,Medium,UK,Map to canonical value
+109,BTD-2024-00144,Country alias,Medium,UK,Map to canonical value
+152,BTD-2024-00315,Country alias,Medium,UK,Map to canonical value
+167,BTD-2026-00781,Country alias,Medium,USA,Map to canonical value
+215,BTD-2026-00817,Country alias,Medium,UK,Map to canonical value
+226,BTD-2025-00566,Country alias,Medium,USA,Map to canonical value
+230,BTD-2025-00543,Country alias,Medium,UK,Map to canonical value
+232,BTD-2026-00809,Country alias,Medium,USA,Map to canonical value
+234,BTD-2025-00426,Country alias,Medium,UK,Map to canonical value
+237,BTD-2024-00051,Country alias,Medium,US,Map to canonical value
+238,BTD-2026-00885,Country alias,Medium,USA,Map to canonical value
+262,BTD-2024-00059,Country alias,Medium,UK,Map to canonical value
+276,BTD-2026-00768,Country alias,Medium,UK,Map to canonical value
+293,BTD-2025-00333,Country alias,Medium,US,Map to canonical value
+294,BTD-2025-00607,Country alias,Medium,USA,Map to canonical value
+313,BTD-2024-00214,Country alias,Medium,UK,Map to canonical value
+317,BTD-2025-00582,Country alias,Medium,UK,Map to canonical value
+327,BTD-2025-00336,Country alias,Medium,UK,Map to canonical value
+338,BTD-2025-00679,Country alias,Medium,UK,Map to canonical value
+357,BTD-2024-00300,Country alias,Medium,UK,Map to canonical value
+392,BTD-2025-00623,Country alias,Medium,USA,Map to canonical value
+404,BTD-2024-00013,Country alias,Medium,UK,Map to canonical value
+422,BTD-2026-00924,Country alias,Medium,UK,Map to canonical value
+440,BTD-2026-00729,Country alias,Medium,UK,Map to canonical value
+467,BTD-2024-00273,Country alias,Medium,UK,Map to canonical value
+489,BTD-2024-00271,Country alias,Medium,USA,Map to canonical value
+502,BTD-2024-00134,Country alias,Medium,UK,Map to canonical value
+505,BTD-2024-00018,Country alias,Medium,US,Map to canonical value
+513,BTD-2024-00307,Country alias,Medium,USA,Map to canonical value
+518,BTD-2024-00177,Country alias,Medium,US,Map to canonical value
+553,BTD-2025-00342,Country alias,Medium,UK,Map to canonical value
+570,BTD-2025-00661,Country alias,Medium,USA,Map to canonical value
+591,BTD-2026-00716,Country alias,Medium,USA,Map to canonical value
+604,BTD-2025-00356,Country alias,Medium,UK,Map to canonical value
+632,BTD-2026-00749,Country alias,Medium,UK,Map to canonical value
+635,BTD-2025-00572,Country alias,Medium,USA,Map to canonical value
+640,BTD-2026-00756,Country alias,Medium,UK,Map to canonical value
+657,BTD-2025-00468,Country alias,Medium,UK,Map to canonical value
+663,BTD-2024-00101,Country alias,Medium,USA,Map to canonical value
+710,BTD-2025-00505,Country alias,Medium,UK,Map to canonical value
+711,BTD-2026-00947,Country alias,Medium,USA,Map to canonical value
+712,BTD-2026-00909,Country alias,Medium,UK,Map to canonical value
+719,BTD-2024-00141,Country alias,Medium,UK,Map to canonical value
+725,BTD-2025-00525,Country alias,Medium,USA,Map to canonical value
+731,BTD-2025-00652,Country alias,Medium,UK,Map to canonical value
+735,BTD-2024-00304,Country alias,Medium,UK,Map to canonical value
+744,BTD-2024-00279,Country alias,Medium,USA,Map to canonical value
+746,BTD-2025-00585,Country alias,Medium,USA,Map to canonical value
+780,BTD-2026-00759,Country alias,Medium,US,Map to canonical value
+786,BTD-2025-00464,Country alias,Medium,USA,Map to canonical value
+807,BTD-2025-00531,Country alias,Medium,UK,Map to canonical value
+816,BTD-2025-00670,Country alias,Medium,UK,Map to canonical value
+819,BTD-2026-00744,Country alias,Medium,US,Map to canonical value
+838,BTD-2026-00800,Country alias,Medium,UK,Map to canonical value
+842,BTD-2024-00001,Country alias,Medium,UK,Map to canonical value
+853,BTD-2024-00016,Country alias,Medium,US,Map to canonical value
+860,BTD-2026-00847,Country alias,Medium,USA,Map to canonical value
+864,BTD-2024-00124,Country alias,Medium,USA,Map to canonical value
+892,BTD-2024-00225,Country alias,Medium,UK,Map to canonical value
+923,BTD-2024-00291,Country alias,Medium,USA,Map to canonical value
+929,BTD-2026-00838,Country alias,Medium,UK,Map to canonical value
+933,BTD-2025-00448,Country alias,Medium,US,Map to canonical value
+43,BTD-2024-00245,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+46,BTD-2024-00169,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+100,BTD-2026-00741,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+141,BTD-2025-00467,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+159,BTD-2026-00765,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+181,BTD-2024-00092,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+216,BTD-2025-00570,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+239,BTD-2026-00855,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+284,BTD-2025-00563,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+320,BTD-2024-00274,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+335,BTD-2024-00010,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+342,BTD-2025-00488,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+361,BTD-2024-00237,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+380,BTD-2025-00407,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+385,BTD-2024-00136,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+403,BTD-2025-00430,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+414,BTD-2024-00259,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+450,BTD-2026-00754,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+464,BTD-2025-00682,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+469,BTD-2024-00096,Currency not ISO-4217,Medium,US$,"Trim, upper-case, US$ -> USD"
+493,BTD-2025-00647,Currency not ISO-4217,Medium,US$,"Trim, upper-case, US$ -> USD"
+539,BTD-2024-00123,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+541,BTD-2026-00747,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+580,BTD-2025-00348,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+609,BTD-2026-00932,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+621,BTD-2026-00835,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+628,BTD-2024-00196,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+753,BTD-2024-00198,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+760,BTD-2026-00760,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+776,BTD-2025-00571,Currency not ISO-4217,Medium,US$,"Trim, upper-case, US$ -> USD"
+813,BTD-2024-00120,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+831,BTD-2026-00943,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+854,BTD-2026-00842,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+879,BTD-2025-00698,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+897,BTD-2024-00321,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+911,BTD-2026-00859,Currency not ISO-4217,Medium,usd,"Trim, upper-case, US$ -> USD"
+932,BTD-2024-00033,Currency not ISO-4217,Medium,GBP ,"Trim, upper-case, US$ -> USD"
+5,BTD-2024-00186,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+13,BTD-2026-00948,Product Line alias,Medium,K&R,Map to canonical value
+15,BTD-2024-00229,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+18,BTD-2025-00469,Product Line alias,Medium,PI,Map to canonical value
+21,BTD-2025-00703,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+98,BTD-2024-00257,Product Line alias,Medium,PI,Map to canonical value
+106,BTD-2025-00524,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+151,BTD-2025-00681,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+195,BTD-2025-00497,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+211,BTD-2024-00276,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+245,BTD-2025-00487,Product Line alias,Medium,K&R,Map to canonical value
+253,BTD-2026-00897,Product Line alias,Medium,K&R,Map to canonical value
+256,BTD-2025-00597,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+312,BTD-2025-00442,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+373,BTD-2026-00867,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+378,BTD-2024-00219,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+379,BTD-2024-00232,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+396,BTD-2024-00011,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+451,BTD-2025-00395,Product Line alias,Medium,PI,Map to canonical value
+452,BTD-2026-00788,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+470,BTD-2025-00549,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+488,BTD-2025-00354,Product Line alias,Medium,PI,Map to canonical value
+543,BTD-2025-00397,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+546,BTD-2025-00538,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+560,BTD-2024-00243,Product Line alias,Medium,K&R,Map to canonical value
+567,BTD-2025-00545,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+589,BTD-2024-00015,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+594,BTD-2024-00327,Product Line alias,Medium,K&R,Map to canonical value
+614,BTD-2025-00612,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+631,BTD-2025-00533,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+649,BTD-2024-00083,Product Line alias,Medium,K&R,Map to canonical value
+659,BTD-2026-00815,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+676,BTD-2025-00606,Product Line alias,Medium,PI,Map to canonical value
+686,BTD-2025-00540,Product Line alias,Medium,K&R,Map to canonical value
+689,BTD-2026-00734,Product Line alias,Medium,K&R,Map to canonical value
+694,BTD-2025-00707,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+747,BTD-2025-00357,Product Line alias,Medium,K&R,Map to canonical value
+790,BTD-2024-00236,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+801,BTD-2024-00190,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+812,BTD-2026-00871,Product Line alias,Medium,Kidnap and Ransom,Map to canonical value
+814,BTD-2025-00422,Product Line alias,Medium,K&R,Map to canonical value
+843,BTD-2025-00441,Product Line alias,Medium,K&R,Map to canonical value
+901,BTD-2025-00528,Product Line alias,Medium,PI,Map to canonical value
+920,BTD-2025-00466,Product Line alias,Medium,Prof Indemnity,Map to canonical value
+47,BTD-2025-00601,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+49,BTD-2025-00474,Distribution casing/whitespace,Low,retail,Trim + title-case
+54,BTD-2026-00862,Distribution casing/whitespace,Low,retail,Trim + title-case
+64,BTD-2024-00054,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+84,BTD-2025-00667,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+111,BTD-2025-00523,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+122,BTD-2026-00896,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+143,BTD-2024-00128,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+170,BTD-2025-00627,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+171,BTD-2026-00883,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+189,BTD-2025-00631,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+207,BTD-2025-00343,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+213,BTD-2025-00496,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+254,BTD-2024-00157,Distribution casing/whitespace,Low,retail,Trim + title-case
+255,BTD-2025-00508,Distribution casing/whitespace,Low,retail,Trim + title-case
+277,BTD-2025-00657,Distribution casing/whitespace,Low,retail,Trim + title-case
+321,BTD-2024-00072,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+326,BTD-2025-00688,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+336,BTD-2024-00233,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+368,BTD-2025-00380,Distribution casing/whitespace,Low,retail,Trim + title-case
+390,BTD-2024-00125,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+397,BTD-2024-00062,Distribution casing/whitespace,Low,retail,Trim + title-case
+421,BTD-2025-00490,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+435,BTD-2026-00762,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+482,BTD-2025-00461,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+497,BTD-2026-00949,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+507,BTD-2024-00316,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+554,BTD-2025-00552,Distribution casing/whitespace,Low,retail,Trim + title-case
+568,BTD-2025-00628,Distribution casing/whitespace,Low,retail,Trim + title-case
+572,BTD-2024-00297,Distribution casing/whitespace,Low,retail,Trim + title-case
+584,BTD-2024-00296,Distribution casing/whitespace,Low,retail,Trim + title-case
+587,BTD-2025-00440,Distribution casing/whitespace,Low,retail,Trim + title-case
+616,BTD-2026-00887,Distribution casing/whitespace,Low,retail,Trim + title-case
+656,BTD-2024-00170,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+716,BTD-2025-00564,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+717,BTD-2024-00152,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+772,BTD-2024-00261,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+773,BTD-2025-00596,Distribution casing/whitespace,Low,retail,Trim + title-case
+784,BTD-2026-00930,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+797,BTD-2026-00837,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+799,BTD-2025-00429,Distribution casing/whitespace,Low,retail,Trim + title-case
+821,BTD-2026-00916,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+833,BTD-2025-00701,Distribution casing/whitespace,Low,retail,Trim + title-case
+863,BTD-2026-00917,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+881,BTD-2024-00099,Distribution casing/whitespace,Low,retail,Trim + title-case
+918,BTD-2026-00776,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+922,BTD-2024-00326,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+941,BTD-2026-00905,Distribution casing/whitespace,Low,Wholesale ,Trim + title-case
+953,BTD-2024-00195,Distribution casing/whitespace,Low,retail,Trim + title-case
+957,BTD-2024-00217,Distribution casing/whitespace,Low,retail,Trim + title-case
+4,BTD-2024-00055,Same client/product/inception as another policy,Low,Harrowgate Resources Group,Review - may be legitimate separate placement
+280,BTD-2024-00268,Same client/product/inception as another policy,Low,Ardenvale Mining Corporation,Review - may be legitimate separate placement
+297,BTD-2025-00535,Same client/product/inception as another policy,Low,Corrieburn Energy,Review - may be legitimate separate placement
+422,BTD-2026-00924,Same client/product/inception as another policy,Low,Pillerton Pharma,Review - may be legitimate separate placement
+466,BTD-2025-00551,Same client/product/inception as another policy,Low,Underhill Logistics,Review - may be legitimate separate placement
+479,BTD-2025-00340,Same client/product/inception as another policy,Low,Wrayburn Motors,Review - may be legitimate separate placement
+582,BTD-2025-00388,Same client/product/inception as another policy,Low,Wrayburn Motors,Review - may be legitimate separate placement
+744,BTD-2024-00279,Same client/product/inception as another policy,Low,Ardenvale Mining Corporation,Review - may be legitimate separate placement
+784,BTD-2026-00930,Same client/product/inception as another policy,Low,Pillerton Pharma,Review - may be legitimate separate placement
+845,BTD-2025-00587,Same client/product/inception as another policy,Low,Underhill Logistics,Review - may be legitimate separate placement
+935,BTD-2024-00017,Same client/product/inception as another policy,Low,Harrowgate Resources Group,Review - may be legitimate separate placement
+960,BTD-2025-00542,Same client/product/inception as another policy,Low,Corrieburn Energy,Review - may be legitimate separate placement

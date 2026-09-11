@@ -200,6 +200,9 @@
 <script>
 const gbp0 = n => '£' + Math.round(n).toLocaleString('en-GB');
 const gbpM = n => '£' + (n / 1e6).toFixed(2) + 'm';
+// Bar-end labels: whole thousands. The tooltip and the table keep the exact figure.
+const gbpK = n => n >= 1000 ? '£' + Math.round(n / 1000).toLocaleString('en-GB') + 'k'
+                            : '£' + Math.round(n);
 
 // '2024-01' -> 'Jan24'
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -271,7 +274,7 @@ function renderBars(elId, dim) {
       '" data-rev="' + d.rev + '" data-n="' + d.n + '">' +
       '<td class="name">' + esc(name) + '</td>' +
       '<td class="barcell"><span class="bar" style="width:' + (d.rev / max * 100).toFixed(1) + '%"></span></td>' +
-      '<td class="val">' + gbp0(d.rev) + '</td></tr>';
+      '<td class="val">' + gbpK(d.rev) + '</td></tr>';
   }).join('');
 }
 

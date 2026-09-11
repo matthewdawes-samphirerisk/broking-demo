@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broking dashboard</title>
+<style>
+  /* Every colour on the page comes from these two sets. */
+  :root {
+    --bg: #fff;          --text: #222;      --muted: #666;      --faint: #888;
+    --value: #444;       --line: #ddd;      --line-strong: #bbb;
+    --grid: #eee;        --axis: #ccc;
+    --panel: #fafafa;    --chip-bg: #fff;   --hover: #f5f5f5;
+    --bar: #3b6ea5;      --bar-red: #c0392b;
+  }
+  [data-theme="dark"] {
+    --bg: #16191d;       --text: #e6e6e6;   --muted: #9aa0a6;   --faint: #7e848a;
+    --value: #c4c8cc;    --line: #343a40;   --line-strong: #4a5158;
+    --grid: #262b30;     --axis: #444b52;
+    --panel: #1d2126;    --chip-bg: #23282e; --hover: #23282e;
+    --bar: #5b9bd5;      --bar-red: #e0564a;
+  }
+
+  body { font: 14px/1.5 system-ui, sans-serif; margin: 0; padding: 24px;
+         color: var(--text); background: var(--bg); -webkit-text-size-adjust: 100%; }
+  .topbar { display: flex; align-items: baseline; gap: 16px; max-width: 900px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 16px; }
+  section { margin-bottom: 32px; }
+  h2 { font-size: 15px; margin: 0 0 12px; font-weight: 600; }
+
+  .btn { border: 1px solid var(--line-strong); background: var(--chip-bg);
+         color: var(--text); cursor: pointer; font-size: 13px; padding: 4px 10px; }
+  .btn:hover { background: var(--hover); }
+  #theme-toggle { margin-left: auto; }
+
+  .headlines { display: flex; flex-wrap: wrap; gap: 16px; max-width: 900px; }
+  .kpi { border: 1px solid var(--line); padding: 16px 20px; flex: 1 1 200px; }
+  .kpi .label { color: var(--muted); font-size: 13px; }
+  .kpi .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .kpi .note { color: var(--faint); font-size: 12px; margin-top: 4px; }
+
+  /* Active filter bar */
+  .filters { border: 1px solid var(--line); background: var(--panel); padding: 10px 12px;
+             margin-bottom: 24px; display: flex; align-items: center;
+             flex-wrap: wrap; gap: 8px; max-width: 900px; }
+  .filters .lead { color: var(--muted); font-size: 13px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; background: var(--chip-bg);
+          border: 1px solid var(--line-strong); padding: 3px 4px 3px 9px; font-size: 13px; }
+  .chip .dim { color: var(--faint); }
+  .chip button { border: 0; background: none; cursor: pointer; font-size: 15px;
+                 line-height: 1; color: var(--muted); padding: 0 4px; }
+  .chip button:hover { color: var(--text); }
+  .clear-all { margin-left: auto; }
+
+  table { border-collapse: collapse; width: 100%; max-width: 900px; }
+  .bars td { padding: 3px 8px 3px 0; vertical-align: middle; }
+  .bars tr { cursor: pointer; }
+  .bars tr:hover td { background: var(--hover); }
+  .bars td.name { white-space: nowrap; }
+  .bars td.val { text-align: right; white-space: nowrap; color: var(--value); }
+  .bar { height: 16px; background: var(--bar); display: block; min-width: 1px; }
+  .barcell { width: 100%; }
+  .bars tr[data-value="Eleanor Voss"] .bar { background: var(--bar-red); }
+  .dim-row .bar, .dim-row td.name, .dim-row td.val { opacity: 0.35; }
+  .sel-row td.name { font-weight: 600; }
+
+  svg { display: block; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .tick { font-size: 10px; fill: var(--muted); }
+  .mbar { fill: var(--bar); }
+  .mbar.faded { opacity: 0.3; }
+  .mhit { fill: transparent; cursor: pointer; }
+  .mlabel.sel { font-weight: 700; fill: var(--text); }
+
+  /* Narrow screens: stack each bar row so long names are not squeezed, and
+     give taps somewhere bigger to land. */
+  @media (max-width: 600px) {
+    body { padding: 14px; }
+    h1 { font-size: 18px; }
+    .kpi { padding: 12px 14px; }
+    .kpi .value { font-size: 24px; }
+    .btn { padding: 6px 12px; }
+
+    .bars tr { display: grid; grid-template-columns: 1fr auto;
+               column-gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--grid); }
+    .bars td { display: block; padding: 0; }
+    .bars td.name { white-space: normal; grid-column: 1; grid-row: 1; }
+    .bars td.val { grid-column: 2; grid-row: 1; }
+    .bars td.barcell { grid-column: 1 / -1; grid-row: 2; margin-top: 4px; }
+    .bars tr:hover td { background: none; }
+    .bars tr:hover { background: var(--hover); }
+  }
+</style>
+<script>
+  // Set before first paint so the page never flashes light then dark.
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    var dark = saved ? saved === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>Broking dashboard</h1>
+  <button class="btn" id="theme-toggle">Dark mode</button>
+</div>
+<p class="sub" id="sub">Loading…</p>
+
+<div class="filters" id="filters"></div>
+
+<section>
+  <div class="headlines">
+    <div class="kpi">
+      <div class="label">Total GWP</div>
+      <div class="value" id="kpi-gwp">—</div>
+      <div class="note" id="kpi-gwp-note"></div>
+    </div>
+    <div class="kpi">
+      <div class="label">Total revenue</div>
+      <div class="value" id="kpi-rev">—</div>
+      <div class="note" id="kpi-rev-note"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Revenue by month of inception</h2>
+  <div id="chart-month"></div>
+</section>
+
+<section>
+  <h2>Revenue by product line</h2>
+  <table class="bars" id="chart-product"></table>
+</section>
+
+<section>
+  <h2>Revenue by account owner</h2>
+  <table class="bars" id="chart-owner"></table>
+</section>
+
+<script>
+const gbp0 = n => '£' + Math.round(n).toLocaleString('en-GB');
+const gbpM = n => '£' + (n / 1e6).toFixed(2) + 'm';
+
+// '2024-01' -> 'Jan24'
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const monthLabel = m => MONTHS[Number(m.slice(5, 7)) - 1] + m.slice(2, 4);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// The three things you can filter by. Each has a chart, a way to read its value
+// off a policy row, and its own set of selected values.
+const DIMS = {
+  month:   { label: 'Month',         value: p => p.inception.slice(0, 7), format: monthLabel },
+  product: { label: 'Product line',  value: p => p.productLine,           format: v => v },
+  owner:   { label: 'Account owner', value: p => p.owner,                 format: v => v },
+};
+
+let POLICIES = [];
+let CATS = {};                       // every value each dimension can take, fixed up front
+const state = { month: new Set(), product: new Set(), owner: new Set() };
+
+// Rows passing every filter except the one named; pass null to apply them all.
+// Leaving a chart's own filter out is what keeps all of its bars on screen.
+function rowsExcept(skip) {
+  const active = Object.keys(DIMS).filter(d => d !== skip && state[d].size);
+  if (!active.length) return POLICIES;
+  return POLICIES.filter(p => active.every(d => state[d].has(DIMS[d].value(p))));
+}
+
+function revenueBy(dim, rows) {
+  const totals = new Map(CATS[dim].map(c => [c, 0]));   // keep empty categories visible
+  for (const p of rows) {
+    const k = DIMS[dim].value(p);
+    if (totals.has(k)) totals.set(k, totals.get(k) + p.revenue);
+  }
+  return totals;
+}
+
+function toggle(dim, value) {
+  state[dim].has(value) ? state[dim].delete(value) : state[dim].add(value);
+  render();
+}
+
+/* ---------- rendering ---------- */
+
+function renderFilters() {
+  const chips = [];
+  for (const dim of Object.keys(DIMS)) {
+    for (const v of state[dim]) {
+      chips.push('<span class="chip"><span class="dim">' + DIMS[dim].label + ':</span> ' +
+        esc(DIMS[dim].format(v)) +
+        ' <button data-dim="' + dim + '" data-value="' + esc(v) + '" title="Remove">&times;</button></span>');
+    }
+  }
+  document.getElementById('filters').innerHTML = chips.length
+    ? '<span class="lead">Filtered by</span>' + chips.join('') +
+      '<button class="btn clear-all" id="clear-all">Clear all</button>'
+    : '<span class="lead">No filters — click any bar to filter, click it again to clear.</span>';
+}
+
+function renderBars(elId, dim) {
+  const totals = revenueBy(dim, rowsExcept(dim));
+  const entries = [...totals.entries()].sort((a, b) => b[1] - a[1]);
+  const max = Math.max(1, ...entries.map(e => e[1]));
+  const anySel = state[dim].size > 0;
+
+  document.getElementById(elId).innerHTML = entries.map(([name, value]) => {
+    const sel = state[dim].has(name);
+    const cls = sel ? 'sel-row' : (anySel ? 'dim-row' : '');
+    return '<tr class="' + cls + '" data-dim="' + dim + '" data-value="' + esc(name) + '">' +
+      '<td class="name">' + esc(name) + '</td>' +
+      '<td class="barcell"><span class="bar" style="width:' + (value / max * 100).toFixed(1) + '%"></span></td>' +
+      '<td class="val">' + gbp0(value) + '</td></tr>';
+  }).join('');
+}
+
+function renderMonths() {
+  const el = document.getElementById('chart-month');
+  const totals = revenueBy('month', rowsExcept('month'));
+  const entries = CATS.month.map(m => [m, totals.get(m)]);   // fixed axis, never reorders
+  const anySel = state.month.size > 0;
+
+  // The viewBox matches the container's real pixel width, so the chart fills the
+  // screen on a phone without shrinking the axis text to nothing.
+  const W = Math.max(300, Math.min(900, el.clientWidth || 900));
+  const narrow = W < 600;
+  const H = narrow ? 190 : 240;
+  const padL = narrow ? 40 : 56, padR = 6, padT = 8, padB = narrow ? 30 : 40;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  const max = Math.max(1, ...entries.map(e => e[1]));
+  const step = plotW / entries.length;
+  const bw = Math.max(2, step * 0.7);
+  const y = v => padT + plotH - (v / max) * plotH;
+  const tick = n => narrow
+    ? (n >= 1000 ? '£' + Math.round(n / 1000) + 'k' : '£' + Math.round(n))
+    : gbp0(n);
+
+  const levels = narrow ? [0, 0.5, 1] : [0, 0.25, 0.5, 0.75, 1];
+  const grid = levels.map(f => f * max).map(t =>
+    '<line class="grid" x1="' + padL + '" y1="' + y(t) + '" x2="' + (W - padR) + '" y2="' + y(t) + '"/>' +
+    '<text class="tick" x="' + (padL - 6) + '" y="' + (y(t) + 3) + '" text-anchor="end">' + tick(t) + '</text>'
+  ).join('');
+
+  const bars = entries.map(([m, v], i) => {
+    const sel = state.month.has(m);
+    const x = padL + i * step;
+    const bx = x + (step - bw) / 2;
+    // A full-height transparent rect over each slot keeps thin and empty bars tappable.
+    return '<rect class="mbar' + (sel || !anySel ? '' : ' faded') + '" x="' + bx.toFixed(1) +
+             '" y="' + y(v).toFixed(1) + '" width="' + bw.toFixed(1) +
+             '" height="' + (padT + plotH - y(v)).toFixed(1) + '"></rect>' +
+           '<rect class="mhit" data-dim="month" data-value="' + m + '" x="' + x.toFixed(1) +
+             '" y="' + padT + '" width="' + step.toFixed(1) + '" height="' + plotH + '">' +
+             '<title>' + monthLabel(m) + ': ' + gbp0(v) + '</title></rect>';
+  }).join('');
+
+  // Label as often as the width allows, plus any month currently selected.
+  const every = Math.max(1, Math.ceil(42 / step));
+  const selIdx = entries.map(([m], i) => state.month.has(m) ? i : -1).filter(i => i >= 0);
+  const labels = entries.map(([m], i) => {
+    const sel = state.month.has(m);
+    // Drop a routine label if a selected month's label sits close enough to collide.
+    if (!sel && (i % every || selIdx.some(j => Math.abs(i - j) < every))) return '';
+    const x = padL + i * step + step / 2;
+    return '<text class="tick mlabel' + (sel ? ' sel' : '') + '" x="' + x.toFixed(1) +
+           '" y="' + (H - padB + 14) + '" text-anchor="middle">' + monthLabel(m) + '</text>';
+  }).join('');
+
+  el.innerHTML =
+    '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="' + H + '">' + grid +
+    '<line class="axis" x1="' + padL + '" y1="' + (padT + plotH) + '" x2="' + (W - padR) +
+    '" y2="' + (padT + plotH) + '"/>' + bars + labels + '</svg>';
+}
+
+function renderKpis() {
+  const rows = rowsExcept(null);
+  const gwp = rows.reduce((a, p) => a + p.gwp, 0);
+  const rev = rows.reduce((a, p) => a + p.revenue, 0);
+
+  document.getElementById('kpi-gwp').textContent = gbpM(gwp);
+  document.getElementById('kpi-gwp-note').textContent = gbp0(gwp);
+  document.getElementById('kpi-rev').textContent = gbpM(rev);
+  document.getElementById('kpi-rev-note').textContent =
+    gbp0(rev) + (gwp ? ' — ' + (rev / gwp * 100).toFixed(1) + '% of GWP' : '');
+  document.getElementById('sub').textContent = rows.length === POLICIES.length
+    ? POLICIES.length + ' policies'
+    : rows.length + ' of ' + POLICIES.length + ' policies';
+}
+
+function render() {
+  renderFilters();
+  renderKpis();
+  renderMonths();
+  renderBars('chart-product', 'product');
+  renderBars('chart-owner', 'owner');
+}
+
+/* ---------- wiring ---------- */
+
+// One delegated listener per container: the charts are redrawn on every click,
+// so listeners on the bars themselves would need reattaching each time.
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => { if (POLICIES.length) renderMonths(); }, 120);
+});
+
+const themeBtn = document.getElementById('theme-toggle');
+function applyTheme(dark) {
+  const root = document.documentElement;
+  dark ? root.setAttribute('data-theme', 'dark') : root.removeAttribute('data-theme');
+  themeBtn.textContent = dark ? 'Light mode' : 'Dark mode';
+  try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+}
+applyTheme(document.documentElement.getAttribute('data-theme') === 'dark');
+themeBtn.addEventListener('click', () =>
+  applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark'));
+
+for (const id of ['chart-month', 'chart-product', 'chart-owner']) {
+  document.getElementById(id).addEventListener('click', e => {
+    const t = e.target.closest('[data-dim]');
+    if (t) toggle(t.dataset.dim, t.dataset.value);
+  });
+}
+
+document.getElementById('filters').addEventListener('click', e => {
+  if (e.target.id === 'clear-all') {
+    Object.values(state).forEach(s => s.clear());
+    return render();
+  }
+  const b = e.target.closest('button[data-dim]');
+  if (b) toggle(b.dataset.dim, b.dataset.value);
+});
+
+fetch('data.json')
+  .then(r => r.json())
+  .then(({ policies }) => {
+    POLICIES = policies;
+
+    // Category lists come from the unfiltered data once, so bars and the month
+    // axis stay put instead of appearing and disappearing as you filter.
+    const seen = [...new Set(policies.map(DIMS.month.value))].sort();
+    const months = [];
+    for (let m = seen[0]; m <= seen[seen.length - 1];) {
+      months.push(m);
+      let [yy, mm] = m.split('-').map(Number);
+      mm === 12 ? (yy++, mm = 1) : mm++;
+      m = yy + '-' + String(mm).padStart(2, '0');
+    }
+    const byRevenue = dim => {
+      const t = new Map();
+      for (const p of policies) {
+        const k = DIMS[dim].value(p);
+        t.set(k, (t.get(k) || 0) + p.revenue);
+      }
+      return [...t.entries()].sort((a, b) => b[1] - a[1]).map(e => e[0]);
+    };
+    CATS = { month: months, product: byRevenue('product'), owner: byRevenue('owner') };
+
+    render();
+  })
+  .catch(e => { document.getElementById('sub').textContent = 'Could not load data.json: ' + e.message; });
+</script>
+
+</body>
+</html>

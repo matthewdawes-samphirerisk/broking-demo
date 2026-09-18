@@ -490,9 +490,10 @@ window.addEventListener('resize', () => {
   rt = setTimeout(() => { if (POLICIES.length) monthChart(document.getElementById('chart-month')); }, 120);
 });
 
-fetch('data.json')
-  .then(r => r.json())
+fetch('api/policies')
+  .then(r => r.ok ? r.json() : r.json().then(b => { throw new Error(b.error || ('HTTP ' + r.status)); }))
   .then(({ policies }) => {
+    if (!Array.isArray(policies)) throw new Error('Unexpected response shape.');
     POLICIES = policies;
 
     // Category order is fixed once, from the unfiltered book, so bars keep their
@@ -521,7 +522,7 @@ fetch('data.json')
     render();
   })
   .catch(e => {
-    document.getElementById('sub').textContent = 'Could not load data.json: ' + e.message;
+    document.getElementById('sub').textContent = 'Could not load policy data: ' + e.message;
     document.getElementById('filters').innerHTML = '';
   });
 </script>

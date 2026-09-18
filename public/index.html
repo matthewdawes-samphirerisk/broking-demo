@@ -6,195 +6,293 @@
 <title>Broking dashboard</title>
 <style>
   /* Light is the default; dark is a selected set of steps from the same blue
-     ramp, not an inversion. Every bar colour clears 3:1 on its own surface. */
+     ramp, not an inversion. Every bar colour clears 3:1 on its own card. */
   :root {
-    --surface:    #fcfcfb;
-    --panel:      #f4f3f0;
-    --border:     #dedcd7;
-    --grid:       #e6e4df;
-    --ink:        #0b0b0b;
-    --ink-2:      #52514e;
-    --bar:        #2a78d6;  /* 4.30:1 */
-    --bar-on:     #184f95;  /* 7.89:1 - selected, most prominent */
-    --bar-off:    #8e8e8a;  /* 3.20:1 - neutral grey, identity removed */
+    --page:       #f1f0ec;
+    --card:       #fcfcfb;   /* the surface the bar colours were validated on */
+    --border:     #e3e1db;
+    --grid:       #e8e6e0;
+    --ink:        #17171a;
+    --ink-2:      #5c5b56;
+    --ink-3:      #84837c;
+    --bar:        #2a78d6;   /* 4.30:1 */
+    --bar-on:     #184f95;   /* 7.89:1 - selected, most prominent */
+    --bar-off:    #8e8e8a;   /* 3.20:1 - neutral grey, identity removed */
     --chip-bg:    #e7eefb;
-    --chip-br:    #b9cdea;
+    --chip-br:    #bed0ec;
     --chip-ink:   #1c5cab;
+    --focus:      #184f95;
+    --shadow:     0 1px 2px rgba(20,20,19,.05), 0 1px 8px rgba(20,20,19,.04);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --surface:  #1a1a19;
-      --panel:    #232322;
-      --border:   #383835;
-      --grid:     #2f2f2d;
-      --ink:      #ffffff;
-      --ink-2:    #c3c2b7;
-      --bar:      #3987e5;  /* 4.79:1 */
-      --bar-on:   #86b6ef;  /* 8.25:1 - selected, most prominent */
-      --bar-off:  #6b6b67;  /* 3.25:1 */
-      --chip-bg:  #1e2b3d;
-      --chip-br:  #34527d;
+      --page:     #101010;
+      --card:     #1a1a19;
+      --border:   #333331;
+      --grid:     #2c2c2a;
+      --ink:      #f5f4ef;
+      --ink-2:    #b4b3a9;
+      --ink-3:    #86857d;
+      --bar:      #3987e5;   /* 4.79:1 */
+      --bar-on:   #86b6ef;   /* 8.25:1 */
+      --bar-off:  #6b6b67;   /* 3.25:1 */
+      --chip-bg:  #1b2637;
+      --chip-br:  #33507a;
       --chip-ink: #9ec5f4;
+      --focus:    #86b6ef;
+      --shadow:   none;
     }
   }
   :root[data-theme="dark"] {
-    --surface:  #1a1a19;
-    --panel:    #232322;
-    --border:   #383835;
-    --grid:     #2f2f2d;
-    --ink:      #ffffff;
-    --ink-2:    #c3c2b7;
-    --bar:      #3987e5;
-    --bar-on:   #86b6ef;
-    --bar-off:  #6b6b67;
-    --chip-bg:  #1e2b3d;
-    --chip-br:  #34527d;
-    --chip-ink: #9ec5f4;
+    --page: #101010; --card: #1a1a19; --border: #333331; --grid: #2c2c2a;
+    --ink: #f5f4ef; --ink-2: #b4b3a9; --ink-3: #86857d;
+    --bar: #3987e5; --bar-on: #86b6ef; --bar-off: #6b6b67;
+    --chip-bg: #1b2637; --chip-br: #33507a; --chip-ink: #9ec5f4;
+    --focus: #86b6ef; --shadow: none;
   }
 
   * { box-sizing: border-box; }
-  body { font-family: system-ui, sans-serif; margin: 0; padding: 24px 32px;
-         color: var(--ink); background: var(--surface); }
-  header { display: flex; align-items: flex-start; gap: 16px; }
-  header .titles { flex: 1 1 auto; min-width: 0; }
-  h1 { font-size: 20px; margin: 0 0 2px; }
-  .sub { color: var(--ink-2); font-size: 13px; }
-  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .06em;
-       color: var(--ink-2); margin: 32px 0 12px; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; padding: 32px 24px 64px;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px; line-height: 1.45;
+    color: var(--ink); background: var(--page);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; }
 
-  #theme-toggle { flex: 0 0 auto; font: inherit; font-size: 13px; cursor: pointer;
-                  border: 1px solid var(--border); background: var(--panel);
-                  color: var(--ink); padding: 6px 12px; min-height: 34px; }
+  /* ---- header ---- */
+  header { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 20px; }
+  .titles { flex: 1 1 auto; min-width: 0; }
+  h1 { font-size: 22px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 3px; }
+  .sub { color: var(--ink-2); font-size: 13.5px; }
+  button {
+    font: inherit; font-size: 13px; cursor: pointer; color: var(--ink);
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 7px; padding: 7px 13px; min-height: 36px;
+    transition: background .14s ease, border-color .14s ease;
+  }
+  button:hover { border-color: var(--ink-3); }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 
-  /* Active filters */
-  #filters { border: 1px solid var(--border); background: var(--panel);
-             padding: 10px 12px; margin: 16px 0 20px; font-size: 13px; }
-  #filters .none { color: var(--ink-2); }
-  .chip { display: inline-block; border: 1px solid var(--chip-br); background: var(--chip-bg);
-          color: var(--chip-ink); padding: 5px 9px; margin: 2px 6px 2px 0; cursor: pointer; }
-  .chip b { font-size: 10px; text-transform: uppercase; letter-spacing: .06em;
-            opacity: .75; margin-right: 6px; font-weight: 600; }
-  .chip .x { margin-left: 8px; opacity: .8; }
-  #clear-all { font: inherit; font-size: 13px; border: 1px solid var(--border);
-               background: var(--surface); color: var(--ink);
-               padding: 5px 10px; margin-left: 4px; cursor: pointer; }
+  /* ---- filter bar: one row, above everything it scopes ---- */
+  #filters {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 11px 13px; margin-bottom: 20px; box-shadow: var(--shadow);
+  }
+  #filters .none { color: var(--ink-3); font-size: 13.5px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid var(--chip-br); background: var(--chip-bg); color: var(--chip-ink);
+    border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer;
+    transition: filter .14s ease;
+  }
+  .chip:hover { filter: brightness(.96); }
+  .chip b { font-size: 10px; text-transform: uppercase; letter-spacing: .07em;
+            font-weight: 600; opacity: .72; }
+  .chip .x { font-size: 15px; line-height: 1; opacity: .75; }
+  #clear-all { margin-left: auto; min-height: 32px; padding: 5px 12px; }
 
-  .headlines { display: flex; gap: 16px; flex-wrap: wrap; }
-  .kpi { border: 1px solid var(--border); padding: 16px 20px;
-         flex: 1 1 220px; min-width: 0; }
-  .kpi .label { font-size: 12px; text-transform: uppercase;
-                letter-spacing: .06em; color: var(--ink-2); }
-  .kpi .value { font-size: 30px; font-variant-numeric: tabular-nums; margin-top: 4px; }
-  .kpi .note { font-size: 12px; color: var(--ink-2); margin-top: 4px; }
+  /* ---- stat tiles ---- */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px; box-shadow: var(--shadow);
+  }
+  .stat .label { font-size: 12px; text-transform: uppercase; letter-spacing: .07em;
+                 color: var(--ink-2); font-weight: 600; }
+  /* Proportional figures: tabular-nums makes a display-size number look loose. */
+  .stat .value { font-size: 36px; font-weight: 600; letter-spacing: -.02em;
+                 line-height: 1.15; margin-top: 7px; }
+  .stat .note { font-size: 12.5px; color: var(--ink-3); margin-top: 3px; }
 
-  /* Bar rows: grid, so they can restack on a narrow screen */
-  .row { display: grid; grid-template-columns: 180px minmax(0, 1fr) 62px;
-         gap: 10px; align-items: center; padding: 4px 0; cursor: pointer; }
-  .rname { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; }
-  .rval { text-align: right; font-variant-numeric: tabular-nums;
-          color: var(--ink-2); font-size: 13px; white-space: nowrap; }
-  .row:hover .rname { text-decoration: underline; }
-  .bar { display: block; height: 15px; background: var(--bar);
-         border-radius: 0 3px 3px 0; }
+  /* ---- chart cards ---- */
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px 16px; box-shadow: var(--shadow);
+    min-width: 0;
+  }
+  .card.wide { grid-column: 1 / -1; }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .07em;
+             color: var(--ink-2); font-weight: 600; margin: 0 0 2px; }
+  .card .cap { font-size: 12.5px; color: var(--ink-3); margin-bottom: 14px; }
+
+  /* ---- bar rows ---- */
+  .row {
+    display: grid; grid-template-columns: 148px minmax(0, 1fr) 62px;
+    gap: 12px; align-items: center; padding: 5px 6px; margin: 0 -6px;
+    border-radius: 6px; cursor: pointer;
+    transition: background .14s ease;
+  }
+  .row:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+  .rname { font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rval { text-align: right; font-size: 13px; color: var(--ink-2);
+          font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .track { height: 14px; display: flex; }
+  .bar {
+    height: 14px; background: var(--bar);
+    border-radius: 0 4px 4px 0;   /* rounded data-end, square at the baseline */
+    transition: width .22s ease, background-color .14s ease;
+  }
   .bar.on  { background: var(--bar-on); }
   .bar.off { background: var(--bar-off); }
 
-  #chart-month svg { display: block; width: 100%; }
-  #chart-month rect { fill: var(--bar); cursor: pointer; }
-  #chart-month rect.on  { fill: var(--bar-on); }
-  #chart-month rect.off { fill: var(--bar-off); }
-  #chart-month .grid { stroke: var(--grid); }
-  #chart-month text { fill: var(--ink-2); }
+  /* ---- month chart ---- */
+  #chart-month svg { display: block; width: 100%; overflow: visible; }
+  .colhit { fill: transparent; cursor: pointer; }
+  .col { fill: var(--bar); pointer-events: none; transition: fill .14s ease; }
+  .col.on  { fill: var(--bar-on); }
+  .col.off { fill: var(--bar-off); }
+  .gridline { stroke: var(--grid); stroke-width: 1; shape-rendering: crispEdges; }
+  .baseline { stroke: var(--border); stroke-width: 1; shape-rendering: crispEdges; }
+  .tick, .mlabel { fill: var(--ink-3); font-size: 10.5px;
+                   font-variant-numeric: tabular-nums; }
+  .peak { fill: var(--ink-2); font-size: 11px; font-weight: 600; }
+  g.colgrp:focus-visible { outline: none; }
+  g.colgrp:focus-visible .col { fill: var(--bar-on); }
+  g.colgrp:focus-visible .focusring { stroke: var(--focus); stroke-width: 2; fill: none; }
 
+  /* ---- table view: values must never be gated behind a tooltip ---- */
+  details.tv { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+  details.tv summary { font-size: 12.5px; color: var(--ink-2); cursor: pointer; }
+  details.tv table { border-collapse: collapse; margin-top: 10px; font-size: 12.5px; width: 100%; }
+  details.tv th { text-align: left; color: var(--ink-3); font-weight: 600;
+                  padding: 4px 8px 4px 0; border-bottom: 1px solid var(--border); }
+  details.tv td { padding: 3px 8px 3px 0; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  details.tv td.n { text-align: right; }
+
+  .empty { color: var(--ink-2); font-size: 13.5px; padding: 18px 2px; }
+
+  @media (max-width: 860px) { .charts { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .stats { grid-template-columns: 1fr; gap: 12px; } }
   @media (max-width: 640px) {
-    body { padding: 16px; }
-    h1 { font-size: 18px; }
-    .kpi { flex: 1 1 100%; padding: 12px 14px; }
-    .kpi .value { font-size: 26px; }
+    body { padding: 20px 14px 48px; font-size: 14px; }
+    h1 { font-size: 19px; }
+    .card { padding: 15px 15px 13px; }
+    .stat { padding: 14px 16px; }
+    .stat .value { font-size: 30px; }
+    #clear-all { margin-left: 0; }
     /* name + value on the first line, bar spanning underneath */
-    .row { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 7px 0; }
+    .row { grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; padding: 8px 6px; }
     .rname { grid-area: 1 / 1; }
     .rval  { grid-area: 1 / 2; }
-    .rbar  { grid-area: 2 / 1 / 3 / 3; }
+    .track { grid-area: 2 / 1 / 3 / 3; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
   }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<header>
-  <div class="titles">
-    <h1>Broking dashboard</h1>
-    <div class="sub" id="sub">Loading...</div>
-  </div>
-  <button id="theme-toggle" type="button">Dark</button>
-</header>
+  <header>
+    <div class="titles">
+      <h1>Broking dashboard</h1>
+      <div class="sub" id="sub">Loading...</div>
+    </div>
+    <button id="theme-toggle" type="button">Dark</button>
+  </header>
 
-<div id="filters"><span class="none">Loading...</span></div>
+  <div id="filters"><span class="none">Loading...</span></div>
 
-<div class="headlines">
-  <div class="kpi">
-    <div class="label">Total GWP</div>
-    <div class="value" id="kpi-gwp">&mdash;</div>
-    <div class="note" id="kpi-gwp-note"></div>
+  <div class="stats">
+    <div class="stat">
+      <div class="label">Total GWP</div>
+      <div class="value" id="kpi-gwp">&mdash;</div>
+      <div class="note" id="kpi-gwp-note"></div>
+    </div>
+    <div class="stat">
+      <div class="label">Total revenue</div>
+      <div class="value" id="kpi-rev">&mdash;</div>
+      <div class="note" id="kpi-rev-note"></div>
+    </div>
+    <div class="stat">
+      <div class="label">Policies</div>
+      <div class="value" id="kpi-cnt">&mdash;</div>
+      <div class="note" id="kpi-cnt-note"></div>
+    </div>
   </div>
-  <div class="kpi">
-    <div class="label">Total revenue</div>
-    <div class="value" id="kpi-rev">&mdash;</div>
-    <div class="note" id="kpi-rev-note"></div>
+
+  <div class="charts">
+    <section class="card wide">
+      <h2>Revenue by month</h2>
+      <div class="cap" id="cap-month">By inception month</div>
+      <div id="chart-month"></div>
+      <details class="tv"><summary>Table view</summary><div id="tv-month"></div></details>
+    </section>
+
+    <section class="card">
+      <h2>Revenue by product line</h2>
+      <div class="cap">12 lines</div>
+      <div id="chart-product"></div>
+    </section>
+
+    <section class="card">
+      <h2>Revenue by account owner</h2>
+      <div class="cap">6 owners</div>
+      <div id="chart-owner"></div>
+    </section>
   </div>
+
 </div>
 
-<h2>Revenue by month</h2>
-<div id="chart-month"></div>
-
-<h2>Revenue by product line</h2>
-<div id="chart-product"></div>
-
-<h2>Revenue by account owner</h2>
-<div id="chart-owner"></div>
-
 <script>
-/* ---------- theme ---------- */
+/* ---------------- theme ---------------- */
 const root = document.documentElement;
 const tbtn = document.getElementById('theme-toggle');
-
-function systemDark() {
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
-function currentTheme() {
-  return root.dataset.theme || (systemDark() ? 'dark' : 'light');
-}
+const systemDark = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const currentTheme = () => root.dataset.theme || (systemDark() ? 'dark' : 'light');
 function applyTheme(t) {
   if (t) root.dataset.theme = t;
-  // The button offers the other mode.
-  tbtn.textContent = currentTheme() === 'dark' ? 'Light' : 'Dark';
+  const dark = currentTheme() === 'dark';
+  tbtn.textContent = dark ? 'Light' : 'Dark';          // the button offers the other mode
+  tbtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
 }
 try {
   const saved = localStorage.getItem('theme');
   if (saved === 'light' || saved === 'dark') root.dataset.theme = saved;
-} catch (e) { /* private mode, blocked storage - fall back to system */ }
+} catch (e) { /* blocked storage - fall back to the system setting */ }
 applyTheme();
-
 tbtn.addEventListener('click', () => {
   const next = currentTheme() === 'dark' ? 'light' : 'dark';
   applyTheme(next);
   try { localStorage.setItem('theme', next); } catch (e) { /* ignore */ }
 });
-// Follow the OS while the user has not made an explicit choice.
 if (window.matchMedia) {
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (!root.dataset.theme) applyTheme();
-  });
+  window.matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', () => { if (!root.dataset.theme) applyTheme(); });
 }
 
-/* ---------- helpers ---------- */
+/* ---------------- helpers ---------------- */
 const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const money0 = n => '£' + Math.round(n).toLocaleString('en-GB');
 const money1 = n => '£' + (n / 1e6).toFixed(2) + 'm';
 const moneyK = n => n === 0 ? '£0' : '£' + Math.round(n / 1000).toLocaleString('en-GB') + 'k';
-const monthLabel = k => MON[+k.slice(5, 7) - 1] + k.slice(2, 4);
+const monthLabel = k => MON[+k.slice(5, 7) - 1] + ' ' + k.slice(2, 4);
 const esc = s => String(s).replace(/[&<>"']/g,
   c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+// Round an axis maximum up to a clean number, so ticks read 0 / 125k / 250k
+// rather than 0 / 109k / 219k.
+function niceMax(v) {
+  if (v <= 0) return 1;
+  const mag = Math.pow(10, Math.floor(Math.log10(v)));
+  const r = v / mag;
+  const step = r <= 1 ? 1 : r <= 2 ? 2 : r <= 2.5 ? 2.5 : r <= 5 ? 5 : 10;
+  return step * mag;
+}
+
+// Column with a 4px rounded cap, square where it meets the baseline.
+function capCol(x, y, w, h) {
+  const r = Math.min(4, w / 2, h);
+  if (h <= 0.6) return '';
+  return `M${x} ${y + h}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}` +
+         `H${x + w - r}A${r} ${r} 0 0 1 ${x + w} ${y + r}V${y + h}Z`;
+}
 
 const DIMS = {
   month:   { title: 'Month',   of: p => p.inception.slice(0, 7), label: monthLabel },
@@ -217,7 +315,7 @@ function matches(p, except) {
   }
   return true;
 }
-function rowsFor(except) { return POLICIES.filter(p => matches(p, except)); }
+const rowsFor = except => POLICIES.filter(p => matches(p, except));
 
 // Revenue per category, seeded with every category so empty ones stay visible.
 function totals(dim, rows) {
@@ -234,24 +332,22 @@ function toggle(dim, key) {
   render();
 }
 // '' when nothing is picked in this dimension, so bars keep the base colour.
-function stateClass(dim, key) {
-  const sel = filters[dim];
-  if (!sel.size) return '';
-  return sel.has(key) ? ' on' : ' off';
-}
+const stateClass = (dim, key) =>
+  !filters[dim].size ? '' : (filters[dim].has(key) ? ' on' : ' off');
 
-/* ---------- charts ---------- */
+/* ---------------- charts ---------------- */
 function barRows(el, dim) {
   const m = totals(dim, rowsFor(dim));
-  const max = Math.max(1, ...m.values());
+  const max = niceMax(Math.max(1, ...m.values()));
   el.innerHTML = ORDER[dim].map(k => {
-    const v = m.get(k);
-    const w = (v / max) * 100;
+    const v = m.get(k), sel = filters[dim].has(k);
+    const label = DIMS[dim].label(k);
     return `<div class="row" data-dim="${dim}" data-key="${esc(k)}"
-                 title="${esc(DIMS[dim].label(k))}: ${money0(v)}">
-      <div class="rname">${esc(DIMS[dim].label(k))}</div>
-      <div class="rbar"><span class="bar${stateClass(dim, k)}"
-           style="width:${w}%${v > 0 ? ';min-width:2px' : ''}"></span></div>
+                 role="button" tabindex="0" aria-pressed="${sel}"
+                 aria-label="${esc(label)}, ${money0(v)}">
+      <div class="rname">${esc(label)}</div>
+      <div class="track"><span class="bar${stateClass(dim, k)}"
+           style="width:${(v / max) * 100}%${v > 0 ? ';min-width:3px' : ''}"></span></div>
       <div class="rval">${moneyK(v)}</div>
     </div>`;
   }).join('');
@@ -260,40 +356,65 @@ function barRows(el, dim) {
 function monthChart(el) {
   const m = totals('month', rowsFor('month'));
   const keys = ORDER.month;
-  const W = Math.max(320, el.clientWidth || 900);
-  const narrow = W < 640;
-  const H = narrow ? 200 : 240;
-  const pad = { t: 8, r: 4, b: narrow ? 42 : 48, l: narrow ? 44 : 62 };
+  const W = Math.max(300, el.clientWidth || 860);
+  const narrow = W < 620;
+  const H = narrow ? 210 : 260;
+  const pad = { t: 22, r: 6, b: narrow ? 40 : 46, l: narrow ? 42 : 56 };
   const plotW = W - pad.l - pad.r, plotH = H - pad.t - pad.b;
-  const max = Math.max(1, ...m.values());
-  const step = plotW / keys.length;
-  const fs = narrow ? 9 : 10;
-  // Label every nth month, so labels never collide at whatever width we got.
-  const every = Math.max(1, Math.ceil((fs * 2.9) / step));
-
-  const bars = keys.map((k, i) => {
-    const h = (m.get(k) / max) * plotH;
-    return `<rect class="${stateClass('month', k).trim()}" data-dim="month" data-key="${k}"
-                  x="${(pad.l + i * step + 1).toFixed(1)}" y="${(pad.t + plotH - h).toFixed(1)}"
-                  width="${Math.max(1, step - 2).toFixed(1)}" height="${h.toFixed(1)}"
-            ><title>${monthLabel(k)}: ${money0(m.get(k))}</title></rect>`;
-  }).join('');
+  const raw = Math.max(1, ...m.values());
+  const max = niceMax(raw);
+  const slot = plotW / keys.length;
+  const bw = Math.min(24, slot - 2);           // cap thickness; leftover is air
+  const fs = narrow ? 9 : 10.5;
+  const every = Math.max(1, Math.ceil((fs * 3.1) / slot));
+  const peakKey = keys.reduce((a, b) => (m.get(b) > m.get(a) ? b : a), keys[0]);
 
   const grid = [0, 0.5, 1].map(f => {
-    const y = pad.t + plotH - f * plotH;
-    return `<line class="grid" x1="${pad.l}" y1="${y}" x2="${W - pad.r}" y2="${y}"/>
-            <text x="${pad.l - 6}" y="${y + 4}" text-anchor="end"
-                  font-size="${fs + 1}">${moneyK(max * f)}</text>`;
+    const y = +(pad.t + plotH - f * plotH).toFixed(1);
+    return `<line class="${f === 0 ? 'baseline' : 'gridline'}" x1="${pad.l}" y1="${y}" x2="${W - pad.r}" y2="${y}"/>
+            <text class="tick" x="${pad.l - 8}" y="${y + 3.5}" text-anchor="end">${moneyK(max * f)}</text>`;
   }).join('');
+
+  const cols = keys.map((k, i) => {
+    const v = m.get(k), h = (v / max) * plotH;
+    const x = pad.l + i * slot + (slot - bw) / 2;
+    const y = pad.t + plotH - h;
+    const sel = filters.month.has(k);
+    return `<g class="colgrp" role="button" tabindex="0" aria-pressed="${sel}"
+               data-dim="month" data-key="${k}"
+               aria-label="${monthLabel(k)}, ${money0(v)}">
+      <title>${monthLabel(k)}: ${money0(v)}</title>
+      <rect class="colhit" x="${(pad.l + i * slot).toFixed(1)}" y="${pad.t}"
+            width="${slot.toFixed(1)}" height="${plotH}"/>
+      <path class="col${stateClass('month', k)}" d="${capCol(+x.toFixed(1), +y.toFixed(1), +bw.toFixed(1), +h.toFixed(1))}"/>
+      <rect class="focusring" x="${(pad.l + i * slot).toFixed(1)}" y="${pad.t}"
+            width="${slot.toFixed(1)}" height="${plotH}" rx="3" fill="none" stroke="none"/>
+    </g>`;
+  }).join('');
+
+  // One direct label, on the peak - never a number on every column.
+  const pi = keys.indexOf(peakKey), pv = m.get(peakKey);
+  const px = pad.l + pi * slot + slot / 2;
+  const peak = pv > 0
+    ? `<text class="peak" x="${px.toFixed(1)}" y="${(pad.t + plotH - (pv / max) * plotH - 7).toFixed(1)}"
+             text-anchor="${pi > keys.length - 3 ? 'end' : pi < 2 ? 'start' : 'middle'}">${moneyK(pv)}</text>`
+    : '';
 
   const labels = keys.map((k, i) => {
     if (i % every) return '';
-    const x = pad.l + i * step + step / 2, y = pad.t + plotH + 10;
-    return `<text x="${x.toFixed(1)}" y="${y}" text-anchor="end" font-size="${fs}"
-                  transform="rotate(-45 ${x.toFixed(1)} ${y})">${monthLabel(k)}</text>`;
+    const x = pad.l + i * slot + slot / 2, y = pad.t + plotH + 14;
+    return `<text class="mlabel" x="${x.toFixed(1)}" y="${y}" text-anchor="middle"
+                  style="font-size:${fs}px">${monthLabel(k).replace(' ', ' ')}</text>`;
   }).join('');
 
-  el.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${grid}${bars}${labels}</svg>`;
+  el.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"
+                       role="img" aria-label="Revenue by inception month">${grid}${cols}${peak}${labels}</svg>`;
+
+  // Table view - the same values, not gated behind a tooltip.
+  document.getElementById('tv-month').innerHTML =
+    '<table><thead><tr><th>Month</th><th class="n" style="text-align:right">Revenue</th></tr></thead><tbody>' +
+    keys.map(k => `<tr><td>${monthLabel(k)}</td><td class="n">${money0(m.get(k))}</td></tr>`).join('') +
+    '</tbody></table>';
 }
 
 function renderFilters() {
@@ -302,30 +423,37 @@ function renderFilters() {
   for (const dim in DIMS)
     for (const k of ORDER[dim])
       if (filters[dim].has(k))
-        chips.push(`<span class="chip" data-dim="${dim}" data-key="${esc(k)}"
-            title="Remove this filter"><b>${DIMS[dim].title}</b>${esc(DIMS[dim].label(k))}<span class="x">&times;</span></span>`);
-
+        chips.push(`<button class="chip" type="button" data-dim="${dim}" data-key="${esc(k)}"
+            aria-label="Remove filter ${esc(DIMS[dim].title)} ${esc(DIMS[dim].label(k))}"
+            ><b>${DIMS[dim].title}</b>${esc(DIMS[dim].label(k))}<span class="x" aria-hidden="true">&times;</span></button>`);
   el.innerHTML = chips.length
     ? chips.join('') + '<button id="clear-all" type="button">Clear all</button>'
-    : '<span class="none">No filters. Tap any bar to filter the rest; tap it again to clear.</span>';
+    : '<span class="none">No filters &mdash; select any bar to filter the other charts. Select it again to clear.</span>';
 }
 
 function render() {
   const shown = rowsFor(null);
   const gwp = shown.reduce((s, p) => s + p.gwp, 0);
   const rev = shown.reduce((s, p) => s + p.revenue, 0);
+  const any = Object.values(filters).some(s => s.size);
+  const bookRev = POLICIES.reduce((s, p) => s + p.revenue, 0);
 
   document.getElementById('kpi-gwp').textContent = money1(gwp);
   document.getElementById('kpi-gwp-note').textContent = money0(gwp);
   document.getElementById('kpi-rev').textContent = money1(rev);
-  document.getElementById('kpi-rev-note').textContent = gwp
-    ? money0(rev) + ' · ' + (rev / gwp * 100).toFixed(1) + '% of GWP'
-    : money0(rev);
+  document.getElementById('kpi-rev-note').textContent =
+    (gwp ? (rev / gwp * 100).toFixed(1) + '% of GWP' : money0(rev)) +
+    (any && bookRev ? ' · ' + (rev / bookRev * 100).toFixed(1) + '% of the book' : '');
+  document.getElementById('kpi-cnt').textContent = shown.length.toLocaleString('en-GB');
+  document.getElementById('kpi-cnt-note').textContent = any
+    ? 'of ' + POLICIES.length.toLocaleString('en-GB') + ' policies'
+    : 'inceptions ' + monthLabel(ORDER.month[0]) + ' to ' + monthLabel(ORDER.month[ORDER.month.length - 1]);
 
-  const any = Object.values(filters).some(s => s.size);
   document.getElementById('sub').textContent = any
-    ? `${shown.length} of ${POLICIES.length} policies match the current filters`
-    : `${POLICIES.length} policies · inceptions ${ORDER.month[0]} to ${ORDER.month[ORDER.month.length - 1]}`;
+    ? shown.length + ' of ' + POLICIES.length + ' policies match the current filters'
+    : POLICIES.length + ' policies · synthetic demo book';
+  document.getElementById('cap-month').textContent =
+    'By inception month' + (shown.length === 0 ? ' · nothing matches the current filters' : '');
 
   renderFilters();
   monthChart(document.getElementById('chart-month'));
@@ -333,14 +461,26 @@ function render() {
   barRows(document.getElementById('chart-owner'), 'owner');
 }
 
-// One delegated handler covers bars, rows and filter chips alike.
+/* ---------------- input ---------------- */
+function hit(target) {
+  const el = target.closest('[data-dim][data-key]');
+  return el && { dim: el.getAttribute('data-dim'), key: el.getAttribute('data-key') };
+}
 document.addEventListener('click', e => {
   if (e.target.closest('#clear-all')) {
     for (const dim in filters) filters[dim].clear();
     return render();
   }
-  const hit = e.target.closest('[data-dim][data-key]');
-  if (hit) toggle(hit.getAttribute('data-dim'), hit.getAttribute('data-key'));
+  const h = hit(e.target);
+  if (h) toggle(h.dim, h.key);
+});
+// Keyboard parity: bars are real controls, so Enter and Space must work.
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+  const el = e.target.closest && e.target.closest('[data-dim][data-key]');
+  if (!el || el.tagName === 'BUTTON') return;   // buttons already do this natively
+  e.preventDefault();
+  toggle(el.getAttribute('data-dim'), el.getAttribute('data-key'));
 });
 
 // The month chart is drawn at real pixel width, so it needs redrawing on resize.

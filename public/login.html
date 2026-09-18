@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in &middot; Broking dashboard</title>
+<style>
+  :root {
+    --page: #f1f0ec; --card: #fcfcfb; --border: #e3e1db;
+    --ink: #17171a; --ink-2: #5c5b56; --ink-3: #84837c;
+    --accent: #2a78d6; --accent-ink: #ffffff; --accent-hover: #1c5cab;
+    --focus: #184f95; --danger: #9a2c2c; --danger-bg: #fbeaea; --danger-br: #e6bcbc;
+    --shadow: 0 1px 2px rgba(20,20,19,.05), 0 1px 8px rgba(20,20,19,.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #101010; --card: #1a1a19; --border: #333331;
+      --ink: #f5f4ef; --ink-2: #b4b3a9; --ink-3: #86857d;
+      --accent: #3987e5; --accent-ink: #0b1220; --accent-hover: #5598e7;
+      --focus: #86b6ef; --danger: #f0a9a9; --danger-bg: #2a1b1b; --danger-br: #5c3434;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px; color: var(--ink); background: var(--page);
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    width: 100%; max-width: 380px; background: var(--card);
+    border: 1px solid var(--border); border-radius: 12px;
+    padding: 28px 26px 24px; box-shadow: var(--shadow);
+  }
+  h1 { font-size: 19px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 4px; }
+  .sub { font-size: 13.5px; color: var(--ink-2); margin-bottom: 22px; }
+  label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase;
+          letter-spacing: .07em; color: var(--ink-2); margin-bottom: 6px; }
+  input {
+    width: 100%; font: inherit; font-size: 15px; color: var(--ink);
+    background: var(--page); border: 1px solid var(--border);
+    border-radius: 7px; padding: 10px 12px; margin-bottom: 16px; min-height: 42px;
+  }
+  input:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button {
+    width: 100%; font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer;
+    color: var(--accent-ink); background: var(--accent); border: 1px solid transparent;
+    border-radius: 7px; padding: 11px 14px; min-height: 44px;
+  }
+  button:hover:not(:disabled) { background: var(--accent-hover); }
+  button:disabled { opacity: .6; cursor: default; }
+  .msg {
+    display: none; font-size: 13.5px; color: var(--danger);
+    background: var(--danger-bg); border: 1px solid var(--danger-br);
+    border-radius: 7px; padding: 9px 11px; margin-bottom: 16px;
+  }
+  .msg.show { display: block; }
+  .foot { font-size: 12.5px; color: var(--ink-3); margin-top: 18px; text-align: center; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <h1>Broking dashboard</h1>
+    <div class="sub">Sign in to continue.</div>
+
+    <div class="msg" id="msg" role="alert" aria-live="polite"></div>
+
+    <form id="form" method="post" action="/auth/login" novalidate>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="username"
+             required autofocus spellcheck="false">
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+      <button type="submit" id="submit">Sign in</button>
+    </form>
+
+    <div class="foot">Access is limited to approved addresses.</div>
+  </main>
+
+<script>
+  const form = document.getElementById('form');
+  const msg = document.getElementById('msg');
+  const submit = document.getElementById('submit');
+
+  function show(text) {
+    msg.textContent = text;
+    msg.classList.add('show');
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    msg.classList.remove('show');
+    submit.disabled = true;
+    submit.textContent = 'Signing in...';
+    try {
+      const r = await fetch('/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: document.getElementById('email').value,
+          password: document.getElementById('password').value,
+        }),
+      });
+      if (r.ok) { window.location.replace('/'); return; }
+      const body = await r.json().catch(() => ({}));
+      show(body.error || 'Sign-in failed.');
+    } catch (err) {
+      show('Could not reach the server. Try again.');
+    }
+    submit.disabled = false;
+    submit.textContent = 'Sign in';
+    document.getElementById('password').value = '';
+    document.getElementById('password').focus();
+  });
+</script>
+</body>
+</html>

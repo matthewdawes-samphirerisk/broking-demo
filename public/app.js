@@ -274,8 +274,8 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTogg
 updateToggle();
 
 // ---------- Load ----------
-fetch('data.json')
-  .then(r => r.json())
+fetch('api/policies')
+  .then(r => r.ok ? r.json() : Promise.reject(new Error(`server returned ${r.status}`)))
   .then(data => {
     policies = data.policies;
     for (const dim of Object.keys(DIMENSIONS)) {
@@ -290,5 +290,5 @@ fetch('data.json')
     render();
   })
   .catch(err => {
-    document.querySelector('.page').append(el('p', { text: `Could not load data.json: ${err.message}` }));
+    document.querySelector('.page').append(el('p', { text: `Could not load the policy data (${err.message}). Try refreshing the page.` }));
   });

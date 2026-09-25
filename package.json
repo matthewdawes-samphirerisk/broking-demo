@@ -4,7 +4,7 @@
   "description": "Demo broking dashboard - synthetic data, built live",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "node --env-file-if-exists=.env server.js"
   },
   "dependencies": {
     "express": "^4.19.2",

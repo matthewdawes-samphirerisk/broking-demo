@@ -97,7 +97,11 @@ function throttled(ip) {
 }
 
 // Form posts must come from this site (defence in depth on top of SameSite cookies).
+// Modern browsers say so directly in Sec-Fetch-Site, even when they hide the origin
+// (Origin: null); older ones fall back to comparing the Origin or Referer host.
 function sameOrigin(req) {
+  const site = req.get('sec-fetch-site');
+  if (site) return site === 'same-origin' || site === 'none';
   const origin = req.get('origin') || req.get('referer');
   if (!origin) return true;
   try { return new URL(origin).host === req.get('host'); } catch { return false; }
@@ -140,7 +144,8 @@ app.set('trust proxy', 1); // Railway terminates HTTPS in front of us; lets req.
 app.use((req, res, next) => {
   res.set({
     'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'no-referrer',
+    // Our own pages get the referrer (so form posts carry a real Origin); other sites get nothing.
+    'Referrer-Policy': 'same-origin',
     'X-Frame-Options': 'DENY',
   });
   next();

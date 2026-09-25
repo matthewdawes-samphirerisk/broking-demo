@@ -20,7 +20,11 @@
       <h1>Revenue dashboard</h1>
       <p class="sub" id="period">Demo data, entirely fictitious</p>
     </div>
-    <button id="theme-toggle" class="btn ghost" type="button"></button>
+    <div class="account">
+      <span class="who" id="who"></span>
+      <button id="theme-toggle" class="btn ghost" type="button"></button>
+      <form method="post" action="/logout"><button class="btn" type="submit">Sign out</button></form>
+    </div>
   </header>
 
   <section class="tiles" aria-label="Headline figures">

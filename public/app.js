@@ -274,8 +274,15 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTogg
 updateToggle();
 
 // ---------- Load ----------
-fetch('api/policies')
-  .then(r => r.ok ? r.json() : Promise.reject(new Error(`server returned ${r.status}`)))
+// A 401 means the session has ended: go back to the sign-in page.
+const getJson = url => fetch(url, { credentials: 'same-origin' }).then(r => {
+  if (r.status === 401) { location.href = '/login'; return new Promise(() => {}); }
+  return r.ok ? r.json() : Promise.reject(new Error(`server returned ${r.status}`));
+});
+
+getJson('api/me').then(me => { document.getElementById('who').textContent = me.email; }).catch(() => {});
+
+getJson('api/policies')
   .then(data => {
     policies = data.policies;
     for (const dim of Object.keys(DIMENSIONS)) {

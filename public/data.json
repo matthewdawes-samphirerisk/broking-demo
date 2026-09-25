@@ -1,0 +1,7621 @@
+{
+"source": "Demo Broking Data (CLEANED).xlsx",
+"policies": [
+{
+"id": "BTD-2024-00003",
+"inception": "2024-01-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 4870.0,
+"revenue": 1306.62
+},
+{
+"id": "BTD-2024-00004",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 11500.0,
+"revenue": 1107.45
+},
+{
+"id": "BTD-2024-00010",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 6890.0,
+"revenue": 607.7
+},
+{
+"id": "BTD-2024-00011",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 21580.0,
+"revenue": 1717.77
+},
+{
+"id": "BTD-2024-00013",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 5220.0,
+"revenue": 420.21
+},
+{
+"id": "BTD-2024-00014",
+"inception": "2024-01-01",
+"owner": "Tom Beckwith",
+"product": "Product Recall",
+"gwp": 14837.61,
+"revenue": 2485.3
+},
+{
+"id": "BTD-2024-00017",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 20050.0,
+"revenue": 3193.97
+},
+{
+"id": "BTD-2024-00018",
+"inception": "2024-01-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 4488.19,
+"revenue": 1047.99
+},
+{
+"id": "BTD-2024-00020",
+"inception": "2024-01-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 20160.0,
+"revenue": 2092.61
+},
+{
+"id": "BTD-2024-00022",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 30990.0,
+"revenue": 4970.8
+},
+{
+"id": "BTD-2024-00025",
+"inception": "2024-01-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 13385.83,
+"revenue": 2329.13
+},
+{
+"id": "BTD-2024-00026",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 15190.0,
+"revenue": 2678.0
+},
+{
+"id": "BTD-2024-00027",
+"inception": "2024-01-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3837.21,
+"revenue": 557.16
+},
+{
+"id": "BTD-2024-00028",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 11610.0,
+"revenue": 1187.7
+},
+{
+"id": "BTD-2024-00030",
+"inception": "2024-01-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 2787.56,
+"revenue": 751.25
+},
+{
+"id": "BTD-2024-00035",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7404.15,
+"revenue": 1290.54
+},
+{
+"id": "BTD-2024-00036",
+"inception": "2024-01-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 75404.26,
+"revenue": 8822.3
+},
+{
+"id": "BTD-2024-00037",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 16000.0,
+"revenue": 1612.8
+},
+{
+"id": "BTD-2024-00038",
+"inception": "2024-01-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 6470.0,
+"revenue": 1596.15
+},
+{
+"id": "BTD-2024-00039",
+"inception": "2024-01-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 13470.0,
+"revenue": 1468.23
+},
+{
+"id": "BTD-2024-00046",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Terrorism",
+"gwp": 12614.17,
+"revenue": 2535.45
+},
+{
+"id": "BTD-2024-00049",
+"inception": "2024-01-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 4891.19,
+"revenue": 650.53
+},
+{
+"id": "BTD-2024-00051",
+"inception": "2024-01-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 14984.25,
+"revenue": 1559.86
+},
+{
+"id": "BTD-2024-00053",
+"inception": "2024-01-01",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 9953.49,
+"revenue": 882.87
+},
+{
+"id": "BTD-2024-00054",
+"inception": "2024-01-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 20803.15,
+"revenue": 2436.05
+},
+{
+"id": "BTD-2024-00055",
+"inception": "2024-01-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 13622.05,
+"revenue": 1040.72
+},
+{
+"id": "BTD-2024-00050",
+"inception": "2024-01-02",
+"owner": "Tom Beckwith",
+"product": "Personal Accident",
+"gwp": 2141.73,
+"revenue": 235.8
+},
+{
+"id": "BTD-2024-00056",
+"inception": "2024-01-02",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 3279.07,
+"revenue": 615.81
+},
+{
+"id": "BTD-2024-00015",
+"inception": "2024-01-03",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 6020.0,
+"revenue": 1505.6
+},
+{
+"id": "BTD-2024-00021",
+"inception": "2024-01-05",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 5905.98,
+"revenue": 1079.02
+},
+{
+"id": "BTD-2024-00005",
+"inception": "2024-01-06",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 18232.56,
+"revenue": 1453.13
+},
+{
+"id": "BTD-2024-00009",
+"inception": "2024-01-06",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 11660.0,
+"revenue": 917.64
+},
+{
+"id": "BTD-2024-00024",
+"inception": "2024-01-06",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 4709.84,
+"revenue": 364.54
+},
+{
+"id": "BTD-2024-00007",
+"inception": "2024-01-07",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 24871.79,
+"revenue": 2216.08
+},
+{
+"id": "BTD-2024-00048",
+"inception": "2024-01-07",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 9030.0,
+"revenue": 1184.74
+},
+{
+"id": "BTD-2024-00016",
+"inception": "2024-01-08",
+"owner": "Sofia Almeida",
+"product": "Personal Accident",
+"gwp": 3724.41,
+"revenue": 742.27
+},
+{
+"id": "BTD-2024-00041",
+"inception": "2024-01-11",
+"owner": "Sofia Almeida",
+"product": "Active Assailant",
+"gwp": 19333.33,
+"revenue": 4168.27
+},
+{
+"id": "BTD-2024-00042",
+"inception": "2024-01-11",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 10552.33,
+"revenue": 1650.38
+},
+{
+"id": "BTD-2024-00023",
+"inception": "2024-01-17",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 9842.52,
+"revenue": 1299.21
+},
+{
+"id": "BTD-2024-00001",
+"inception": "2024-01-19",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 35660.0,
+"revenue": 7456.51
+},
+{
+"id": "BTD-2024-00019",
+"inception": "2024-01-19",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 12755.91,
+"revenue": 1289.62
+},
+{
+"id": "BTD-2024-00047",
+"inception": "2024-01-19",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 4932.64,
+"revenue": 545.55
+},
+{
+"id": "BTD-2024-00052",
+"inception": "2024-01-19",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 4794.87,
+"revenue": 1253.86
+},
+{
+"id": "BTD-2024-00012",
+"inception": "2024-01-20",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 11984.25,
+"revenue": 2460.37
+},
+{
+"id": "BTD-2024-00033",
+"inception": "2024-01-21",
+"owner": "Sofia Almeida",
+"product": "Fixated Threat",
+"gwp": 680.0,
+"revenue": 162.79
+},
+{
+"id": "BTD-2024-00044",
+"inception": "2024-01-21",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 13629.92,
+"revenue": 1237.6
+},
+{
+"id": "BTD-2024-00029",
+"inception": "2024-01-22",
+"owner": "Tom Beckwith",
+"product": "D&O",
+"gwp": 10952.76,
+"revenue": 939.75
+},
+{
+"id": "BTD-2024-00031",
+"inception": "2024-01-22",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 6240.0,
+"revenue": 1583.71
+},
+{
+"id": "BTD-2024-00008",
+"inception": "2024-01-23",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3960.63,
+"revenue": 552.9
+},
+{
+"id": "BTD-2024-00032",
+"inception": "2024-01-23",
+"owner": "Marcus Ridley",
+"product": "Fixated Threat",
+"gwp": 2251.97,
+"revenue": 544.75
+},
+{
+"id": "BTD-2024-00040",
+"inception": "2024-01-23",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 3190.0,
+"revenue": 395.56
+},
+{
+"id": "BTD-2024-00045",
+"inception": "2024-01-24",
+"owner": "Eleanor Voss",
+"product": "Personal Accident",
+"gwp": 5829.06,
+"revenue": 1080.71
+},
+{
+"id": "BTD-2024-00002",
+"inception": "2024-01-25",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 6310.0,
+"revenue": 559.07
+},
+{
+"id": "BTD-2024-00034",
+"inception": "2024-01-25",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 14450.0,
+"revenue": 1361.19
+},
+{
+"id": "BTD-2024-00006",
+"inception": "2024-01-28",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 5331.4,
+"revenue": 797.58
+},
+{
+"id": "BTD-2024-00043",
+"inception": "2024-01-28",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 15697.87,
+"revenue": 1795.84
+},
+{
+"id": "BTD-2024-00057",
+"inception": "2024-02-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 12180.0,
+"revenue": 1177.81
+},
+{
+"id": "BTD-2024-00058",
+"inception": "2024-02-01",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 27370.0,
+"revenue": 3229.66
+},
+{
+"id": "BTD-2024-00062",
+"inception": "2024-02-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 31085.47,
+"revenue": 5710.4
+},
+{
+"id": "BTD-2024-00063",
+"inception": "2024-02-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 6810.0,
+"revenue": 883.94
+},
+{
+"id": "BTD-2024-00066",
+"inception": "2024-02-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 7585.49,
+"revenue": 1008.87
+},
+{
+"id": "BTD-2024-00068",
+"inception": "2024-02-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 17017.44,
+"revenue": 3505.59
+},
+{
+"id": "BTD-2024-00069",
+"inception": "2024-02-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 63710.0,
+"revenue": 7409.47
+},
+{
+"id": "BTD-2024-00071",
+"inception": "2024-02-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 60260.0,
+"revenue": 15788.12
+},
+{
+"id": "BTD-2024-00074",
+"inception": "2024-02-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 3959.3,
+"revenue": 504.42
+},
+{
+"id": "BTD-2024-00075",
+"inception": "2024-02-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 10210.0,
+"revenue": 1336.49
+},
+{
+"id": "BTD-2024-00059",
+"inception": "2024-02-11",
+"owner": "Sofia Almeida",
+"product": "Active Assailant",
+"gwp": 12590.0,
+"revenue": 2631.31
+},
+{
+"id": "BTD-2024-00065",
+"inception": "2024-02-11",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 33923.08,
+"revenue": 3568.71
+},
+{
+"id": "BTD-2024-00060",
+"inception": "2024-02-12",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 66100.0,
+"revenue": 13325.76
+},
+{
+"id": "BTD-2024-00061",
+"inception": "2024-02-13",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 9941.86,
+"revenue": 1285.48
+},
+{
+"id": "BTD-2024-00072",
+"inception": "2024-02-15",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 17680.23,
+"revenue": 2012.01
+},
+{
+"id": "BTD-2024-00064",
+"inception": "2024-02-19",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 6490.0,
+"revenue": 756.09
+},
+{
+"id": "BTD-2024-00067",
+"inception": "2024-02-21",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 6826.77,
+"revenue": 450.57
+},
+{
+"id": "BTD-2024-00070",
+"inception": "2024-02-21",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 13669.29,
+"revenue": 3148.04
+},
+{
+"id": "BTD-2024-00073",
+"inception": "2024-02-24",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 13283.46,
+"revenue": 1562.14
+},
+{
+"id": "BTD-2024-00078",
+"inception": "2024-03-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 21250.0,
+"revenue": 1734.0
+},
+{
+"id": "BTD-2024-00082",
+"inception": "2024-03-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 2830.0,
+"revenue": 179.14
+},
+{
+"id": "BTD-2024-00087",
+"inception": "2024-03-01",
+"owner": "Marcus Ridley",
+"product": "Personal Accident",
+"gwp": 3243.52,
+"revenue": 357.11
+},
+{
+"id": "BTD-2024-00090",
+"inception": "2024-03-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 6070.87,
+"revenue": 1130.4
+},
+{
+"id": "BTD-2024-00091",
+"inception": "2024-03-01",
+"owner": "Eleanor Voss",
+"product": "Professional Indemnity",
+"gwp": 12880.0,
+"revenue": 1916.54
+},
+{
+"id": "BTD-2024-00092",
+"inception": "2024-03-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 35448.82,
+"revenue": 6621.84
+},
+{
+"id": "BTD-2024-00095",
+"inception": "2024-03-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 49100.0,
+"revenue": 8518.85
+},
+{
+"id": "BTD-2024-00096",
+"inception": "2024-03-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 26228.35,
+"revenue": 3115.93
+},
+{
+"id": "BTD-2024-00097",
+"inception": "2024-03-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1490.0,
+"revenue": 201.75
+},
+{
+"id": "BTD-2024-00098",
+"inception": "2024-03-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 9580.0,
+"revenue": 821.96
+},
+{
+"id": "BTD-2024-00077",
+"inception": "2024-03-04",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 28110.0,
+"revenue": 2642.34
+},
+{
+"id": "BTD-2024-00081",
+"inception": "2024-03-05",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 7170.0,
+"revenue": 1614.68
+},
+{
+"id": "BTD-2024-00093",
+"inception": "2024-03-08",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 4186.05,
+"revenue": 392.65
+},
+{
+"id": "BTD-2024-00083",
+"inception": "2024-03-11",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 26623.93,
+"revenue": 6802.41
+},
+{
+"id": "BTD-2024-00088",
+"inception": "2024-03-11",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2120.0,
+"revenue": 550.56
+},
+{
+"id": "BTD-2024-00076",
+"inception": "2024-03-13",
+"owner": "Marcus Ridley",
+"product": "Marine Cargo",
+"gwp": 7620.0,
+"revenue": 544.83
+},
+{
+"id": "BTD-2024-00084",
+"inception": "2024-03-13",
+"owner": "Tom Beckwith",
+"product": "Marine Cargo",
+"gwp": 4960.63,
+"revenue": 602.22
+},
+{
+"id": "BTD-2024-00085",
+"inception": "2024-03-17",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 3488.19,
+"revenue": 327.89
+},
+{
+"id": "BTD-2024-00094",
+"inception": "2024-03-17",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 12770.0,
+"revenue": 1923.16
+},
+{
+"id": "BTD-2024-00089",
+"inception": "2024-03-20",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 19320.0,
+"revenue": 2888.34
+},
+{
+"id": "BTD-2024-00080",
+"inception": "2024-03-25",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 16582.68,
+"revenue": 2925.18
+},
+{
+"id": "BTD-2024-00079",
+"inception": "2024-03-26",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 6504.27,
+"revenue": 1435.49
+},
+{
+"id": "BTD-2024-00086",
+"inception": "2024-03-26",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 20519.69,
+"revenue": 4108.04
+},
+{
+"id": "BTD-2024-00100",
+"inception": "2024-04-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 5383.42,
+"revenue": 670.77
+},
+{
+"id": "BTD-2024-00104",
+"inception": "2024-04-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 29881.89,
+"revenue": 5767.2
+},
+{
+"id": "BTD-2024-00106",
+"inception": "2024-04-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 10948.72,
+"revenue": 935.02
+},
+{
+"id": "BTD-2024-00107",
+"inception": "2024-04-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 76023.62,
+"revenue": 7366.69
+},
+{
+"id": "BTD-2024-00108",
+"inception": "2024-04-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 15390.0,
+"revenue": 2097.66
+},
+{
+"id": "BTD-2024-00111",
+"inception": "2024-04-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 7362.2,
+"revenue": 1189.73
+},
+{
+"id": "BTD-2024-00116",
+"inception": "2024-04-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 5590.0,
+"revenue": 1330.98
+},
+{
+"id": "BTD-2024-00118",
+"inception": "2024-04-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 9931.62,
+"revenue": 871.0
+},
+{
+"id": "BTD-2024-00120",
+"inception": "2024-04-01",
+"owner": "Marcus Ridley",
+"product": "Fixated Threat",
+"gwp": 1910.0,
+"revenue": 447.89
+},
+{
+"id": "BTD-2024-00124",
+"inception": "2024-04-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7165.35,
+"revenue": 728.72
+},
+{
+"id": "BTD-2024-00121",
+"inception": "2024-04-05",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 12395.35,
+"revenue": 2661.28
+},
+{
+"id": "BTD-2024-00126",
+"inception": "2024-04-05",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 17220.0,
+"revenue": 1498.14
+},
+{
+"id": "BTD-2024-00129",
+"inception": "2024-04-06",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 4653.54,
+"revenue": 867.89
+},
+{
+"id": "BTD-2024-00115",
+"inception": "2024-04-07",
+"owner": "Tom Beckwith",
+"product": "Political Violence",
+"gwp": 27900.0,
+"revenue": 5783.67
+},
+{
+"id": "BTD-2024-00105",
+"inception": "2024-04-08",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 10378.24,
+"revenue": 834.41
+},
+{
+"id": "BTD-2024-00109",
+"inception": "2024-04-09",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 28543.31,
+"revenue": 5329.04
+},
+{
+"id": "BTD-2024-00122",
+"inception": "2024-04-09",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 5913.39,
+"revenue": 1413.3
+},
+{
+"id": "BTD-2024-00110",
+"inception": "2024-04-11",
+"owner": "Tom Beckwith",
+"product": "D&O",
+"gwp": 17500.0,
+"revenue": 2644.25
+},
+{
+"id": "BTD-2024-00103",
+"inception": "2024-04-13",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 24020.0,
+"revenue": 2478.86
+},
+{
+"id": "BTD-2024-00117",
+"inception": "2024-04-13",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10153.85,
+"revenue": 833.63
+},
+{
+"id": "BTD-2024-00123",
+"inception": "2024-04-13",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 5940.0,
+"revenue": 1058.51
+},
+{
+"id": "BTD-2024-00112",
+"inception": "2024-04-14",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 4000.0,
+"revenue": 507.6
+},
+{
+"id": "BTD-2024-00125",
+"inception": "2024-04-15",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 12156.98,
+"revenue": 949.46
+},
+{
+"id": "BTD-2024-00101",
+"inception": "2024-04-17",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 4196.85,
+"revenue": 498.17
+},
+{
+"id": "BTD-2024-00113",
+"inception": "2024-04-22",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 6180.0,
+"revenue": 432.6
+},
+{
+"id": "BTD-2024-00099",
+"inception": "2024-04-23",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 60640.0,
+"revenue": 8956.53
+},
+{
+"id": "BTD-2024-00119",
+"inception": "2024-04-23",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 14921.26,
+"revenue": 2997.68
+},
+{
+"id": "BTD-2024-00127",
+"inception": "2024-04-23",
+"owner": "Sofia Almeida",
+"product": "Liability",
+"gwp": 10111.11,
+"revenue": 948.42
+},
+{
+"id": "BTD-2024-00102",
+"inception": "2024-04-24",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7614.17,
+"revenue": 790.35
+},
+{
+"id": "BTD-2024-00114",
+"inception": "2024-04-25",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 5566.93,
+"revenue": 704.22
+},
+{
+"id": "BTD-2024-00128",
+"inception": "2024-04-26",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 7320.0,
+"revenue": 613.42
+},
+{
+"id": "BTD-2024-00130",
+"inception": "2024-05-01",
+"owner": "Eleanor Voss",
+"product": "Cyber",
+"gwp": 19220.47,
+"revenue": 2848.47
+},
+{
+"id": "BTD-2024-00131",
+"inception": "2024-05-01",
+"owner": "Sofia Almeida",
+"product": "Liability",
+"gwp": 10088.08,
+"revenue": 1686.73
+},
+{
+"id": "BTD-2024-00132",
+"inception": "2024-05-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 3188.03,
+"revenue": 342.39
+},
+{
+"id": "BTD-2024-00133",
+"inception": "2024-05-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 15116.28,
+"revenue": 3207.67
+},
+{
+"id": "BTD-2024-00134",
+"inception": "2024-05-01",
+"owner": "Eleanor Voss",
+"product": "Professional Indemnity",
+"gwp": 10160.0,
+"revenue": 1422.4
+},
+{
+"id": "BTD-2024-00135",
+"inception": "2024-05-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 17890.0,
+"revenue": 1592.21
+},
+{
+"id": "BTD-2024-00137",
+"inception": "2024-05-01",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 4040.0,
+"revenue": 461.77
+},
+{
+"id": "BTD-2024-00140",
+"inception": "2024-05-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 17811.02,
+"revenue": 3334.22
+},
+{
+"id": "BTD-2024-00143",
+"inception": "2024-05-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 9905.98,
+"revenue": 2005.96
+},
+{
+"id": "BTD-2024-00147",
+"inception": "2024-05-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3232.56,
+"revenue": 421.53
+},
+{
+"id": "BTD-2024-00148",
+"inception": "2024-05-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 7550.0,
+"revenue": 1599.85
+},
+{
+"id": "BTD-2024-00150",
+"inception": "2024-05-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 14521.37,
+"revenue": 3412.52
+},
+{
+"id": "BTD-2024-00136",
+"inception": "2024-05-03",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 19120.0,
+"revenue": 1894.79
+},
+{
+"id": "BTD-2024-00142",
+"inception": "2024-05-10",
+"owner": "Tom Beckwith",
+"product": "Product Recall",
+"gwp": 7959.3,
+"revenue": 1400.04
+},
+{
+"id": "BTD-2024-00145",
+"inception": "2024-05-13",
+"owner": "Eleanor Voss",
+"product": "Product Recall",
+"gwp": 25854.7,
+"revenue": 2298.48
+},
+{
+"id": "BTD-2024-00141",
+"inception": "2024-05-14",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 20660.0,
+"revenue": 1780.89
+},
+{
+"id": "BTD-2024-00138",
+"inception": "2024-05-16",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 12008.55,
+"revenue": 2529.0
+},
+{
+"id": "BTD-2024-00144",
+"inception": "2024-05-16",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 1900.0,
+"revenue": 205.96
+},
+{
+"id": "BTD-2024-00139",
+"inception": "2024-05-20",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 146581.2,
+"revenue": 21459.49
+},
+{
+"id": "BTD-2024-00146",
+"inception": "2024-05-22",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 3200.0,
+"revenue": 326.08
+},
+{
+"id": "BTD-2024-00149",
+"inception": "2024-05-23",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 51220.47,
+"revenue": 6530.61
+},
+{
+"id": "BTD-2024-00154",
+"inception": "2024-06-01",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 34240.0,
+"revenue": 5673.57
+},
+{
+"id": "BTD-2024-00158",
+"inception": "2024-06-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 20290.6,
+"revenue": 4291.46
+},
+{
+"id": "BTD-2024-00159",
+"inception": "2024-06-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 11897.64,
+"revenue": 1713.26
+},
+{
+"id": "BTD-2024-00164",
+"inception": "2024-06-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 4370.0,
+"revenue": 564.17
+},
+{
+"id": "BTD-2024-00165",
+"inception": "2024-06-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 12180.0,
+"revenue": 2621.14
+},
+{
+"id": "BTD-2024-00167",
+"inception": "2024-06-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 18842.52,
+"revenue": 3478.33
+},
+{
+"id": "BTD-2024-00168",
+"inception": "2024-06-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 18572.65,
+"revenue": 1948.27
+},
+{
+"id": "BTD-2024-00170",
+"inception": "2024-06-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 16205.13,
+"revenue": 1131.12
+},
+{
+"id": "BTD-2024-00172",
+"inception": "2024-06-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 3370.0,
+"revenue": 366.66
+},
+{
+"id": "BTD-2024-00173",
+"inception": "2024-06-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 18910.0,
+"revenue": 2163.3
+},
+{
+"id": "BTD-2024-00152",
+"inception": "2024-06-02",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 3240.0,
+"revenue": 336.31
+},
+{
+"id": "BTD-2024-00155",
+"inception": "2024-06-02",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 2320.0,
+"revenue": 150.1
+},
+{
+"id": "BTD-2024-00156",
+"inception": "2024-06-04",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 35098.84,
+"revenue": 6984.67
+},
+{
+"id": "BTD-2024-00163",
+"inception": "2024-06-06",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 15900.0,
+"revenue": 3429.63
+},
+{
+"id": "BTD-2024-00171",
+"inception": "2024-06-07",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 12090.0,
+"revenue": 3209.89
+},
+{
+"id": "BTD-2024-00174",
+"inception": "2024-06-10",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 3196.85,
+"revenue": 804.01
+},
+{
+"id": "BTD-2024-00157",
+"inception": "2024-06-11",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 12748.03,
+"revenue": 1822.97
+},
+{
+"id": "BTD-2024-00160",
+"inception": "2024-06-13",
+"owner": "Tom Beckwith",
+"product": "Personal Accident",
+"gwp": 6388.6,
+"revenue": 686.77
+},
+{
+"id": "BTD-2024-00153",
+"inception": "2024-06-16",
+"owner": "Sofia Almeida",
+"product": "D&O",
+"gwp": 38834.2,
+"revenue": 3203.82
+},
+{
+"id": "BTD-2024-00161",
+"inception": "2024-06-16",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 2330.71,
+"revenue": 265.7
+},
+{
+"id": "BTD-2024-00162",
+"inception": "2024-06-18",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 2350.0,
+"revenue": 478.46
+},
+{
+"id": "BTD-2024-00169",
+"inception": "2024-06-21",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 2950.0,
+"revenue": 229.51
+},
+{
+"id": "BTD-2024-00166",
+"inception": "2024-06-27",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 5881.89,
+"revenue": 821.11
+},
+{
+"id": "BTD-2024-00151",
+"inception": "2024-06-28",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 43204.72,
+"revenue": 7755.25
+},
+{
+"id": "BTD-2024-00177",
+"inception": "2024-07-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 32472.44,
+"revenue": 3331.67
+},
+{
+"id": "BTD-2024-00178",
+"inception": "2024-07-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 35660.0,
+"revenue": 5284.81
+},
+{
+"id": "BTD-2024-00179",
+"inception": "2024-07-01",
+"owner": "Eleanor Voss",
+"product": "Professional Indemnity",
+"gwp": 9653.54,
+"revenue": 829.24
+},
+{
+"id": "BTD-2024-00180",
+"inception": "2024-07-01",
+"owner": "Sofia Almeida",
+"product": "Professional Indemnity",
+"gwp": 9889.76,
+"revenue": 870.3
+},
+{
+"id": "BTD-2024-00181",
+"inception": "2024-07-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 3881.89,
+"revenue": 1036.08
+},
+{
+"id": "BTD-2024-00183",
+"inception": "2024-07-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 22120.0,
+"revenue": 3329.06
+},
+{
+"id": "BTD-2024-00188",
+"inception": "2024-07-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 5283.46,
+"revenue": 800.44
+},
+{
+"id": "BTD-2024-00189",
+"inception": "2024-07-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 6307.69,
+"revenue": 709.62
+},
+{
+"id": "BTD-2024-00190",
+"inception": "2024-07-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 10787.4,
+"revenue": 1370.0
+},
+{
+"id": "BTD-2024-00191",
+"inception": "2024-07-01",
+"owner": "Eleanor Voss",
+"product": "Fixated Threat",
+"gwp": 4893.62,
+"revenue": 658.19
+},
+{
+"id": "BTD-2024-00193",
+"inception": "2024-07-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 74094.02,
+"revenue": 15967.26
+},
+{
+"id": "BTD-2024-00195",
+"inception": "2024-07-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 47196.58,
+"revenue": 9250.53
+},
+{
+"id": "BTD-2024-00197",
+"inception": "2024-07-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 88885.11,
+"revenue": 9021.84
+},
+{
+"id": "BTD-2024-00199",
+"inception": "2024-07-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 23881.89,
+"revenue": 2777.46
+},
+{
+"id": "BTD-2024-00200",
+"inception": "2024-07-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 4145.35,
+"revenue": 554.23
+},
+{
+"id": "BTD-2024-00203",
+"inception": "2024-07-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 32180.0,
+"revenue": 3565.54
+},
+{
+"id": "BTD-2024-00206",
+"inception": "2024-07-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 4212.6,
+"revenue": 750.69
+},
+{
+"id": "BTD-2024-00214",
+"inception": "2024-07-01",
+"owner": "Priya Nandakumar",
+"product": "Terrorism",
+"gwp": 18660.0,
+"revenue": 2013.41
+},
+{
+"id": "BTD-2024-00215",
+"inception": "2024-07-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 19763.78,
+"revenue": 1749.09
+},
+{
+"id": "BTD-2024-00219",
+"inception": "2024-07-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 3150.26,
+"revenue": 763.94
+},
+{
+"id": "BTD-2024-00187",
+"inception": "2024-07-04",
+"owner": "Priya Nandakumar",
+"product": "D&O",
+"gwp": 29188.03,
+"revenue": 4658.41
+},
+{
+"id": "BTD-2024-00205",
+"inception": "2024-07-05",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 5480.0,
+"revenue": 1077.92
+},
+{
+"id": "BTD-2024-00209",
+"inception": "2024-07-05",
+"owner": "Sofia Almeida",
+"product": "Kidnap & Ransom",
+"gwp": 29574.8,
+"revenue": 7373.0
+},
+{
+"id": "BTD-2024-00185",
+"inception": "2024-07-09",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 5308.14,
+"revenue": 520.73
+},
+{
+"id": "BTD-2024-00207",
+"inception": "2024-07-10",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 3700.0,
+"revenue": 725.94
+},
+{
+"id": "BTD-2024-00184",
+"inception": "2024-07-12",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2960.0,
+"revenue": 787.95
+},
+{
+"id": "BTD-2024-00175",
+"inception": "2024-07-13",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 29860.0,
+"revenue": 5754.02
+},
+{
+"id": "BTD-2024-00182",
+"inception": "2024-07-13",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 14937.01,
+"revenue": 1669.96
+},
+{
+"id": "BTD-2024-00194",
+"inception": "2024-07-14",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 33700.79,
+"revenue": 3242.02
+},
+{
+"id": "BTD-2024-00213",
+"inception": "2024-07-14",
+"owner": "Priya Nandakumar",
+"product": "Active Assailant",
+"gwp": 4960.0,
+"revenue": 1125.42
+},
+{
+"id": "BTD-2024-00186",
+"inception": "2024-07-16",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 32464.57,
+"revenue": 4476.86
+},
+{
+"id": "BTD-2024-00192",
+"inception": "2024-07-17",
+"owner": "Tom Beckwith",
+"product": "Professional Indemnity",
+"gwp": 5640.0,
+"revenue": 469.81
+},
+{
+"id": "BTD-2024-00176",
+"inception": "2024-07-18",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 12650.0,
+"revenue": 1493.96
+},
+{
+"id": "BTD-2024-00204",
+"inception": "2024-07-18",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1290.6,
+"revenue": 348.33
+},
+{
+"id": "BTD-2024-00198",
+"inception": "2024-07-19",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 11610.0,
+"revenue": 891.65
+},
+{
+"id": "BTD-2024-00208",
+"inception": "2024-07-20",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 17062.99,
+"revenue": 1632.93
+},
+{
+"id": "BTD-2024-00212",
+"inception": "2024-07-20",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 5210.0,
+"revenue": 666.36
+},
+{
+"id": "BTD-2024-00217",
+"inception": "2024-07-20",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 6157.48,
+"revenue": 949.48
+},
+{
+"id": "BTD-2024-00196",
+"inception": "2024-07-21",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7921.26,
+"revenue": 1473.35
+},
+{
+"id": "BTD-2024-00201",
+"inception": "2024-07-22",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 36320.0,
+"revenue": 4100.53
+},
+{
+"id": "BTD-2024-00202",
+"inception": "2024-07-24",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7589.74,
+"revenue": 746.83
+},
+{
+"id": "BTD-2024-00210",
+"inception": "2024-07-26",
+"owner": "Priya Nandakumar",
+"product": "Political Violence",
+"gwp": 15100.0,
+"revenue": 3101.54
+},
+{
+"id": "BTD-2024-00216",
+"inception": "2024-07-26",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 12940.0,
+"revenue": 1321.17
+},
+{
+"id": "BTD-2024-00211",
+"inception": "2024-07-27",
+"owner": "Tom Beckwith",
+"product": "D&O",
+"gwp": 18566.93,
+"revenue": 2967.0
+},
+{
+"id": "BTD-2024-00218",
+"inception": "2024-07-28",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 39921.26,
+"revenue": 3824.46
+},
+{
+"id": "BTD-2024-00220",
+"inception": "2024-08-01",
+"owner": "Eleanor Voss",
+"product": "Marine Cargo",
+"gwp": 17150.0,
+"revenue": 2068.29
+},
+{
+"id": "BTD-2024-00227",
+"inception": "2024-08-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 13424.42,
+"revenue": 1525.01
+},
+{
+"id": "BTD-2024-00228",
+"inception": "2024-08-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 905.51,
+"revenue": 118.89
+},
+{
+"id": "BTD-2024-00229",
+"inception": "2024-08-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 10010.0,
+"revenue": 2518.52
+},
+{
+"id": "BTD-2024-00234",
+"inception": "2024-08-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 1803.15,
+"revenue": 228.1
+},
+{
+"id": "BTD-2024-00225",
+"inception": "2024-08-04",
+"owner": "Sofia Almeida",
+"product": "D&O",
+"gwp": 18240.0,
+"revenue": 2575.49
+},
+{
+"id": "BTD-2024-00236",
+"inception": "2024-08-06",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 14000.0,
+"revenue": 3432.8
+},
+{
+"id": "BTD-2024-00221",
+"inception": "2024-08-08",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 14503.94,
+"revenue": 2783.31
+},
+{
+"id": "BTD-2024-00224",
+"inception": "2024-08-08",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 24259.84,
+"revenue": 5490.0
+},
+{
+"id": "BTD-2024-00235",
+"inception": "2024-08-10",
+"owner": "Sofia Almeida",
+"product": "Active Assailant",
+"gwp": 3818.9,
+"revenue": 868.04
+},
+{
+"id": "BTD-2024-00233",
+"inception": "2024-08-12",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 1574.8,
+"revenue": 168.35
+},
+{
+"id": "BTD-2024-00226",
+"inception": "2024-08-14",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 3511.81,
+"revenue": 825.63
+},
+{
+"id": "BTD-2024-00222",
+"inception": "2024-08-17",
+"owner": "Tom Beckwith",
+"product": "Personal Accident",
+"gwp": 1098.45,
+"revenue": 219.47
+},
+{
+"id": "BTD-2024-00223",
+"inception": "2024-08-19",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1848.84,
+"revenue": 238.68
+},
+{
+"id": "BTD-2024-00230",
+"inception": "2024-08-21",
+"owner": "Tom Beckwith",
+"product": "Product Recall",
+"gwp": 15551.18,
+"revenue": 1478.92
+},
+{
+"id": "BTD-2024-00231",
+"inception": "2024-08-23",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 25510.0,
+"revenue": 5275.47
+},
+{
+"id": "BTD-2024-00232",
+"inception": "2024-08-25",
+"owner": "Priya Nandakumar",
+"product": "Professional Indemnity",
+"gwp": 3472.44,
+"revenue": 503.16
+},
+{
+"id": "BTD-2024-00237",
+"inception": "2024-09-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1710.0,
+"revenue": 233.41
+},
+{
+"id": "BTD-2024-00239",
+"inception": "2024-09-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 31470.0,
+"revenue": 5859.71
+},
+{
+"id": "BTD-2024-00240",
+"inception": "2024-09-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 2340.0,
+"revenue": 253.89
+},
+{
+"id": "BTD-2024-00241",
+"inception": "2024-09-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 96453.49,
+"revenue": 20399.91
+},
+{
+"id": "BTD-2024-00242",
+"inception": "2024-09-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 75220.47,
+"revenue": 15818.87
+},
+{
+"id": "BTD-2024-00244",
+"inception": "2024-09-01",
+"owner": "Tom Beckwith",
+"product": "Personal Accident",
+"gwp": 5017.09,
+"revenue": 979.34
+},
+{
+"id": "BTD-2024-00245",
+"inception": "2024-09-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 13850.0,
+"revenue": 1221.57
+},
+{
+"id": "BTD-2024-00250",
+"inception": "2024-09-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 15880.0,
+"revenue": 1462.55
+},
+{
+"id": "BTD-2024-00252",
+"inception": "2024-09-01",
+"owner": "Tom Beckwith",
+"product": "Liability",
+"gwp": 4669.29,
+"revenue": 456.66
+},
+{
+"id": "BTD-2024-00254",
+"inception": "2024-09-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 23102.36,
+"revenue": 4394.07
+},
+{
+"id": "BTD-2024-00255",
+"inception": "2024-09-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 4480.0,
+"revenue": 365.57
+},
+{
+"id": "BTD-2024-00256",
+"inception": "2024-09-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 14685.04,
+"revenue": 2183.67
+},
+{
+"id": "BTD-2024-00259",
+"inception": "2024-09-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 13724.41,
+"revenue": 3050.94
+},
+{
+"id": "BTD-2024-00246",
+"inception": "2024-09-04",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 5275.59,
+"revenue": 1234.49
+},
+{
+"id": "BTD-2024-00238",
+"inception": "2024-09-07",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 15420.0,
+"revenue": 1734.75
+},
+{
+"id": "BTD-2024-00247",
+"inception": "2024-09-10",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 27360.0,
+"revenue": 3201.12
+},
+{
+"id": "BTD-2024-00251",
+"inception": "2024-09-10",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 22811.02,
+"revenue": 4817.69
+},
+{
+"id": "BTD-2024-00257",
+"inception": "2024-09-14",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10649.57,
+"revenue": 825.34
+},
+{
+"id": "BTD-2024-00248",
+"inception": "2024-09-17",
+"owner": "Marcus Ridley",
+"product": "Fixated Threat",
+"gwp": 6905.51,
+"revenue": 892.88
+},
+{
+"id": "BTD-2024-00249",
+"inception": "2024-09-17",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 1858.27,
+"revenue": 133.24
+},
+{
+"id": "BTD-2024-00258",
+"inception": "2024-09-23",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 3582.68,
+"revenue": 414.87
+},
+{
+"id": "BTD-2024-00253",
+"inception": "2024-09-24",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 14738.37,
+"revenue": 1037.58
+},
+{
+"id": "BTD-2024-00243",
+"inception": "2024-09-26",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 9430.0,
+"revenue": 2328.27
+},
+{
+"id": "BTD-2024-00260",
+"inception": "2024-10-01",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 3820.0,
+"revenue": 995.49
+},
+{
+"id": "BTD-2024-00262",
+"inception": "2024-10-01",
+"owner": "Sofia Almeida",
+"product": "Cyber",
+"gwp": 17585.49,
+"revenue": 1415.63
+},
+{
+"id": "BTD-2024-00268",
+"inception": "2024-10-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 4520.0,
+"revenue": 1095.65
+},
+{
+"id": "BTD-2024-00273",
+"inception": "2024-10-01",
+"owner": "Priya Nandakumar",
+"product": "Active Assailant",
+"gwp": 15560.0,
+"revenue": 3297.16
+},
+{
+"id": "BTD-2024-00274",
+"inception": "2024-10-01",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 17937.01,
+"revenue": 3356.01
+},
+{
+"id": "BTD-2024-00277",
+"inception": "2024-10-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 11854.65,
+"revenue": 2049.67
+},
+{
+"id": "BTD-2024-00278",
+"inception": "2024-10-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 5912.79,
+"revenue": 878.05
+},
+{
+"id": "BTD-2024-00279",
+"inception": "2024-10-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 5606.3,
+"revenue": 1486.79
+},
+{
+"id": "BTD-2024-00280",
+"inception": "2024-10-01",
+"owner": "Eleanor Voss",
+"product": "Personal Accident",
+"gwp": 7220.0,
+"revenue": 773.26
+},
+{
+"id": "BTD-2024-00285",
+"inception": "2024-10-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 22968.91,
+"revenue": 2055.72
+},
+{
+"id": "BTD-2024-00288",
+"inception": "2024-10-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 5686.05,
+"revenue": 452.61
+},
+{
+"id": "BTD-2024-00276",
+"inception": "2024-10-03",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 11340.0,
+"revenue": 3011.9
+},
+{
+"id": "BTD-2024-00281",
+"inception": "2024-10-03",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 7042.74,
+"revenue": 1607.86
+},
+{
+"id": "BTD-2024-00287",
+"inception": "2024-10-04",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 14989.64,
+"revenue": 1555.92
+},
+{
+"id": "BTD-2024-00263",
+"inception": "2024-10-05",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10080.0,
+"revenue": 872.93
+},
+{
+"id": "BTD-2024-00270",
+"inception": "2024-10-06",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 6941.86,
+"revenue": 1391.15
+},
+{
+"id": "BTD-2024-00275",
+"inception": "2024-10-09",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 13102.36,
+"revenue": 1154.32
+},
+{
+"id": "BTD-2024-00289",
+"inception": "2024-10-09",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 7626.94,
+"revenue": 646.0
+},
+{
+"id": "BTD-2024-00266",
+"inception": "2024-10-13",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 34204.72,
+"revenue": 7340.33
+},
+{
+"id": "BTD-2024-00286",
+"inception": "2024-10-14",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 7110.0,
+"revenue": 928.57
+},
+{
+"id": "BTD-2024-00269",
+"inception": "2024-10-15",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 23401.57,
+"revenue": 3000.08
+},
+{
+"id": "BTD-2024-00282",
+"inception": "2024-10-15",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 15881.89,
+"revenue": 1843.89
+},
+{
+"id": "BTD-2024-00271",
+"inception": "2024-10-17",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 2968.5,
+"revenue": 601.12
+},
+{
+"id": "BTD-2024-00284",
+"inception": "2024-10-17",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 29410.26,
+"revenue": 2741.04
+},
+{
+"id": "BTD-2024-00265",
+"inception": "2024-10-20",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 5905.98,
+"revenue": 569.34
+},
+{
+"id": "BTD-2024-00267",
+"inception": "2024-10-20",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 39240.0,
+"revenue": 7353.58
+},
+{
+"id": "BTD-2024-00272",
+"inception": "2024-10-20",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 10370.0,
+"revenue": 2475.32
+},
+{
+"id": "BTD-2024-00264",
+"inception": "2024-10-23",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 18017.44,
+"revenue": 3549.44
+},
+{
+"id": "BTD-2024-00283",
+"inception": "2024-10-23",
+"owner": "Tom Beckwith",
+"product": "Personal Accident",
+"gwp": 4570.0,
+"revenue": 847.74
+},
+{
+"id": "BTD-2024-00261",
+"inception": "2024-10-25",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 4730.0,
+"revenue": 615.85
+},
+{
+"id": "BTD-2024-00290",
+"inception": "2024-11-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 7823.83,
+"revenue": 1452.1
+},
+{
+"id": "BTD-2024-00291",
+"inception": "2024-11-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 5440.94,
+"revenue": 657.81
+},
+{
+"id": "BTD-2024-00292",
+"inception": "2024-11-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 17240.0,
+"revenue": 1658.49
+},
+{
+"id": "BTD-2024-00296",
+"inception": "2024-11-01",
+"owner": "Sofia Almeida",
+"product": "Cyber",
+"gwp": 19140.0,
+"revenue": 2844.2
+},
+{
+"id": "BTD-2024-00297",
+"inception": "2024-11-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 9906.74,
+"revenue": 2460.83
+},
+{
+"id": "BTD-2024-00298",
+"inception": "2024-11-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 670.0,
+"revenue": 173.73
+},
+{
+"id": "BTD-2024-00301",
+"inception": "2024-11-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 12229.79,
+"revenue": 1138.59
+},
+{
+"id": "BTD-2024-00302",
+"inception": "2024-11-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 12470.09,
+"revenue": 2469.08
+},
+{
+"id": "BTD-2024-00303",
+"inception": "2024-11-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 13593.02,
+"revenue": 1035.79
+},
+{
+"id": "BTD-2024-00304",
+"inception": "2024-11-01",
+"owner": "Tom Beckwith",
+"product": "Marine Cargo",
+"gwp": 4510.0,
+"revenue": 537.59
+},
+{
+"id": "BTD-2024-00310",
+"inception": "2024-11-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 3540.0,
+"revenue": 408.16
+},
+{
+"id": "BTD-2024-00300",
+"inception": "2024-11-12",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 15310.0,
+"revenue": 3039.03
+},
+{
+"id": "BTD-2024-00293",
+"inception": "2024-11-14",
+"owner": "Tom Beckwith",
+"product": "Cyber",
+"gwp": 19660.0,
+"revenue": 2726.84
+},
+{
+"id": "BTD-2024-00305",
+"inception": "2024-11-15",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 16410.0,
+"revenue": 1412.9
+},
+{
+"id": "BTD-2024-00294",
+"inception": "2024-11-17",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 7653.54,
+"revenue": 1392.18
+},
+{
+"id": "BTD-2024-00307",
+"inception": "2024-11-17",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 12251.97,
+"revenue": 1254.6
+},
+{
+"id": "BTD-2024-00295",
+"inception": "2024-11-20",
+"owner": "Priya Nandakumar",
+"product": "Kidnap & Ransom",
+"gwp": 9980.0,
+"revenue": 2485.02
+},
+{
+"id": "BTD-2024-00299",
+"inception": "2024-11-20",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 2792.75,
+"revenue": 374.79
+},
+{
+"id": "BTD-2024-00309",
+"inception": "2024-11-21",
+"owner": "Sofia Almeida",
+"product": "Liability",
+"gwp": 22666.67,
+"revenue": 4277.2
+},
+{
+"id": "BTD-2024-00306",
+"inception": "2024-11-23",
+"owner": "Sofia Almeida",
+"product": "Liability",
+"gwp": 25496.06,
+"revenue": 4635.18
+},
+{
+"id": "BTD-2024-00308",
+"inception": "2024-11-28",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 73888.89,
+"revenue": 15790.06
+},
+{
+"id": "BTD-2024-00312",
+"inception": "2024-12-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 30139.53,
+"revenue": 4014.59
+},
+{
+"id": "BTD-2024-00318",
+"inception": "2024-12-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 91574.8,
+"revenue": 10686.78
+},
+{
+"id": "BTD-2024-00326",
+"inception": "2024-12-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 4111.11,
+"revenue": 493.74
+},
+{
+"id": "BTD-2024-00327",
+"inception": "2024-12-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 15543.31,
+"revenue": 2036.17
+},
+{
+"id": "BTD-2024-00314",
+"inception": "2024-12-02",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 10863.25,
+"revenue": 1297.07
+},
+{
+"id": "BTD-2024-00317",
+"inception": "2024-12-02",
+"owner": "Eleanor Voss",
+"product": "Cyber",
+"gwp": 4510.0,
+"revenue": 727.01
+},
+{
+"id": "BTD-2024-00325",
+"inception": "2024-12-07",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 62173.23,
+"revenue": 6963.4
+},
+{
+"id": "BTD-2024-00321",
+"inception": "2024-12-10",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 4448.82,
+"revenue": 365.25
+},
+{
+"id": "BTD-2024-00311",
+"inception": "2024-12-15",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 3393.16,
+"revenue": 729.87
+},
+{
+"id": "BTD-2024-00324",
+"inception": "2024-12-15",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 21779.07,
+"revenue": 2517.66
+},
+{
+"id": "BTD-2024-00316",
+"inception": "2024-12-16",
+"owner": "Priya Nandakumar",
+"product": "Kidnap & Ransom",
+"gwp": 3330.71,
+"revenue": 462.3
+},
+{
+"id": "BTD-2024-00320",
+"inception": "2024-12-18",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 6433.07,
+"revenue": 424.58
+},
+{
+"id": "BTD-2024-00323",
+"inception": "2024-12-18",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 19110.24,
+"revenue": 3541.13
+},
+{
+"id": "BTD-2024-00328",
+"inception": "2024-12-20",
+"owner": "Priya Nandakumar",
+"product": "Professional Indemnity",
+"gwp": 10840.0,
+"revenue": 922.48
+},
+{
+"id": "BTD-2024-00313",
+"inception": "2024-12-21",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 4902.13,
+"revenue": 583.84
+},
+{
+"id": "BTD-2024-00319",
+"inception": "2024-12-23",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 2283.46,
+"revenue": 534.33
+},
+{
+"id": "BTD-2024-00315",
+"inception": "2024-12-24",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 10010.0,
+"revenue": 847.85
+},
+{
+"id": "BTD-2024-00322",
+"inception": "2024-12-28",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 2511.63,
+"revenue": 325.0
+},
+{
+"id": "BTD-2025-00333",
+"inception": "2025-01-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 10149.61,
+"revenue": 2126.34
+},
+{
+"id": "BTD-2025-00334",
+"inception": "2025-01-01",
+"owner": "Marcus Ridley",
+"product": "Personal Accident",
+"gwp": 9590.0,
+"revenue": 993.52
+},
+{
+"id": "BTD-2025-00336",
+"inception": "2025-01-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 1660.0,
+"revenue": 212.65
+},
+{
+"id": "BTD-2025-00338",
+"inception": "2025-01-01",
+"owner": "Eleanor Voss",
+"product": "Professional Indemnity",
+"gwp": 15566.93,
+"revenue": 1327.86
+},
+{
+"id": "BTD-2025-00339",
+"inception": "2025-01-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 1974.09,
+"revenue": 481.09
+},
+{
+"id": "BTD-2025-00340",
+"inception": "2025-01-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 4968.5,
+"revenue": 658.82
+},
+{
+"id": "BTD-2025-00344",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 8717.95,
+"revenue": 553.59
+},
+{
+"id": "BTD-2025-00348",
+"inception": "2025-01-01",
+"owner": "Priya Nandakumar",
+"product": "Active Assailant",
+"gwp": 10677.17,
+"revenue": 1363.47
+},
+{
+"id": "BTD-2025-00352",
+"inception": "2025-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 3866.14,
+"revenue": 361.87
+},
+{
+"id": "BTD-2025-00356",
+"inception": "2025-01-01",
+"owner": "Priya Nandakumar",
+"product": "Professional Indemnity",
+"gwp": 12900.0,
+"revenue": 1879.53
+},
+{
+"id": "BTD-2025-00357",
+"inception": "2025-01-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 10790.0,
+"revenue": 2715.84
+},
+{
+"id": "BTD-2025-00360",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 32957.26,
+"revenue": 6219.04
+},
+{
+"id": "BTD-2025-00361",
+"inception": "2025-01-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 25125.98,
+"revenue": 3979.96
+},
+{
+"id": "BTD-2025-00362",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 16708.66,
+"revenue": 1228.09
+},
+{
+"id": "BTD-2025-00363",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 59984.25,
+"revenue": 12794.64
+},
+{
+"id": "BTD-2025-00365",
+"inception": "2025-01-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 37291.34,
+"revenue": 7846.1
+},
+{
+"id": "BTD-2025-00367",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 28367.52,
+"revenue": 3687.78
+},
+{
+"id": "BTD-2025-00368",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 21700.79,
+"revenue": 4055.88
+},
+{
+"id": "BTD-2025-00372",
+"inception": "2025-01-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 24550.0,
+"revenue": 6417.37
+},
+{
+"id": "BTD-2025-00374",
+"inception": "2025-01-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 4891.19,
+"revenue": 653.95
+},
+{
+"id": "BTD-2025-00376",
+"inception": "2025-01-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 11700.0,
+"revenue": 1605.24
+},
+{
+"id": "BTD-2025-00377",
+"inception": "2025-01-01",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 78157.48,
+"revenue": 14459.13
+},
+{
+"id": "BTD-2025-00379",
+"inception": "2025-01-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 5600.0,
+"revenue": 810.32
+},
+{
+"id": "BTD-2025-00382",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 3632.48,
+"revenue": 447.52
+},
+{
+"id": "BTD-2025-00383",
+"inception": "2025-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 11290.6,
+"revenue": 1126.8
+},
+{
+"id": "BTD-2025-00384",
+"inception": "2025-01-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 12860.0,
+"revenue": 3078.68
+},
+{
+"id": "BTD-2025-00388",
+"inception": "2025-01-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 5300.0,
+"revenue": 703.31
+},
+{
+"id": "BTD-2025-00389",
+"inception": "2025-01-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 9430.05,
+"revenue": 1182.53
+},
+{
+"id": "BTD-2025-00341",
+"inception": "2025-01-02",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 15690.0,
+"revenue": 2929.32
+},
+{
+"id": "BTD-2025-00387",
+"inception": "2025-01-03",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 6340.0,
+"revenue": 947.83
+},
+{
+"id": "BTD-2025-00329",
+"inception": "2025-01-05",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 22621.76,
+"revenue": 5560.43
+},
+{
+"id": "BTD-2025-00331",
+"inception": "2025-01-05",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 31880.34,
+"revenue": 6589.67
+},
+{
+"id": "BTD-2025-00358",
+"inception": "2025-01-05",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 13039.37,
+"revenue": 1057.49
+},
+{
+"id": "BTD-2025-00392",
+"inception": "2025-01-05",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 7490.0,
+"revenue": 666.61
+},
+{
+"id": "BTD-2025-00346",
+"inception": "2025-01-06",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 1350.0,
+"revenue": 314.42
+},
+{
+"id": "BTD-2025-00369",
+"inception": "2025-01-08",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 21818.9,
+"revenue": 1752.06
+},
+{
+"id": "BTD-2025-00375",
+"inception": "2025-01-08",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 11204.72,
+"revenue": 1323.28
+},
+{
+"id": "BTD-2025-00378",
+"inception": "2025-01-08",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 16710.64,
+"revenue": 1836.5
+},
+{
+"id": "BTD-2025-00332",
+"inception": "2025-01-10",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 2980.0,
+"revenue": 632.95
+},
+{
+"id": "BTD-2025-00381",
+"inception": "2025-01-11",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 23490.0,
+"revenue": 2384.24
+},
+{
+"id": "BTD-2025-00342",
+"inception": "2025-01-12",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 10770.0,
+"revenue": 1103.92
+},
+{
+"id": "BTD-2025-00373",
+"inception": "2025-01-12",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 14436.05,
+"revenue": 2817.92
+},
+{
+"id": "BTD-2025-00385",
+"inception": "2025-01-12",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 28530.0,
+"revenue": 3332.3
+},
+{
+"id": "BTD-2025-00343",
+"inception": "2025-01-13",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 5960.63,
+"revenue": 825.55
+},
+{
+"id": "BTD-2025-00380",
+"inception": "2025-01-13",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 10346.46,
+"revenue": 1321.24
+},
+{
+"id": "BTD-2025-00345",
+"inception": "2025-01-15",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 9900.0,
+"revenue": 1418.67
+},
+{
+"id": "BTD-2025-00355",
+"inception": "2025-01-15",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 45450.0,
+"revenue": 4199.58
+},
+{
+"id": "BTD-2025-00370",
+"inception": "2025-01-15",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 8470.0,
+"revenue": 1200.2
+},
+{
+"id": "BTD-2025-00390",
+"inception": "2025-01-15",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 33650.0,
+"revenue": 5818.09
+},
+{
+"id": "BTD-2025-00364",
+"inception": "2025-01-16",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 56880.0,
+"revenue": 11324.81
+},
+{
+"id": "BTD-2025-00347",
+"inception": "2025-01-17",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 7606.3,
+"revenue": 1862.78
+},
+{
+"id": "BTD-2025-00366",
+"inception": "2025-01-19",
+"owner": "Eleanor Voss",
+"product": "Personal Accident",
+"gwp": 19188.98,
+"revenue": 2162.6
+},
+{
+"id": "BTD-2025-00330",
+"inception": "2025-01-21",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 13389.53,
+"revenue": 1194.35
+},
+{
+"id": "BTD-2025-00353",
+"inception": "2025-01-21",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 60220.47,
+"revenue": 11074.54
+},
+{
+"id": "BTD-2025-00354",
+"inception": "2025-01-21",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 22435.9,
+"revenue": 1720.83
+},
+{
+"id": "BTD-2025-00391",
+"inception": "2025-01-21",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 28825.58,
+"revenue": 6220.56
+},
+{
+"id": "BTD-2025-00351",
+"inception": "2025-01-22",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 9000.0,
+"revenue": 1377.9
+},
+{
+"id": "BTD-2025-00394",
+"inception": "2025-01-23",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3460.0,
+"revenue": 447.72
+},
+{
+"id": "BTD-2025-00337",
+"inception": "2025-01-24",
+"owner": "Sofia Almeida",
+"product": "Professional Indemnity",
+"gwp": 9338.58,
+"revenue": 1380.24
+},
+{
+"id": "BTD-2025-00386",
+"inception": "2025-01-24",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 94140.0,
+"revenue": 19647.02
+},
+{
+"id": "BTD-2025-00335",
+"inception": "2025-01-25",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 12960.0,
+"revenue": 1140.48
+},
+{
+"id": "BTD-2025-00350",
+"inception": "2025-01-25",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 17295.34,
+"revenue": 1361.14
+},
+{
+"id": "BTD-2025-00359",
+"inception": "2025-01-25",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 12905.51,
+"revenue": 2582.39
+},
+{
+"id": "BTD-2025-00349",
+"inception": "2025-01-27",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10582.68,
+"revenue": 1666.77
+},
+{
+"id": "BTD-2025-00393",
+"inception": "2025-01-27",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 10340.0,
+"revenue": 1101.21
+},
+{
+"id": "BTD-2025-00371",
+"inception": "2025-01-28",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 10259.84,
+"revenue": 1922.69
+},
+{
+"id": "BTD-2025-00397",
+"inception": "2025-02-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 3130.0,
+"revenue": 425.68
+},
+{
+"id": "BTD-2025-00399",
+"inception": "2025-02-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 17010.0,
+"revenue": 3580.61
+},
+{
+"id": "BTD-2025-00402",
+"inception": "2025-02-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 48960.0,
+"revenue": 4293.79
+},
+{
+"id": "BTD-2025-00404",
+"inception": "2025-02-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 3866.14,
+"revenue": 270.63
+},
+{
+"id": "BTD-2025-00405",
+"inception": "2025-02-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 2848.84,
+"revenue": 294.85
+},
+{
+"id": "BTD-2025-00407",
+"inception": "2025-02-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 21850.0,
+"revenue": 4839.77
+},
+{
+"id": "BTD-2025-00409",
+"inception": "2025-02-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 55050.0,
+"revenue": 9776.88
+},
+{
+"id": "BTD-2025-00411",
+"inception": "2025-02-01",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 12787.4,
+"revenue": 2282.55
+},
+{
+"id": "BTD-2025-00414",
+"inception": "2025-02-01",
+"owner": "Eleanor Voss",
+"product": "Fixated Threat",
+"gwp": 5244.09,
+"revenue": 678.59
+},
+{
+"id": "BTD-2025-00415",
+"inception": "2025-02-01",
+"owner": "Priya Nandakumar",
+"product": "Terrorism",
+"gwp": 22448.82,
+"revenue": 2604.06
+},
+{
+"id": "BTD-2025-00396",
+"inception": "2025-02-02",
+"owner": "Marcus Ridley",
+"product": "Marine Cargo",
+"gwp": 6367.52,
+"revenue": 784.48
+},
+{
+"id": "BTD-2025-00400",
+"inception": "2025-02-04",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 10660.0,
+"revenue": 822.95
+},
+{
+"id": "BTD-2025-00408",
+"inception": "2025-02-13",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 18420.0,
+"revenue": 1900.94
+},
+{
+"id": "BTD-2025-00401",
+"inception": "2025-02-15",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 2495.73,
+"revenue": 341.42
+},
+{
+"id": "BTD-2025-00417",
+"inception": "2025-02-15",
+"owner": "Marcus Ridley",
+"product": "Personal Accident",
+"gwp": 6910.0,
+"revenue": 704.13
+},
+{
+"id": "BTD-2025-00403",
+"inception": "2025-02-17",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 61769.23,
+"revenue": 11575.55
+},
+{
+"id": "BTD-2025-00398",
+"inception": "2025-02-18",
+"owner": "Tom Beckwith",
+"product": "Product Recall",
+"gwp": 11920.0,
+"revenue": 1979.91
+},
+{
+"id": "BTD-2025-00410",
+"inception": "2025-02-18",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 5376.07,
+"revenue": 394.6
+},
+{
+"id": "BTD-2025-00395",
+"inception": "2025-02-24",
+"owner": "Priya Nandakumar",
+"product": "Professional Indemnity",
+"gwp": 10920.0,
+"revenue": 859.4
+},
+{
+"id": "BTD-2025-00406",
+"inception": "2025-02-24",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 11130.0,
+"revenue": 912.66
+},
+{
+"id": "BTD-2025-00416",
+"inception": "2025-02-24",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 9650.0,
+"revenue": 857.89
+},
+{
+"id": "BTD-2025-00412",
+"inception": "2025-02-25",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 6220.47,
+"revenue": 485.2
+},
+{
+"id": "BTD-2025-00413",
+"inception": "2025-02-26",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 46780.0,
+"revenue": 8864.81
+},
+{
+"id": "BTD-2025-00419",
+"inception": "2025-03-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2897.64,
+"revenue": 369.74
+},
+{
+"id": "BTD-2025-00424",
+"inception": "2025-03-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 28656.98,
+"revenue": 2384.26
+},
+{
+"id": "BTD-2025-00427",
+"inception": "2025-03-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 3180.0,
+"revenue": 623.28
+},
+{
+"id": "BTD-2025-00428",
+"inception": "2025-03-01",
+"owner": "Tom Beckwith",
+"product": "D&O",
+"gwp": 84910.0,
+"revenue": 12872.36
+},
+{
+"id": "BTD-2025-00429",
+"inception": "2025-03-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 93846.15,
+"revenue": 17887.08
+},
+{
+"id": "BTD-2025-00430",
+"inception": "2025-03-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 6080.0,
+"revenue": 1449.47
+},
+{
+"id": "BTD-2025-00432",
+"inception": "2025-03-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 6780.0,
+"revenue": 922.76
+},
+{
+"id": "BTD-2025-00433",
+"inception": "2025-03-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 34970.0,
+"revenue": 6857.62
+},
+{
+"id": "BTD-2025-00434",
+"inception": "2025-03-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 4820.0,
+"revenue": 624.67
+},
+{
+"id": "BTD-2025-00435",
+"inception": "2025-03-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 34950.0,
+"revenue": 2956.77
+},
+{
+"id": "BTD-2025-00437",
+"inception": "2025-03-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 31188.03,
+"revenue": 5981.86
+},
+{
+"id": "BTD-2025-00438",
+"inception": "2025-03-01",
+"owner": "Eleanor Voss",
+"product": "Product Recall",
+"gwp": 49519.69,
+"revenue": 8076.66
+},
+{
+"id": "BTD-2025-00440",
+"inception": "2025-03-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 9803.15,
+"revenue": 1129.32
+},
+{
+"id": "BTD-2025-00443",
+"inception": "2025-03-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 8940.17,
+"revenue": 1082.65
+},
+{
+"id": "BTD-2025-00420",
+"inception": "2025-03-03",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 19445.6,
+"revenue": 3951.35
+},
+{
+"id": "BTD-2025-00418",
+"inception": "2025-03-09",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 40244.09,
+"revenue": 7976.38
+},
+{
+"id": "BTD-2025-00439",
+"inception": "2025-03-12",
+"owner": "Sofia Almeida",
+"product": "Personal Accident",
+"gwp": 7170.94,
+"revenue": 1478.65
+},
+{
+"id": "BTD-2025-00441",
+"inception": "2025-03-12",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 9690.0,
+"revenue": 1403.11
+},
+{
+"id": "BTD-2025-00423",
+"inception": "2025-03-13",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 13766.84,
+"revenue": 1229.38
+},
+{
+"id": "BTD-2025-00431",
+"inception": "2025-03-13",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 24670.0,
+"revenue": 2548.41
+},
+{
+"id": "BTD-2025-00425",
+"inception": "2025-03-15",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 20680.0,
+"revenue": 3875.43
+},
+{
+"id": "BTD-2025-00421",
+"inception": "2025-03-20",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 11190.0,
+"revenue": 1304.75
+},
+{
+"id": "BTD-2025-00436",
+"inception": "2025-03-21",
+"owner": "Priya Nandakumar",
+"product": "Active Assailant",
+"gwp": 13803.15,
+"revenue": 3305.85
+},
+{
+"id": "BTD-2025-00444",
+"inception": "2025-03-21",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 73480.0,
+"revenue": 13777.5
+},
+{
+"id": "BTD-2025-00426",
+"inception": "2025-03-26",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 10060.0,
+"revenue": 1176.01
+},
+{
+"id": "BTD-2025-00442",
+"inception": "2025-03-26",
+"owner": "Sofia Almeida",
+"product": "Professional Indemnity",
+"gwp": 13412.79,
+"revenue": 2150.07
+},
+{
+"id": "BTD-2025-00422",
+"inception": "2025-03-28",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 19168.6,
+"revenue": 2583.93
+},
+{
+"id": "BTD-2025-00448",
+"inception": "2025-04-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 4047.24,
+"revenue": 479.19
+},
+{
+"id": "BTD-2025-00449",
+"inception": "2025-04-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 47740.16,
+"revenue": 6187.12
+},
+{
+"id": "BTD-2025-00450",
+"inception": "2025-04-01",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 57197.67,
+"revenue": 8276.5
+},
+{
+"id": "BTD-2025-00451",
+"inception": "2025-04-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 4007.87,
+"revenue": 829.63
+},
+{
+"id": "BTD-2025-00455",
+"inception": "2025-04-01",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 29551.18,
+"revenue": 2922.61
+},
+{
+"id": "BTD-2025-00462",
+"inception": "2025-04-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 65690.0,
+"revenue": 13308.79
+},
+{
+"id": "BTD-2025-00465",
+"inception": "2025-04-01",
+"owner": "Priya Nandakumar",
+"product": "D&O",
+"gwp": 33299.15,
+"revenue": 2620.64
+},
+{
+"id": "BTD-2025-00467",
+"inception": "2025-04-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 39020.0,
+"revenue": 9462.35
+},
+{
+"id": "BTD-2025-00473",
+"inception": "2025-04-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 7401.57,
+"revenue": 957.76
+},
+{
+"id": "BTD-2025-00474",
+"inception": "2025-04-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 8212.6,
+"revenue": 1055.32
+},
+{
+"id": "BTD-2025-00477",
+"inception": "2025-04-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 1188.98,
+"revenue": 83.11
+},
+{
+"id": "BTD-2025-00478",
+"inception": "2025-04-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 3250.0,
+"revenue": 296.07
+},
+{
+"id": "BTD-2025-00479",
+"inception": "2025-04-01",
+"owner": "Eleanor Voss",
+"product": "Product Recall",
+"gwp": 106300.0,
+"revenue": 10279.21
+},
+{
+"id": "BTD-2025-00480",
+"inception": "2025-04-02",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 20020.0,
+"revenue": 1547.55
+},
+{
+"id": "BTD-2025-00456",
+"inception": "2025-04-03",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 12546.51,
+"revenue": 1076.49
+},
+{
+"id": "BTD-2025-00458",
+"inception": "2025-04-03",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 3380.0,
+"revenue": 485.37
+},
+{
+"id": "BTD-2025-00452",
+"inception": "2025-04-05",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 1901.55,
+"revenue": 129.31
+},
+{
+"id": "BTD-2025-00454",
+"inception": "2025-04-05",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 120256.41,
+"revenue": 25145.62
+},
+{
+"id": "BTD-2025-00466",
+"inception": "2025-04-08",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 9086.61,
+"revenue": 758.73
+},
+{
+"id": "BTD-2025-00446",
+"inception": "2025-04-09",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 12160.0,
+"revenue": 2931.78
+},
+{
+"id": "BTD-2025-00445",
+"inception": "2025-04-11",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 37196.85,
+"revenue": 3574.62
+},
+{
+"id": "BTD-2025-00459",
+"inception": "2025-04-11",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 677.17,
+"revenue": 72.12
+},
+{
+"id": "BTD-2025-00481",
+"inception": "2025-04-12",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 4470.0,
+"revenue": 442.08
+},
+{
+"id": "BTD-2025-00447",
+"inception": "2025-04-13",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 32130.0,
+"revenue": 3479.68
+},
+{
+"id": "BTD-2025-00453",
+"inception": "2025-04-15",
+"owner": "Priya Nandakumar",
+"product": "Terrorism",
+"gwp": 5270.0,
+"revenue": 988.65
+},
+{
+"id": "BTD-2025-00457",
+"inception": "2025-04-15",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 41212.6,
+"revenue": 7599.6
+},
+{
+"id": "BTD-2025-00461",
+"inception": "2025-04-17",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 17078.74,
+"revenue": 2034.08
+},
+{
+"id": "BTD-2025-00475",
+"inception": "2025-04-18",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 47669.29,
+"revenue": 8351.66
+},
+{
+"id": "BTD-2025-00463",
+"inception": "2025-04-19",
+"owner": "Eleanor Voss",
+"product": "Product Recall",
+"gwp": 12976.38,
+"revenue": 1169.17
+},
+{
+"id": "BTD-2025-00469",
+"inception": "2025-04-19",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 34247.86,
+"revenue": 2770.65
+},
+{
+"id": "BTD-2025-00476",
+"inception": "2025-04-21",
+"owner": "Tom Beckwith",
+"product": "Marine Cargo",
+"gwp": 3409.45,
+"revenue": 420.39
+},
+{
+"id": "BTD-2025-00460",
+"inception": "2025-04-23",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 6125.98,
+"revenue": 681.21
+},
+{
+"id": "BTD-2025-00464",
+"inception": "2025-04-23",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 51937.01,
+"revenue": 11852.03
+},
+{
+"id": "BTD-2025-00470",
+"inception": "2025-04-23",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7196.58,
+"revenue": 1315.54
+},
+{
+"id": "BTD-2025-00471",
+"inception": "2025-04-26",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 4070.87,
+"revenue": 1060.87
+},
+{
+"id": "BTD-2025-00468",
+"inception": "2025-04-27",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 13030.0,
+"revenue": 2430.09
+},
+{
+"id": "BTD-2025-00472",
+"inception": "2025-04-27",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 54897.64,
+"revenue": 10458.0
+},
+{
+"id": "BTD-2025-00482",
+"inception": "2025-05-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 3581.2,
+"revenue": 415.06
+},
+{
+"id": "BTD-2025-00488",
+"inception": "2025-05-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 5763.78,
+"revenue": 1058.81
+},
+{
+"id": "BTD-2025-00494",
+"inception": "2025-05-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 25960.63,
+"revenue": 2850.48
+},
+{
+"id": "BTD-2025-00497",
+"inception": "2025-05-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 9800.0,
+"revenue": 2638.16
+},
+{
+"id": "BTD-2025-00499",
+"inception": "2025-05-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 19620.0,
+"revenue": 2527.06
+},
+{
+"id": "BTD-2025-00504",
+"inception": "2025-05-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 12960.0,
+"revenue": 2589.41
+},
+{
+"id": "BTD-2025-00490",
+"inception": "2025-05-02",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 7976.38,
+"revenue": 568.72
+},
+{
+"id": "BTD-2025-00492",
+"inception": "2025-05-03",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 3600.0,
+"revenue": 293.04
+},
+{
+"id": "BTD-2025-00503",
+"inception": "2025-05-03",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 19310.0,
+"revenue": 1828.66
+},
+{
+"id": "BTD-2025-00505",
+"inception": "2025-05-05",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 7740.0,
+"revenue": 991.49
+},
+{
+"id": "BTD-2025-00493",
+"inception": "2025-05-06",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 21914.53,
+"revenue": 5224.42
+},
+{
+"id": "BTD-2025-00496",
+"inception": "2025-05-12",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 3070.0,
+"revenue": 275.38
+},
+{
+"id": "BTD-2025-00498",
+"inception": "2025-05-12",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 27251.97,
+"revenue": 2951.39
+},
+{
+"id": "BTD-2025-00489",
+"inception": "2025-05-13",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 3708.66,
+"revenue": 538.87
+},
+{
+"id": "BTD-2025-00495",
+"inception": "2025-05-15",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 18780.0,
+"revenue": 2972.87
+},
+{
+"id": "BTD-2025-00491",
+"inception": "2025-05-16",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 16060.0,
+"revenue": 3459.32
+},
+{
+"id": "BTD-2025-00501",
+"inception": "2025-05-17",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 31384.62,
+"revenue": 5178.46
+},
+{
+"id": "BTD-2025-00487",
+"inception": "2025-05-19",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 2992.13,
+"revenue": 787.53
+},
+{
+"id": "BTD-2025-00485",
+"inception": "2025-05-20",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 7118.11,
+"revenue": 1339.63
+},
+{
+"id": "BTD-2025-00502",
+"inception": "2025-05-20",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 35333.33,
+"revenue": 5625.07
+},
+{
+"id": "BTD-2025-00486",
+"inception": "2025-05-21",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 12960.0,
+"revenue": 2001.02
+},
+{
+"id": "BTD-2025-00500",
+"inception": "2025-05-23",
+"owner": "Tom Beckwith",
+"product": "Cyber",
+"gwp": 14590.0,
+"revenue": 2074.7
+},
+{
+"id": "BTD-2025-00483",
+"inception": "2025-05-24",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 6340.0,
+"revenue": 1485.46
+},
+{
+"id": "BTD-2025-00484",
+"inception": "2025-05-26",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 2923.08,
+"revenue": 370.94
+},
+{
+"id": "BTD-2025-00506",
+"inception": "2025-06-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 27606.3,
+"revenue": 2263.72
+},
+{
+"id": "BTD-2025-00507",
+"inception": "2025-06-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 89481.87,
+"revenue": 13109.09
+},
+{
+"id": "BTD-2025-00508",
+"inception": "2025-06-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 34708.66,
+"revenue": 6511.34
+},
+{
+"id": "BTD-2025-00509",
+"inception": "2025-06-01",
+"owner": "Tom Beckwith",
+"product": "Liability",
+"gwp": 8982.91,
+"revenue": 1540.57
+},
+{
+"id": "BTD-2025-00511",
+"inception": "2025-06-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 20750.0,
+"revenue": 2701.65
+},
+{
+"id": "BTD-2025-00513",
+"inception": "2025-06-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 20890.0,
+"revenue": 2444.13
+},
+{
+"id": "BTD-2025-00514",
+"inception": "2025-06-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 28299.21,
+"revenue": 6259.79
+},
+{
+"id": "BTD-2025-00515",
+"inception": "2025-06-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 4825.58,
+"revenue": 1285.53
+},
+{
+"id": "BTD-2025-00516",
+"inception": "2025-06-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 10078.74,
+"revenue": 1297.13
+},
+{
+"id": "BTD-2025-00519",
+"inception": "2025-06-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 12230.0,
+"revenue": 1571.56
+},
+{
+"id": "BTD-2025-00520",
+"inception": "2025-06-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 14410.0,
+"revenue": 2436.73
+},
+{
+"id": "BTD-2025-00521",
+"inception": "2025-06-01",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 46829.02,
+"revenue": 5109.05
+},
+{
+"id": "BTD-2025-00522",
+"inception": "2025-06-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 24170.94,
+"revenue": 2813.5
+},
+{
+"id": "BTD-2025-00524",
+"inception": "2025-06-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10070.0,
+"revenue": 791.5
+},
+{
+"id": "BTD-2025-00529",
+"inception": "2025-06-01",
+"owner": "Tom Beckwith",
+"product": "Cyber",
+"gwp": 22560.0,
+"revenue": 3408.82
+},
+{
+"id": "BTD-2025-00530",
+"inception": "2025-06-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 5930.0,
+"revenue": 858.66
+},
+{
+"id": "BTD-2025-00525",
+"inception": "2025-06-03",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 12543.31,
+"revenue": 2803.43
+},
+{
+"id": "BTD-2025-00528",
+"inception": "2025-06-03",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 52340.0,
+"revenue": 7270.03
+},
+{
+"id": "BTD-2025-00532",
+"inception": "2025-06-03",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 56622.05,
+"revenue": 9472.87
+},
+{
+"id": "BTD-2025-00510",
+"inception": "2025-06-14",
+"owner": "Priya Nandakumar",
+"product": "Product Recall",
+"gwp": 10511.81,
+"revenue": 1039.62
+},
+{
+"id": "BTD-2025-00523",
+"inception": "2025-06-15",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 21580.0,
+"revenue": 2529.18
+},
+{
+"id": "BTD-2025-00534",
+"inception": "2025-06-17",
+"owner": "Priya Nandakumar",
+"product": "D&O",
+"gwp": 19080.0,
+"revenue": 2867.72
+},
+{
+"id": "BTD-2025-00533",
+"inception": "2025-06-18",
+"owner": "Sofia Almeida",
+"product": "Professional Indemnity",
+"gwp": 17070.87,
+"revenue": 1333.23
+},
+{
+"id": "BTD-2025-00517",
+"inception": "2025-06-19",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 55732.28,
+"revenue": 11776.23
+},
+{
+"id": "BTD-2025-00531",
+"inception": "2025-06-19",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 5320.0,
+"revenue": 345.27
+},
+{
+"id": "BTD-2025-00512",
+"inception": "2025-06-23",
+"owner": "Sofia Almeida",
+"product": "Professional Indemnity",
+"gwp": 12520.0,
+"revenue": 1969.4
+},
+{
+"id": "BTD-2025-00518",
+"inception": "2025-06-24",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 43496.06,
+"revenue": 7624.86
+},
+{
+"id": "BTD-2025-00527",
+"inception": "2025-06-25",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 6360.0,
+"revenue": 766.38
+},
+{
+"id": "BTD-2025-00526",
+"inception": "2025-06-28",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 10010.36,
+"revenue": 2154.23
+},
+{
+"id": "BTD-2025-00535",
+"inception": "2025-07-01",
+"owner": "Tom Beckwith",
+"product": "Liability",
+"gwp": 14645.67,
+"revenue": 1455.78
+},
+{
+"id": "BTD-2025-00536",
+"inception": "2025-07-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2430.0,
+"revenue": 337.53
+},
+{
+"id": "BTD-2025-00541",
+"inception": "2025-07-01",
+"owner": "Tom Beckwith",
+"product": "Political Violence",
+"gwp": 72393.7,
+"revenue": 14978.26
+},
+{
+"id": "BTD-2025-00542",
+"inception": "2025-07-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 10519.69,
+"revenue": 1065.64
+},
+{
+"id": "BTD-2025-00545",
+"inception": "2025-07-01",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 17606.3,
+"revenue": 2285.3
+},
+{
+"id": "BTD-2025-00548",
+"inception": "2025-07-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1860.0,
+"revenue": 247.57
+},
+{
+"id": "BTD-2025-00549",
+"inception": "2025-07-01",
+"owner": "Priya Nandakumar",
+"product": "Kidnap & Ransom",
+"gwp": 12149.61,
+"revenue": 1640.2
+},
+{
+"id": "BTD-2025-00550",
+"inception": "2025-07-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 4410.0,
+"revenue": 631.95
+},
+{
+"id": "BTD-2025-00551",
+"inception": "2025-07-01",
+"owner": "Tom Beckwith",
+"product": "Liability",
+"gwp": 48616.28,
+"revenue": 4798.43
+},
+{
+"id": "BTD-2025-00552",
+"inception": "2025-07-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 34905.98,
+"revenue": 7347.71
+},
+{
+"id": "BTD-2025-00558",
+"inception": "2025-07-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 33590.55,
+"revenue": 3547.16
+},
+{
+"id": "BTD-2025-00560",
+"inception": "2025-07-01",
+"owner": "Callum Reid",
+"product": "Cyber",
+"gwp": 13000.0,
+"revenue": 2005.9
+},
+{
+"id": "BTD-2025-00561",
+"inception": "2025-07-01",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 41760.0,
+"revenue": 4948.56
+},
+{
+"id": "BTD-2025-00563",
+"inception": "2025-07-01",
+"owner": "Priya Nandakumar",
+"product": "Political Violence",
+"gwp": 14760.0,
+"revenue": 2839.82
+},
+{
+"id": "BTD-2025-00564",
+"inception": "2025-07-01",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 8505.81,
+"revenue": 1013.04
+},
+{
+"id": "BTD-2025-00572",
+"inception": "2025-07-01",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 12551.18,
+"revenue": 971.46
+},
+{
+"id": "BTD-2025-00573",
+"inception": "2025-07-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1500.0,
+"revenue": 194.1
+},
+{
+"id": "BTD-2025-00574",
+"inception": "2025-07-01",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 1850.39,
+"revenue": 209.09
+},
+{
+"id": "BTD-2025-00580",
+"inception": "2025-07-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 3456.69,
+"revenue": 386.46
+},
+{
+"id": "BTD-2025-00582",
+"inception": "2025-07-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 9940.0,
+"revenue": 1296.18
+},
+{
+"id": "BTD-2025-00584",
+"inception": "2025-07-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 38842.52,
+"revenue": 8118.09
+},
+{
+"id": "BTD-2025-00587",
+"inception": "2025-07-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 9251.97,
+"revenue": 847.48
+},
+{
+"id": "BTD-2025-00556",
+"inception": "2025-07-02",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 4220.47,
+"revenue": 1088.04
+},
+{
+"id": "BTD-2025-00557",
+"inception": "2025-07-04",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 24559.06,
+"revenue": 2013.84
+},
+{
+"id": "BTD-2025-00568",
+"inception": "2025-07-05",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 32284.88,
+"revenue": 3273.69
+},
+{
+"id": "BTD-2025-00578",
+"inception": "2025-07-05",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 34897.64,
+"revenue": 6379.29
+},
+{
+"id": "BTD-2025-00555",
+"inception": "2025-07-06",
+"owner": "Callum Reid",
+"product": "Cyber",
+"gwp": 45170.0,
+"revenue": 6391.55
+},
+{
+"id": "BTD-2025-00539",
+"inception": "2025-07-07",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 16307.69,
+"revenue": 1162.74
+},
+{
+"id": "BTD-2025-00553",
+"inception": "2025-07-07",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 4690.0,
+"revenue": 635.96
+},
+{
+"id": "BTD-2025-00566",
+"inception": "2025-07-08",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 16409.45,
+"revenue": 4343.58
+},
+{
+"id": "BTD-2025-00547",
+"inception": "2025-07-09",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 33168.6,
+"revenue": 3618.69
+},
+{
+"id": "BTD-2025-00581",
+"inception": "2025-07-09",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 9834.65,
+"revenue": 2305.24
+},
+{
+"id": "BTD-2025-00546",
+"inception": "2025-07-10",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 6118.11,
+"revenue": 810.04
+},
+{
+"id": "BTD-2025-00537",
+"inception": "2025-07-11",
+"owner": "Eleanor Voss",
+"product": "Marine Cargo",
+"gwp": 7500.0,
+"revenue": 506.25
+},
+{
+"id": "BTD-2025-00576",
+"inception": "2025-07-12",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 3151.16,
+"revenue": 365.85
+},
+{
+"id": "BTD-2025-00583",
+"inception": "2025-07-12",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3448.82,
+"revenue": 858.07
+},
+{
+"id": "BTD-2025-00544",
+"inception": "2025-07-13",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 3803.42,
+"revenue": 406.59
+},
+{
+"id": "BTD-2025-00559",
+"inception": "2025-07-14",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 17700.79,
+"revenue": 2832.13
+},
+{
+"id": "BTD-2025-00586",
+"inception": "2025-07-14",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 4763.78,
+"revenue": 498.77
+},
+{
+"id": "BTD-2025-00540",
+"inception": "2025-07-15",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 6034.88,
+"revenue": 784.53
+},
+{
+"id": "BTD-2025-00569",
+"inception": "2025-07-15",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 33905.51,
+"revenue": 6926.9
+},
+{
+"id": "BTD-2025-00571",
+"inception": "2025-07-15",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7622.05,
+"revenue": 685.22
+},
+{
+"id": "BTD-2025-00585",
+"inception": "2025-07-15",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 6173.23,
+"revenue": 531.51
+},
+{
+"id": "BTD-2025-00575",
+"inception": "2025-07-17",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 5430.23,
+"revenue": 430.62
+},
+{
+"id": "BTD-2025-00570",
+"inception": "2025-07-19",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 28170.0,
+"revenue": 5293.14
+},
+{
+"id": "BTD-2025-00577",
+"inception": "2025-07-19",
+"owner": "Eleanor Voss",
+"product": "Personal Accident",
+"gwp": 2420.0,
+"revenue": 484.0
+},
+{
+"id": "BTD-2025-00543",
+"inception": "2025-07-20",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 26120.0,
+"revenue": 6091.18
+},
+{
+"id": "BTD-2025-00565",
+"inception": "2025-07-21",
+"owner": "Sofia Almeida",
+"product": "D&O",
+"gwp": 31213.68,
+"revenue": 5044.13
+},
+{
+"id": "BTD-2025-00567",
+"inception": "2025-07-21",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 8770.0,
+"revenue": 1169.92
+},
+{
+"id": "BTD-2025-00562",
+"inception": "2025-07-22",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 18230.0,
+"revenue": 2827.47
+},
+{
+"id": "BTD-2025-00554",
+"inception": "2025-07-23",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 21913.39,
+"revenue": 2213.25
+},
+{
+"id": "BTD-2025-00579",
+"inception": "2025-07-26",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 21299.21,
+"revenue": 2325.87
+},
+{
+"id": "BTD-2025-00538",
+"inception": "2025-07-27",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 20872.09,
+"revenue": 1636.37
+},
+{
+"id": "BTD-2025-00589",
+"inception": "2025-08-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 6425.2,
+"revenue": 643.8
+},
+{
+"id": "BTD-2025-00591",
+"inception": "2025-08-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 29600.0,
+"revenue": 5828.24
+},
+{
+"id": "BTD-2025-00596",
+"inception": "2025-08-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 7661.42,
+"revenue": 891.02
+},
+{
+"id": "BTD-2025-00599",
+"inception": "2025-08-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 35130.0,
+"revenue": 3769.45
+},
+{
+"id": "BTD-2025-00601",
+"inception": "2025-08-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 11763.78,
+"revenue": 904.63
+},
+{
+"id": "BTD-2025-00602",
+"inception": "2025-08-01",
+"owner": "Priya Nandakumar",
+"product": "Kidnap & Ransom",
+"gwp": 5031.5,
+"revenue": 715.48
+},
+{
+"id": "BTD-2025-00603",
+"inception": "2025-08-01",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 1820.0,
+"revenue": 206.21
+},
+{
+"id": "BTD-2025-00604",
+"inception": "2025-08-01",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 10020.0,
+"revenue": 824.65
+},
+{
+"id": "BTD-2025-00594",
+"inception": "2025-08-02",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 3880.34,
+"revenue": 492.03
+},
+{
+"id": "BTD-2025-00597",
+"inception": "2025-08-03",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10968.91,
+"revenue": 853.38
+},
+{
+"id": "BTD-2025-00607",
+"inception": "2025-08-03",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 56566.93,
+"revenue": 5973.47
+},
+{
+"id": "BTD-2025-00590",
+"inception": "2025-08-04",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 23794.87,
+"revenue": 3186.13
+},
+{
+"id": "BTD-2025-00605",
+"inception": "2025-08-04",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 6179.49,
+"revenue": 875.02
+},
+{
+"id": "BTD-2025-00588",
+"inception": "2025-08-05",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 56314.89,
+"revenue": 4769.87
+},
+{
+"id": "BTD-2025-00600",
+"inception": "2025-08-07",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 11940.0,
+"revenue": 2964.7
+},
+{
+"id": "BTD-2025-00593",
+"inception": "2025-08-13",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 31068.38,
+"revenue": 6098.72
+},
+{
+"id": "BTD-2025-00592",
+"inception": "2025-08-19",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 8600.0,
+"revenue": 2039.06
+},
+{
+"id": "BTD-2025-00598",
+"inception": "2025-08-22",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3500.0,
+"revenue": 483.35
+},
+{
+"id": "BTD-2025-00595",
+"inception": "2025-08-23",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 11890.0,
+"revenue": 1694.33
+},
+{
+"id": "BTD-2025-00606",
+"inception": "2025-08-24",
+"owner": "Priya Nandakumar",
+"product": "Professional Indemnity",
+"gwp": 9410.26,
+"revenue": 831.87
+},
+{
+"id": "BTD-2025-00609",
+"inception": "2025-09-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 3162.79,
+"revenue": 422.87
+},
+{
+"id": "BTD-2025-00610",
+"inception": "2025-09-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 13950.0,
+"revenue": 1480.1
+},
+{
+"id": "BTD-2025-00614",
+"inception": "2025-09-01",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 6818.9,
+"revenue": 943.05
+},
+{
+"id": "BTD-2025-00616",
+"inception": "2025-09-01",
+"owner": "Marcus Ridley",
+"product": "Terrorism",
+"gwp": 15593.02,
+"revenue": 2996.98
+},
+{
+"id": "BTD-2025-00617",
+"inception": "2025-09-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 17863.25,
+"revenue": 3145.72
+},
+{
+"id": "BTD-2025-00625",
+"inception": "2025-09-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 12270.0,
+"revenue": 3266.27
+},
+{
+"id": "BTD-2025-00627",
+"inception": "2025-09-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 3122.09,
+"revenue": 213.86
+},
+{
+"id": "BTD-2025-00629",
+"inception": "2025-09-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 19640.0,
+"revenue": 3814.09
+},
+{
+"id": "BTD-2025-00630",
+"inception": "2025-09-01",
+"owner": "Tom Beckwith",
+"product": "Political Violence",
+"gwp": 38780.0,
+"revenue": 4087.41
+},
+{
+"id": "BTD-2025-00631",
+"inception": "2025-09-01",
+"owner": "Marcus Ridley",
+"product": "Personal Accident",
+"gwp": 3503.94,
+"revenue": 360.56
+},
+{
+"id": "BTD-2025-00633",
+"inception": "2025-09-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 13726.5,
+"revenue": 2716.47
+},
+{
+"id": "BTD-2025-00634",
+"inception": "2025-09-01",
+"owner": "Tom Beckwith",
+"product": "Political Violence",
+"gwp": 43924.42,
+"revenue": 5051.31
+},
+{
+"id": "BTD-2025-00618",
+"inception": "2025-09-04",
+"owner": "Sofia Almeida",
+"product": "Personal Accident",
+"gwp": 32952.76,
+"revenue": 6323.63
+},
+{
+"id": "BTD-2025-00626",
+"inception": "2025-09-04",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 15370.0,
+"revenue": 3101.67
+},
+{
+"id": "BTD-2025-00613",
+"inception": "2025-09-05",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 34660.0,
+"revenue": 7056.78
+},
+{
+"id": "BTD-2025-00632",
+"inception": "2025-09-07",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 21372.09,
+"revenue": 3994.44
+},
+{
+"id": "BTD-2025-00628",
+"inception": "2025-09-08",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 17559.06,
+"revenue": 3448.6
+},
+{
+"id": "BTD-2025-00622",
+"inception": "2025-09-09",
+"owner": "Eleanor Voss",
+"product": "Fixated Threat",
+"gwp": 3826.77,
+"revenue": 1032.85
+},
+{
+"id": "BTD-2025-00612",
+"inception": "2025-09-11",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 9697.67,
+"revenue": 2527.21
+},
+{
+"id": "BTD-2025-00624",
+"inception": "2025-09-11",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 5850.39,
+"revenue": 1233.26
+},
+{
+"id": "BTD-2025-00623",
+"inception": "2025-09-12",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 7362.2,
+"revenue": 1088.87
+},
+{
+"id": "BTD-2025-00608",
+"inception": "2025-09-18",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 38692.91,
+"revenue": 4333.61
+},
+{
+"id": "BTD-2025-00619",
+"inception": "2025-09-20",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 39401.71,
+"revenue": 3061.51
+},
+{
+"id": "BTD-2025-00620",
+"inception": "2025-09-21",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 44905.98,
+"revenue": 8527.65
+},
+{
+"id": "BTD-2025-00611",
+"inception": "2025-09-23",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 44354.33,
+"revenue": 4918.9
+},
+{
+"id": "BTD-2025-00621",
+"inception": "2025-09-25",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1660.0,
+"revenue": 419.15
+},
+{
+"id": "BTD-2025-00615",
+"inception": "2025-09-26",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1448.82,
+"revenue": 196.75
+},
+{
+"id": "BTD-2025-00639",
+"inception": "2025-10-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 12085.47,
+"revenue": 1224.26
+},
+{
+"id": "BTD-2025-00640",
+"inception": "2025-10-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10620.0,
+"revenue": 897.39
+},
+{
+"id": "BTD-2025-00643",
+"inception": "2025-10-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 8960.0,
+"revenue": 2322.43
+},
+{
+"id": "BTD-2025-00645",
+"inception": "2025-10-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 17320.0,
+"revenue": 2663.82
+},
+{
+"id": "BTD-2025-00646",
+"inception": "2025-10-01",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 16840.0,
+"revenue": 1481.92
+},
+{
+"id": "BTD-2025-00651",
+"inception": "2025-10-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 8770.0,
+"revenue": 1122.56
+},
+{
+"id": "BTD-2025-00652",
+"inception": "2025-10-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 4030.0,
+"revenue": 449.35
+},
+{
+"id": "BTD-2025-00654",
+"inception": "2025-10-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 3165.35,
+"revenue": 650.8
+},
+{
+"id": "BTD-2025-00655",
+"inception": "2025-10-01",
+"owner": "Tom Beckwith",
+"product": "Political Violence",
+"gwp": 40940.0,
+"revenue": 4605.75
+},
+{
+"id": "BTD-2025-00661",
+"inception": "2025-10-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 16173.23,
+"revenue": 1601.15
+},
+{
+"id": "BTD-2025-00662",
+"inception": "2025-10-01",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 5440.94,
+"revenue": 968.49
+},
+{
+"id": "BTD-2025-00663",
+"inception": "2025-10-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1490.0,
+"revenue": 192.96
+},
+{
+"id": "BTD-2025-00670",
+"inception": "2025-10-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2170.0,
+"revenue": 573.31
+},
+{
+"id": "BTD-2025-00641",
+"inception": "2025-10-03",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 22236.22,
+"revenue": 1954.56
+},
+{
+"id": "BTD-2025-00644",
+"inception": "2025-10-03",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 18514.89,
+"revenue": 1794.09
+},
+{
+"id": "BTD-2025-00647",
+"inception": "2025-10-04",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2094.49,
+"revenue": 265.16
+},
+{
+"id": "BTD-2025-00653",
+"inception": "2025-10-04",
+"owner": "Marcus Ridley",
+"product": "Marine Cargo",
+"gwp": 9110.0,
+"revenue": 609.46
+},
+{
+"id": "BTD-2025-00669",
+"inception": "2025-10-04",
+"owner": "Sofia Almeida",
+"product": "D&O",
+"gwp": 14165.35,
+"revenue": 1144.56
+},
+{
+"id": "BTD-2025-00656",
+"inception": "2025-10-05",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 26523.32,
+"revenue": 5148.18
+},
+{
+"id": "BTD-2025-00648",
+"inception": "2025-10-07",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 6906.98,
+"revenue": 480.73
+},
+{
+"id": "BTD-2025-00636",
+"inception": "2025-10-08",
+"owner": "Tom Beckwith",
+"product": "Cyber",
+"gwp": 13251.97,
+"revenue": 1883.1
+},
+{
+"id": "BTD-2025-00642",
+"inception": "2025-10-08",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 19780.0,
+"revenue": 2019.54
+},
+{
+"id": "BTD-2025-00666",
+"inception": "2025-10-10",
+"owner": "Tom Beckwith",
+"product": "D&O",
+"gwp": 15440.0,
+"revenue": 1238.29
+},
+{
+"id": "BTD-2025-00664",
+"inception": "2025-10-15",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 8796.51,
+"revenue": 1313.32
+},
+{
+"id": "BTD-2025-00667",
+"inception": "2025-10-15",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 33976.38,
+"revenue": 3873.31
+},
+{
+"id": "BTD-2025-00668",
+"inception": "2025-10-16",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 10100.0,
+"revenue": 1162.51
+},
+{
+"id": "BTD-2025-00637",
+"inception": "2025-10-17",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 35566.93,
+"revenue": 3684.73
+},
+{
+"id": "BTD-2025-00649",
+"inception": "2025-10-17",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 4260.0,
+"revenue": 431.11
+},
+{
+"id": "BTD-2025-00658",
+"inception": "2025-10-18",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 37110.0,
+"revenue": 7351.49
+},
+{
+"id": "BTD-2025-00650",
+"inception": "2025-10-19",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 27796.51,
+"revenue": 3196.6
+},
+{
+"id": "BTD-2025-00660",
+"inception": "2025-10-19",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 4780.0,
+"revenue": 533.45
+},
+{
+"id": "BTD-2025-00659",
+"inception": "2025-10-20",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 11780.0,
+"revenue": 2394.87
+},
+{
+"id": "BTD-2025-00665",
+"inception": "2025-10-20",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 6102.56,
+"revenue": 661.52
+},
+{
+"id": "BTD-2025-00638",
+"inception": "2025-10-24",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 16358.97,
+"revenue": 1702.97
+},
+{
+"id": "BTD-2025-00635",
+"inception": "2025-10-26",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 5840.0,
+"revenue": 748.1
+},
+{
+"id": "BTD-2025-00657",
+"inception": "2025-10-28",
+"owner": "Tom Beckwith",
+"product": "Professional Indemnity",
+"gwp": 9108.81,
+"revenue": 1278.88
+},
+{
+"id": "BTD-2025-00672",
+"inception": "2025-11-01",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 13558.14,
+"revenue": 1199.9
+},
+{
+"id": "BTD-2025-00674",
+"inception": "2025-11-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 6104.65,
+"revenue": 1032.91
+},
+{
+"id": "BTD-2025-00677",
+"inception": "2025-11-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 7580.0,
+"revenue": 756.48
+},
+{
+"id": "BTD-2025-00678",
+"inception": "2025-11-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 68330.71,
+"revenue": 13017.0
+},
+{
+"id": "BTD-2025-00680",
+"inception": "2025-11-01",
+"owner": "Priya Nandakumar",
+"product": "Political Violence",
+"gwp": 31716.54,
+"revenue": 3273.15
+},
+{
+"id": "BTD-2025-00681",
+"inception": "2025-11-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 6627.91,
+"revenue": 854.34
+},
+{
+"id": "BTD-2025-00684",
+"inception": "2025-11-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 1730.0,
+"revenue": 112.62
+},
+{
+"id": "BTD-2025-00685",
+"inception": "2025-11-01",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 23519.69,
+"revenue": 2763.56
+},
+{
+"id": "BTD-2025-00686",
+"inception": "2025-11-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3401.57,
+"revenue": 911.62
+},
+{
+"id": "BTD-2025-00689",
+"inception": "2025-11-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 47025.91,
+"revenue": 9659.12
+},
+{
+"id": "BTD-2025-00690",
+"inception": "2025-11-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 5239.32,
+"revenue": 677.97
+},
+{
+"id": "BTD-2025-00692",
+"inception": "2025-11-01",
+"owner": "Callum Reid",
+"product": "Active Assailant",
+"gwp": 6755.91,
+"revenue": 854.62
+},
+{
+"id": "BTD-2025-00693",
+"inception": "2025-11-01",
+"owner": "Priya Nandakumar",
+"product": "Terrorism",
+"gwp": 46870.0,
+"revenue": 9331.82
+},
+{
+"id": "BTD-2025-00691",
+"inception": "2025-11-03",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 56307.09,
+"revenue": 10979.88
+},
+{
+"id": "BTD-2025-00682",
+"inception": "2025-11-04",
+"owner": "Tom Beckwith",
+"product": "Cyber",
+"gwp": 7160.0,
+"revenue": 546.31
+},
+{
+"id": "BTD-2025-00688",
+"inception": "2025-11-12",
+"owner": "Tom Beckwith",
+"product": "Cyber",
+"gwp": 6270.0,
+"revenue": 492.82
+},
+{
+"id": "BTD-2025-00687",
+"inception": "2025-11-14",
+"owner": "Tom Beckwith",
+"product": "Product Recall",
+"gwp": 71220.0,
+"revenue": 6808.63
+},
+{
+"id": "BTD-2025-00675",
+"inception": "2025-11-16",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 172900.0,
+"revenue": 37121.63
+},
+{
+"id": "BTD-2025-00676",
+"inception": "2025-11-18",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 44810.0,
+"revenue": 9392.18
+},
+{
+"id": "BTD-2025-00671",
+"inception": "2025-11-19",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 1649.57,
+"revenue": 226.16
+},
+{
+"id": "BTD-2025-00673",
+"inception": "2025-11-21",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 7370.0,
+"revenue": 978.0
+},
+{
+"id": "BTD-2025-00679",
+"inception": "2025-11-26",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 5820.0,
+"revenue": 1216.38
+},
+{
+"id": "BTD-2025-00694",
+"inception": "2025-11-26",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 20370.08,
+"revenue": 3605.5
+},
+{
+"id": "BTD-2025-00683",
+"inception": "2025-11-27",
+"owner": "Eleanor Voss",
+"product": "Cyber",
+"gwp": 5220.47,
+"revenue": 832.14
+},
+{
+"id": "BTD-2025-00695",
+"inception": "2025-12-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 31069.77,
+"revenue": 3284.07
+},
+{
+"id": "BTD-2025-00696",
+"inception": "2025-12-01",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 15992.13,
+"revenue": 2454.79
+},
+{
+"id": "BTD-2025-00697",
+"inception": "2025-12-01",
+"owner": "Eleanor Voss",
+"product": "Professional Indemnity",
+"gwp": 16780.0,
+"revenue": 2560.63
+},
+{
+"id": "BTD-2025-00698",
+"inception": "2025-12-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 2540.0,
+"revenue": 166.88
+},
+{
+"id": "BTD-2025-00699",
+"inception": "2025-12-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 4800.0,
+"revenue": 583.68
+},
+{
+"id": "BTD-2025-00702",
+"inception": "2025-12-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 73136.75,
+"revenue": 13998.37
+},
+{
+"id": "BTD-2025-00703",
+"inception": "2025-12-01",
+"owner": "Priya Nandakumar",
+"product": "Kidnap & Ransom",
+"gwp": 4174.42,
+"revenue": 985.16
+},
+{
+"id": "BTD-2025-00705",
+"inception": "2025-12-01",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 20840.0,
+"revenue": 2146.52
+},
+{
+"id": "BTD-2025-00706",
+"inception": "2025-12-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 4538.46,
+"revenue": 534.63
+},
+{
+"id": "BTD-2025-00709",
+"inception": "2025-12-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 4409.45,
+"revenue": 1039.75
+},
+{
+"id": "BTD-2025-00711",
+"inception": "2025-12-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 46840.0,
+"revenue": 4159.39
+},
+{
+"id": "BTD-2025-00712",
+"inception": "2025-12-01",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 8994.19,
+"revenue": 1341.93
+},
+{
+"id": "BTD-2025-00715",
+"inception": "2025-12-01",
+"owner": "Marcus Ridley",
+"product": "Political Violence",
+"gwp": 46425.2,
+"revenue": 5027.85
+},
+{
+"id": "BTD-2025-00714",
+"inception": "2025-12-08",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 20340.0,
+"revenue": 4267.33
+},
+{
+"id": "BTD-2025-00707",
+"inception": "2025-12-11",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 35047.24,
+"revenue": 4612.22
+},
+{
+"id": "BTD-2025-00704",
+"inception": "2025-12-12",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 5228.35,
+"revenue": 730.92
+},
+{
+"id": "BTD-2025-00701",
+"inception": "2025-12-13",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 24031.5,
+"revenue": 3953.18
+},
+{
+"id": "BTD-2025-00710",
+"inception": "2025-12-17",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 13810.0,
+"revenue": 2386.37
+},
+{
+"id": "BTD-2025-00700",
+"inception": "2025-12-22",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 68895.35,
+"revenue": 7123.78
+},
+{
+"id": "BTD-2025-00708",
+"inception": "2025-12-25",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 5401.71,
+"revenue": 661.17
+},
+{
+"id": "BTD-2025-00713",
+"inception": "2025-12-25",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 11512.82,
+"revenue": 1591.07
+},
+{
+"id": "BTD-2026-00716",
+"inception": "2026-01-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 8023.62,
+"revenue": 1019.8
+},
+{
+"id": "BTD-2026-00718",
+"inception": "2026-01-01",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 6560.0,
+"revenue": 568.75
+},
+{
+"id": "BTD-2026-00720",
+"inception": "2026-01-01",
+"owner": "Priya Nandakumar",
+"product": "Active Assailant",
+"gwp": 10352.33,
+"revenue": 1335.45
+},
+{
+"id": "BTD-2026-00721",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 41761.63,
+"revenue": 3854.6
+},
+{
+"id": "BTD-2026-00725",
+"inception": "2026-01-01",
+"owner": "Callum Reid",
+"product": "Marine Cargo",
+"gwp": 7370.0,
+"revenue": 546.12
+},
+{
+"id": "BTD-2026-00727",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 7920.0,
+"revenue": 698.54
+},
+{
+"id": "BTD-2026-00732",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 19992.13,
+"revenue": 1923.24
+},
+{
+"id": "BTD-2026-00735",
+"inception": "2026-01-01",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 22895.35,
+"revenue": 3450.33
+},
+{
+"id": "BTD-2026-00741",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 15450.0,
+"revenue": 1206.64
+},
+{
+"id": "BTD-2026-00742",
+"inception": "2026-01-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 32590.55,
+"revenue": 5657.72
+},
+{
+"id": "BTD-2026-00743",
+"inception": "2026-01-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 50041.45,
+"revenue": 10383.6
+},
+{
+"id": "BTD-2026-00744",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Product Recall",
+"gwp": 24582.68,
+"revenue": 4299.51
+},
+{
+"id": "BTD-2026-00745",
+"inception": "2026-01-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 14110.24,
+"revenue": 2992.78
+},
+{
+"id": "BTD-2026-00746",
+"inception": "2026-01-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 5251.97,
+"revenue": 724.77
+},
+{
+"id": "BTD-2026-00747",
+"inception": "2026-01-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 4614.17,
+"revenue": 585.54
+},
+{
+"id": "BTD-2026-00748",
+"inception": "2026-01-01",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 9094.02,
+"revenue": 701.15
+},
+{
+"id": "BTD-2026-00752",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 5165.35,
+"revenue": 815.61
+},
+{
+"id": "BTD-2026-00754",
+"inception": "2026-01-01",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 39889.76,
+"revenue": 5628.45
+},
+{
+"id": "BTD-2026-00755",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 27000.0,
+"revenue": 2592.0
+},
+{
+"id": "BTD-2026-00756",
+"inception": "2026-01-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 13420.0,
+"revenue": 2992.66
+},
+{
+"id": "BTD-2026-00762",
+"inception": "2026-01-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 18094.49,
+"revenue": 1872.78
+},
+{
+"id": "BTD-2026-00763",
+"inception": "2026-01-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 26740.16,
+"revenue": 2968.16
+},
+{
+"id": "BTD-2026-00768",
+"inception": "2026-01-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 14950.0,
+"revenue": 1372.41
+},
+{
+"id": "BTD-2026-00769",
+"inception": "2026-01-01",
+"owner": "Tom Beckwith",
+"product": "D&O",
+"gwp": 9280.0,
+"revenue": 738.69
+},
+{
+"id": "BTD-2026-00772",
+"inception": "2026-01-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 1690.0,
+"revenue": 236.43
+},
+{
+"id": "BTD-2026-00773",
+"inception": "2026-01-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 42140.0,
+"revenue": 4365.7
+},
+{
+"id": "BTD-2026-00774",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 13151.16,
+"revenue": 1303.28
+},
+{
+"id": "BTD-2026-00783",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 27606.3,
+"revenue": 4176.83
+},
+{
+"id": "BTD-2026-00784",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Fixated Threat",
+"gwp": 6504.27,
+"revenue": 924.26
+},
+{
+"id": "BTD-2026-00785",
+"inception": "2026-01-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 16157.48,
+"revenue": 1449.33
+},
+{
+"id": "BTD-2026-00786",
+"inception": "2026-01-01",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 12055.12,
+"revenue": 1345.35
+},
+{
+"id": "BTD-2026-00787",
+"inception": "2026-01-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 36204.72,
+"revenue": 6719.6
+},
+{
+"id": "BTD-2026-00789",
+"inception": "2026-01-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 34755.91,
+"revenue": 7288.31
+},
+{
+"id": "BTD-2026-00790",
+"inception": "2026-01-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 65050.0,
+"revenue": 12710.77
+},
+{
+"id": "BTD-2026-00791",
+"inception": "2026-01-01",
+"owner": "Callum Reid",
+"product": "Active Assailant",
+"gwp": 8900.0,
+"revenue": 2037.21
+},
+{
+"id": "BTD-2026-00751",
+"inception": "2026-01-02",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 10377.91,
+"revenue": 809.48
+},
+{
+"id": "BTD-2026-00717",
+"inception": "2026-01-03",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10025.64,
+"revenue": 882.26
+},
+{
+"id": "BTD-2026-00730",
+"inception": "2026-01-03",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 14251.97,
+"revenue": 1686.01
+},
+{
+"id": "BTD-2026-00750",
+"inception": "2026-01-04",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 18324.79,
+"revenue": 1515.46
+},
+{
+"id": "BTD-2026-00761",
+"inception": "2026-01-04",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 9630.0,
+"revenue": 753.07
+},
+{
+"id": "BTD-2026-00737",
+"inception": "2026-01-05",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 27547.01,
+"revenue": 5848.23
+},
+{
+"id": "BTD-2026-00749",
+"inception": "2026-01-07",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 16900.0,
+"revenue": 4508.92
+},
+{
+"id": "BTD-2026-00734",
+"inception": "2026-01-08",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 7180.0,
+"revenue": 1822.28
+},
+{
+"id": "BTD-2026-00788",
+"inception": "2026-01-08",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 13660.0,
+"revenue": 3267.47
+},
+{
+"id": "BTD-2026-00775",
+"inception": "2026-01-09",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 18110.0,
+"revenue": 1398.09
+},
+{
+"id": "BTD-2026-00778",
+"inception": "2026-01-09",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2236.22,
+"revenue": 299.65
+},
+{
+"id": "BTD-2026-00729",
+"inception": "2026-01-11",
+"owner": "Priya Nandakumar",
+"product": "Active Assailant",
+"gwp": 10420.0,
+"revenue": 1351.47
+},
+{
+"id": "BTD-2026-00733",
+"inception": "2026-01-11",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 18450.0,
+"revenue": 3499.97
+},
+{
+"id": "BTD-2026-00738",
+"inception": "2026-01-11",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 5322.83,
+"revenue": 431.68
+},
+{
+"id": "BTD-2026-00771",
+"inception": "2026-01-11",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 49616.28,
+"revenue": 5641.37
+},
+{
+"id": "BTD-2026-00731",
+"inception": "2026-01-12",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 22200.0,
+"revenue": 1813.74
+},
+{
+"id": "BTD-2026-00728",
+"inception": "2026-01-13",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 3732.28,
+"revenue": 318.74
+},
+{
+"id": "BTD-2026-00736",
+"inception": "2026-01-13",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 15937.01,
+"revenue": 1322.77
+},
+{
+"id": "BTD-2026-00764",
+"inception": "2026-01-14",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 33110.0,
+"revenue": 3708.32
+},
+{
+"id": "BTD-2026-00722",
+"inception": "2026-01-15",
+"owner": "Callum Reid",
+"product": "Liability",
+"gwp": 7920.0,
+"revenue": 1317.1
+},
+{
+"id": "BTD-2026-00766",
+"inception": "2026-01-16",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 9070.0,
+"revenue": 2097.89
+},
+{
+"id": "BTD-2026-00781",
+"inception": "2026-01-16",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 17881.89,
+"revenue": 3106.08
+},
+{
+"id": "BTD-2026-00776",
+"inception": "2026-01-17",
+"owner": "Callum Reid",
+"product": "Cyber",
+"gwp": 3923.08,
+"revenue": 336.6
+},
+{
+"id": "BTD-2026-00758",
+"inception": "2026-01-18",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 79527.56,
+"revenue": 7857.32
+},
+{
+"id": "BTD-2026-00777",
+"inception": "2026-01-18",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 10430.05,
+"revenue": 1198.41
+},
+{
+"id": "BTD-2026-00779",
+"inception": "2026-01-18",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 16720.0,
+"revenue": 3424.26
+},
+{
+"id": "BTD-2026-00757",
+"inception": "2026-01-19",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 16914.53,
+"revenue": 1946.86
+},
+{
+"id": "BTD-2026-00770",
+"inception": "2026-01-19",
+"owner": "Priya Nandakumar",
+"product": "Cyber",
+"gwp": 16850.39,
+"revenue": 2404.55
+},
+{
+"id": "BTD-2026-00753",
+"inception": "2026-01-20",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 31641.03,
+"revenue": 6207.97
+},
+{
+"id": "BTD-2026-00782",
+"inception": "2026-01-21",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 54740.0,
+"revenue": 9907.94
+},
+{
+"id": "BTD-2026-00719",
+"inception": "2026-01-22",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 4863.25,
+"revenue": 497.02
+},
+{
+"id": "BTD-2026-00767",
+"inception": "2026-01-22",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 8500.0,
+"revenue": 1881.9
+},
+{
+"id": "BTD-2026-00760",
+"inception": "2026-01-23",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 47362.2,
+"revenue": 9794.5
+},
+{
+"id": "BTD-2026-00726",
+"inception": "2026-01-24",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 31530.0,
+"revenue": 7605.04
+},
+{
+"id": "BTD-2026-00739",
+"inception": "2026-01-24",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 3660.0,
+"revenue": 954.16
+},
+{
+"id": "BTD-2026-00740",
+"inception": "2026-01-24",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 24372.09,
+"revenue": 4947.53
+},
+{
+"id": "BTD-2026-00759",
+"inception": "2026-01-24",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 6519.69,
+"revenue": 1239.39
+},
+{
+"id": "BTD-2026-00723",
+"inception": "2026-01-25",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 8367.52,
+"revenue": 1240.9
+},
+{
+"id": "BTD-2026-00724",
+"inception": "2026-01-25",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 15149.61,
+"revenue": 3928.29
+},
+{
+"id": "BTD-2026-00765",
+"inception": "2026-01-25",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 6090.0,
+"revenue": 1281.34
+},
+{
+"id": "BTD-2026-00780",
+"inception": "2026-01-27",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 28819.77,
+"revenue": 3124.06
+},
+{
+"id": "BTD-2026-00792",
+"inception": "2026-02-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 10110.0,
+"revenue": 1019.09
+},
+{
+"id": "BTD-2026-00795",
+"inception": "2026-02-01",
+"owner": "Sofia Almeida",
+"product": "Personal Accident",
+"gwp": 14264.96,
+"revenue": 1557.73
+},
+{
+"id": "BTD-2026-00796",
+"inception": "2026-02-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 5740.0,
+"revenue": 1197.94
+},
+{
+"id": "BTD-2026-00797",
+"inception": "2026-02-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 25582.68,
+"revenue": 4612.56
+},
+{
+"id": "BTD-2026-00798",
+"inception": "2026-02-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 10180.23,
+"revenue": 1205.34
+},
+{
+"id": "BTD-2026-00799",
+"inception": "2026-02-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 10720.21,
+"revenue": 959.46
+},
+{
+"id": "BTD-2026-00800",
+"inception": "2026-02-01",
+"owner": "Eleanor Voss",
+"product": "Cyber",
+"gwp": 15000.0,
+"revenue": 2239.5
+},
+{
+"id": "BTD-2026-00803",
+"inception": "2026-02-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 11653.54,
+"revenue": 1347.15
+},
+{
+"id": "BTD-2026-00806",
+"inception": "2026-02-01",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 17460.0,
+"revenue": 2240.12
+},
+{
+"id": "BTD-2026-00807",
+"inception": "2026-02-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 7015.75,
+"revenue": 496.01
+},
+{
+"id": "BTD-2026-00808",
+"inception": "2026-02-01",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 7968.5,
+"revenue": 1164.2
+},
+{
+"id": "BTD-2026-00812",
+"inception": "2026-02-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 16350.0,
+"revenue": 1760.89
+},
+{
+"id": "BTD-2026-00813",
+"inception": "2026-02-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 7200.0,
+"revenue": 1883.52
+},
+{
+"id": "BTD-2026-00815",
+"inception": "2026-02-01",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 11170.0,
+"revenue": 1569.38
+},
+{
+"id": "BTD-2026-00816",
+"inception": "2026-02-01",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 2610.0,
+"revenue": 271.18
+},
+{
+"id": "BTD-2026-00802",
+"inception": "2026-02-02",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 32110.0,
+"revenue": 5953.19
+},
+{
+"id": "BTD-2026-00809",
+"inception": "2026-02-02",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 2755.91,
+"revenue": 741.34
+},
+{
+"id": "BTD-2026-00814",
+"inception": "2026-02-02",
+"owner": "Sofia Almeida",
+"product": "D&O",
+"gwp": 11017.09,
+"revenue": 915.52
+},
+{
+"id": "BTD-2026-00793",
+"inception": "2026-02-07",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 3551.18,
+"revenue": 866.49
+},
+{
+"id": "BTD-2026-00794",
+"inception": "2026-02-12",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 7550.0,
+"revenue": 836.54
+},
+{
+"id": "BTD-2026-00805",
+"inception": "2026-02-12",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 2960.0,
+"revenue": 382.73
+},
+{
+"id": "BTD-2026-00811",
+"inception": "2026-02-12",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 17692.91,
+"revenue": 1631.29
+},
+{
+"id": "BTD-2026-00801",
+"inception": "2026-02-17",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 21905.98,
+"revenue": 4035.08
+},
+{
+"id": "BTD-2026-00804",
+"inception": "2026-02-24",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10604.65,
+"revenue": 809.13
+},
+{
+"id": "BTD-2026-00817",
+"inception": "2026-02-24",
+"owner": "Eleanor Voss",
+"product": "Fixated Threat",
+"gwp": 9000.0,
+"revenue": 1325.7
+},
+{
+"id": "BTD-2026-00810",
+"inception": "2026-02-27",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 21362.69,
+"revenue": 4112.32
+},
+{
+"id": "BTD-2026-00821",
+"inception": "2026-03-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 13546.51,
+"revenue": 1209.7
+},
+{
+"id": "BTD-2026-00822",
+"inception": "2026-03-01",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 9912.79,
+"revenue": 872.33
+},
+{
+"id": "BTD-2026-00824",
+"inception": "2026-03-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3370.0,
+"revenue": 470.12
+},
+{
+"id": "BTD-2026-00826",
+"inception": "2026-03-01",
+"owner": "Tom Beckwith",
+"product": "Political Violence",
+"gwp": 53510.0,
+"revenue": 6175.05
+},
+{
+"id": "BTD-2026-00829",
+"inception": "2026-03-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 37320.0,
+"revenue": 7049.75
+},
+{
+"id": "BTD-2026-00830",
+"inception": "2026-03-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 20984.25,
+"revenue": 4406.69
+},
+{
+"id": "BTD-2026-00832",
+"inception": "2026-03-01",
+"owner": "Callum Reid",
+"product": "Product Recall",
+"gwp": 50380.0,
+"revenue": 4796.18
+},
+{
+"id": "BTD-2026-00838",
+"inception": "2026-03-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 18570.0,
+"revenue": 4692.64
+},
+{
+"id": "BTD-2026-00839",
+"inception": "2026-03-01",
+"owner": "Eleanor Voss",
+"product": "Cyber",
+"gwp": 24015.75,
+"revenue": 3751.26
+},
+{
+"id": "BTD-2026-00841",
+"inception": "2026-03-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 45658.12,
+"revenue": 4396.88
+},
+{
+"id": "BTD-2026-00842",
+"inception": "2026-03-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 13055.12,
+"revenue": 3095.37
+},
+{
+"id": "BTD-2026-00843",
+"inception": "2026-03-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 36046.51,
+"revenue": 7497.67
+},
+{
+"id": "BTD-2026-00845",
+"inception": "2026-03-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 20988.37,
+"revenue": 1979.2
+},
+{
+"id": "BTD-2026-00837",
+"inception": "2026-03-02",
+"owner": "Sofia Almeida",
+"product": "Active Assailant",
+"gwp": 27780.0,
+"revenue": 3669.74
+},
+{
+"id": "BTD-2026-00818",
+"inception": "2026-03-03",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 16536.17,
+"revenue": 1405.57
+},
+{
+"id": "BTD-2026-00846",
+"inception": "2026-03-03",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 9040.0,
+"revenue": 837.1
+},
+{
+"id": "BTD-2026-00828",
+"inception": "2026-03-04",
+"owner": "Priya Nandakumar",
+"product": "Cyber",
+"gwp": 16820.51,
+"revenue": 2348.14
+},
+{
+"id": "BTD-2026-00833",
+"inception": "2026-03-10",
+"owner": "Marcus Ridley",
+"product": "Terrorism",
+"gwp": 14700.85,
+"revenue": 2804.92
+},
+{
+"id": "BTD-2026-00847",
+"inception": "2026-03-10",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 16858.27,
+"revenue": 3508.21
+},
+{
+"id": "BTD-2026-00831",
+"inception": "2026-03-11",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 8362.2,
+"revenue": 2123.16
+},
+{
+"id": "BTD-2026-00840",
+"inception": "2026-03-12",
+"owner": "Callum Reid",
+"product": "Terrorism",
+"gwp": 12410.0,
+"revenue": 2613.55
+},
+{
+"id": "BTD-2026-00834",
+"inception": "2026-03-13",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 6273.5,
+"revenue": 419.07
+},
+{
+"id": "BTD-2026-00820",
+"inception": "2026-03-14",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 10610.47,
+"revenue": 1708.28
+},
+{
+"id": "BTD-2026-00848",
+"inception": "2026-03-14",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 8601.04,
+"revenue": 1011.48
+},
+{
+"id": "BTD-2026-00836",
+"inception": "2026-03-17",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 25763.78,
+"revenue": 5098.65
+},
+{
+"id": "BTD-2026-00819",
+"inception": "2026-03-18",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 9007.87,
+"revenue": 2159.19
+},
+{
+"id": "BTD-2026-00823",
+"inception": "2026-03-18",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 23570.0,
+"revenue": 3417.65
+},
+{
+"id": "BTD-2026-00844",
+"inception": "2026-03-19",
+"owner": "Eleanor Voss",
+"product": "Professional Indemnity",
+"gwp": 24077.72,
+"revenue": 3565.91
+},
+{
+"id": "BTD-2026-00825",
+"inception": "2026-03-23",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 12284.88,
+"revenue": 1622.83
+},
+{
+"id": "BTD-2026-00827",
+"inception": "2026-03-23",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 159000.0,
+"revenue": 31036.8
+},
+{
+"id": "BTD-2026-00835",
+"inception": "2026-03-25",
+"owner": "Eleanor Voss",
+"product": "Personal Accident",
+"gwp": 7750.0,
+"revenue": 867.23
+},
+{
+"id": "BTD-2026-00851",
+"inception": "2026-04-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 17850.0,
+"revenue": 1745.73
+},
+{
+"id": "BTD-2026-00853",
+"inception": "2026-04-01",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 6770.0,
+"revenue": 1716.19
+},
+{
+"id": "BTD-2026-00856",
+"inception": "2026-04-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 16228.35,
+"revenue": 1447.57
+},
+{
+"id": "BTD-2026-00859",
+"inception": "2026-04-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 8771.65,
+"revenue": 1854.33
+},
+{
+"id": "BTD-2026-00861",
+"inception": "2026-04-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 7050.0,
+"revenue": 452.61
+},
+{
+"id": "BTD-2026-00862",
+"inception": "2026-04-01",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 3094.49,
+"revenue": 413.42
+},
+{
+"id": "BTD-2026-00868",
+"inception": "2026-04-01",
+"owner": "Eleanor Voss",
+"product": "Product Recall",
+"gwp": 21354.33,
+"revenue": 2069.23
+},
+{
+"id": "BTD-2026-00869",
+"inception": "2026-04-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 11820.0,
+"revenue": 2854.53
+},
+{
+"id": "BTD-2026-00870",
+"inception": "2026-04-01",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 2600.0,
+"revenue": 509.34
+},
+{
+"id": "BTD-2026-00871",
+"inception": "2026-04-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 9308.14,
+"revenue": 1211.92
+},
+{
+"id": "BTD-2026-00872",
+"inception": "2026-04-01",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 13070.0,
+"revenue": 2245.43
+},
+{
+"id": "BTD-2026-00874",
+"inception": "2026-04-01",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 28180.23,
+"revenue": 3280.18
+},
+{
+"id": "BTD-2026-00875",
+"inception": "2026-04-01",
+"owner": "Callum Reid",
+"product": "D&O",
+"gwp": 47716.54,
+"revenue": 4189.51
+},
+{
+"id": "BTD-2026-00879",
+"inception": "2026-04-01",
+"owner": "Callum Reid",
+"product": "Cyber",
+"gwp": 9276.6,
+"revenue": 1372.94
+},
+{
+"id": "BTD-2026-00880",
+"inception": "2026-04-01",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 9990.0,
+"revenue": 1332.67
+},
+{
+"id": "BTD-2026-00881",
+"inception": "2026-04-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 11519.69,
+"revenue": 993.0
+},
+{
+"id": "BTD-2026-00882",
+"inception": "2026-04-01",
+"owner": "Sofia Almeida",
+"product": "Active Assailant",
+"gwp": 14150.0,
+"revenue": 3359.21
+},
+{
+"id": "BTD-2026-00884",
+"inception": "2026-04-01",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 48133.86,
+"revenue": 8611.15
+},
+{
+"id": "BTD-2026-00888",
+"inception": "2026-04-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 111259.84,
+"revenue": 12283.09
+},
+{
+"id": "BTD-2026-00857",
+"inception": "2026-04-02",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 34464.57,
+"revenue": 6872.23
+},
+{
+"id": "BTD-2026-00866",
+"inception": "2026-04-03",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 27125.98,
+"revenue": 5259.73
+},
+{
+"id": "BTD-2026-00877",
+"inception": "2026-04-03",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 105748.03,
+"revenue": 18008.89
+},
+{
+"id": "BTD-2026-00876",
+"inception": "2026-04-06",
+"owner": "Priya Nandakumar",
+"product": "Political Violence",
+"gwp": 26102.56,
+"revenue": 3051.39
+},
+{
+"id": "BTD-2026-00864",
+"inception": "2026-04-08",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 44472.44,
+"revenue": 9045.69
+},
+{
+"id": "BTD-2026-00849",
+"inception": "2026-04-09",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 23750.0,
+"revenue": 4892.5
+},
+{
+"id": "BTD-2026-00885",
+"inception": "2026-04-09",
+"owner": "Eleanor Voss",
+"product": "Liability",
+"gwp": 23385.83,
+"revenue": 3835.28
+},
+{
+"id": "BTD-2026-00860",
+"inception": "2026-04-10",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 30000.0,
+"revenue": 3072.0
+},
+{
+"id": "BTD-2026-00887",
+"inception": "2026-04-10",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 15674.42,
+"revenue": 3274.39
+},
+{
+"id": "BTD-2026-00890",
+"inception": "2026-04-11",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 1730.0,
+"revenue": 192.9
+},
+{
+"id": "BTD-2026-00878",
+"inception": "2026-04-13",
+"owner": "Priya Nandakumar",
+"product": "Active Assailant",
+"gwp": 31500.0,
+"revenue": 3792.6
+},
+{
+"id": "BTD-2026-00850",
+"inception": "2026-04-15",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 2283.46,
+"revenue": 151.39
+},
+{
+"id": "BTD-2026-00852",
+"inception": "2026-04-16",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 51510.0,
+"revenue": 4440.16
+},
+{
+"id": "BTD-2026-00873",
+"inception": "2026-04-16",
+"owner": "Sofia Almeida",
+"product": "Fixated Threat",
+"gwp": 8976.38,
+"revenue": 2303.34
+},
+{
+"id": "BTD-2026-00855",
+"inception": "2026-04-17",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 9511.81,
+"revenue": 1216.56
+},
+{
+"id": "BTD-2026-00886",
+"inception": "2026-04-18",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 6970.93,
+"revenue": 1654.9
+},
+{
+"id": "BTD-2026-00854",
+"inception": "2026-04-19",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 5826.77,
+"revenue": 1042.99
+},
+{
+"id": "BTD-2026-00858",
+"inception": "2026-04-19",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 4889.76,
+"revenue": 722.22
+},
+{
+"id": "BTD-2026-00867",
+"inception": "2026-04-20",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 9420.0,
+"revenue": 750.77
+},
+{
+"id": "BTD-2026-00889",
+"inception": "2026-04-20",
+"owner": "Priya Nandakumar",
+"product": "Marine Cargo",
+"gwp": 5354.65,
+"revenue": 664.51
+},
+{
+"id": "BTD-2026-00865",
+"inception": "2026-04-23",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 13160.0,
+"revenue": 1022.53
+},
+{
+"id": "BTD-2026-00883",
+"inception": "2026-04-26",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 11680.23,
+"revenue": 1408.64
+},
+{
+"id": "BTD-2026-00863",
+"inception": "2026-04-27",
+"owner": "Sofia Almeida",
+"product": "Kidnap & Ransom",
+"gwp": 5047.24,
+"revenue": 1240.61
+},
+{
+"id": "BTD-2026-00891",
+"inception": "2026-04-28",
+"owner": "Eleanor Voss",
+"product": "Active Assailant",
+"gwp": 16230.0,
+"revenue": 3698.82
+},
+{
+"id": "BTD-2026-00897",
+"inception": "2026-05-01",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 7362.2,
+"revenue": 1735.27
+},
+{
+"id": "BTD-2026-00898",
+"inception": "2026-05-01",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 11354.65,
+"revenue": 1546.5
+},
+{
+"id": "BTD-2026-00899",
+"inception": "2026-05-01",
+"owner": "Callum Reid",
+"product": "Marine Cargo",
+"gwp": 1865.28,
+"revenue": 133.55
+},
+{
+"id": "BTD-2026-00900",
+"inception": "2026-05-01",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 7282.05,
+"revenue": 1352.28
+},
+{
+"id": "BTD-2026-00905",
+"inception": "2026-05-01",
+"owner": "Tom Beckwith",
+"product": "Terrorism",
+"gwp": 30291.34,
+"revenue": 3341.13
+},
+{
+"id": "BTD-2026-00908",
+"inception": "2026-05-01",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 14662.79,
+"revenue": 3520.54
+},
+{
+"id": "BTD-2026-00909",
+"inception": "2026-05-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 50230.0,
+"revenue": 10799.45
+},
+{
+"id": "BTD-2026-00917",
+"inception": "2026-05-01",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 55173.23,
+"revenue": 4811.11
+},
+{
+"id": "BTD-2026-00911",
+"inception": "2026-05-03",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 46811.02,
+"revenue": 11669.99
+},
+{
+"id": "BTD-2026-00901",
+"inception": "2026-05-04",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 5210.0,
+"revenue": 602.28
+},
+{
+"id": "BTD-2026-00906",
+"inception": "2026-05-05",
+"owner": "Eleanor Voss",
+"product": "Kidnap & Ransom",
+"gwp": 15540.0,
+"revenue": 3846.15
+},
+{
+"id": "BTD-2026-00916",
+"inception": "2026-05-05",
+"owner": "Callum Reid",
+"product": "Cyber",
+"gwp": 9230.0,
+"revenue": 815.93
+},
+{
+"id": "BTD-2026-00895",
+"inception": "2026-05-07",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 29170.0,
+"revenue": 2371.52
+},
+{
+"id": "BTD-2026-00893",
+"inception": "2026-05-08",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 18251.97,
+"revenue": 2819.93
+},
+{
+"id": "BTD-2026-00912",
+"inception": "2026-05-08",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 17395.35,
+"revenue": 1466.43
+},
+{
+"id": "BTD-2026-00892",
+"inception": "2026-05-09",
+"owner": "Tom Beckwith",
+"product": "Active Assailant",
+"gwp": 12647.67,
+"revenue": 2803.99
+},
+{
+"id": "BTD-2026-00918",
+"inception": "2026-05-10",
+"owner": "Priya Nandakumar",
+"product": "Liability",
+"gwp": 18000.0,
+"revenue": 1810.8
+},
+{
+"id": "BTD-2026-00907",
+"inception": "2026-05-13",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 26790.0,
+"revenue": 5033.84
+},
+{
+"id": "BTD-2026-00914",
+"inception": "2026-05-13",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 21680.0,
+"revenue": 3405.93
+},
+{
+"id": "BTD-2026-00903",
+"inception": "2026-05-15",
+"owner": "Callum Reid",
+"product": "Personal Accident",
+"gwp": 3307.09,
+"revenue": 642.57
+},
+{
+"id": "BTD-2026-00913",
+"inception": "2026-05-15",
+"owner": "Priya Nandakumar",
+"product": "Personal Accident",
+"gwp": 17174.42,
+"revenue": 3635.82
+},
+{
+"id": "BTD-2026-00919",
+"inception": "2026-05-17",
+"owner": "Tom Beckwith",
+"product": "Kidnap & Ransom",
+"gwp": 11581.4,
+"revenue": 1538.01
+},
+{
+"id": "BTD-2026-00902",
+"inception": "2026-05-21",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 22726.5,
+"revenue": 2024.93
+},
+{
+"id": "BTD-2026-00910",
+"inception": "2026-05-21",
+"owner": "Eleanor Voss",
+"product": "Cyber",
+"gwp": 13726.74,
+"revenue": 2182.55
+},
+{
+"id": "BTD-2026-00915",
+"inception": "2026-05-23",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 4280.0,
+"revenue": 376.64
+},
+{
+"id": "BTD-2026-00904",
+"inception": "2026-05-25",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 10685.04,
+"revenue": 1320.67
+},
+{
+"id": "BTD-2026-00894",
+"inception": "2026-05-26",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 58549.22,
+"revenue": 5573.89
+},
+{
+"id": "BTD-2026-00896",
+"inception": "2026-05-27",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 33094.49,
+"revenue": 2544.97
+},
+{
+"id": "BTD-2026-00920",
+"inception": "2026-06-01",
+"owner": "Eleanor Voss",
+"product": "Terrorism",
+"gwp": 44085.47,
+"revenue": 4549.62
+},
+{
+"id": "BTD-2026-00922",
+"inception": "2026-06-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 55157.48,
+"revenue": 11533.43
+},
+{
+"id": "BTD-2026-00923",
+"inception": "2026-06-01",
+"owner": "Marcus Ridley",
+"product": "Active Assailant",
+"gwp": 29710.0,
+"revenue": 6952.14
+},
+{
+"id": "BTD-2026-00924",
+"inception": "2026-06-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 33870.0,
+"revenue": 6574.17
+},
+{
+"id": "BTD-2026-00926",
+"inception": "2026-06-01",
+"owner": "Eleanor Voss",
+"product": "Political Violence",
+"gwp": 43868.09,
+"revenue": 9133.34
+},
+{
+"id": "BTD-2026-00927",
+"inception": "2026-06-01",
+"owner": "Callum Reid",
+"product": "Terrorism",
+"gwp": 6203.49,
+"revenue": 1163.15
+},
+{
+"id": "BTD-2026-00930",
+"inception": "2026-06-01",
+"owner": "Sofia Almeida",
+"product": "Political Violence",
+"gwp": 11800.0,
+"revenue": 1348.74
+},
+{
+"id": "BTD-2026-00932",
+"inception": "2026-06-01",
+"owner": "Marcus Ridley",
+"product": "Liability",
+"gwp": 9850.0,
+"revenue": 1788.76
+},
+{
+"id": "BTD-2026-00933",
+"inception": "2026-06-01",
+"owner": "Sofia Almeida",
+"product": "Professional Indemnity",
+"gwp": 22913.39,
+"revenue": 3283.49
+},
+{
+"id": "BTD-2026-00934",
+"inception": "2026-06-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 11779.53,
+"revenue": 1415.9
+},
+{
+"id": "BTD-2026-00939",
+"inception": "2026-06-01",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 1637.8,
+"revenue": 236.99
+},
+{
+"id": "BTD-2026-00943",
+"inception": "2026-06-01",
+"owner": "Sofia Almeida",
+"product": "Marine Cargo",
+"gwp": 4377.95,
+"revenue": 303.83
+},
+{
+"id": "BTD-2026-00944",
+"inception": "2026-06-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 22936.17,
+"revenue": 4598.7
+},
+{
+"id": "BTD-2026-00945",
+"inception": "2026-06-01",
+"owner": "Sofia Almeida",
+"product": "Terrorism",
+"gwp": 9669.29,
+"revenue": 2074.06
+},
+{
+"id": "BTD-2026-00946",
+"inception": "2026-06-01",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 12518.13,
+"revenue": 2024.18
+},
+{
+"id": "BTD-2026-00948",
+"inception": "2026-06-01",
+"owner": "Marcus Ridley",
+"product": "Kidnap & Ransom",
+"gwp": 14354.33,
+"revenue": 3381.88
+},
+{
+"id": "BTD-2026-00949",
+"inception": "2026-06-01",
+"owner": "Callum Reid",
+"product": "Kidnap & Ransom",
+"gwp": 12559.06,
+"revenue": 1651.52
+},
+{
+"id": "BTD-2026-00950",
+"inception": "2026-06-01",
+"owner": "Callum Reid",
+"product": "Cyber",
+"gwp": 15030.0,
+"revenue": 1259.51
+},
+{
+"id": "BTD-2026-00952",
+"inception": "2026-06-01",
+"owner": "Priya Nandakumar",
+"product": "Terrorism",
+"gwp": 19780.0,
+"revenue": 2065.03
+},
+{
+"id": "BTD-2026-00951",
+"inception": "2026-06-02",
+"owner": "Eleanor Voss",
+"product": "D&O",
+"gwp": 182047.24,
+"revenue": 26906.58
+},
+{
+"id": "BTD-2026-00921",
+"inception": "2026-06-03",
+"owner": "Sofia Almeida",
+"product": "Product Recall",
+"gwp": 31771.65,
+"revenue": 5277.27
+},
+{
+"id": "BTD-2026-00929",
+"inception": "2026-06-04",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 28503.94,
+"revenue": 2491.24
+},
+{
+"id": "BTD-2026-00931",
+"inception": "2026-06-04",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 12560.0,
+"revenue": 1951.82
+},
+{
+"id": "BTD-2026-00936",
+"inception": "2026-06-05",
+"owner": "Priya Nandakumar",
+"product": "Professional Indemnity",
+"gwp": 9102.36,
+"revenue": 1381.74
+},
+{
+"id": "BTD-2026-00937",
+"inception": "2026-06-06",
+"owner": "Tom Beckwith",
+"product": "Political Violence",
+"gwp": 34921.26,
+"revenue": 3649.27
+},
+{
+"id": "BTD-2026-00942",
+"inception": "2026-06-06",
+"owner": "Marcus Ridley",
+"product": "Cyber",
+"gwp": 31333.33,
+"revenue": 2412.67
+},
+{
+"id": "BTD-2026-00941",
+"inception": "2026-06-07",
+"owner": "Marcus Ridley",
+"product": "D&O",
+"gwp": 20110.24,
+"revenue": 1749.59
+},
+{
+"id": "BTD-2026-00947",
+"inception": "2026-06-09",
+"owner": "Marcus Ridley",
+"product": "Fixated Threat",
+"gwp": 2582.68,
+"revenue": 340.4
+},
+{
+"id": "BTD-2026-00940",
+"inception": "2026-06-11",
+"owner": "Tom Beckwith",
+"product": "Fixated Threat",
+"gwp": 3350.0,
+"revenue": 457.61
+},
+{
+"id": "BTD-2026-00928",
+"inception": "2026-06-12",
+"owner": "Callum Reid",
+"product": "Professional Indemnity",
+"gwp": 5300.0,
+"revenue": 432.48
+},
+{
+"id": "BTD-2026-00938",
+"inception": "2026-06-14",
+"owner": "Priya Nandakumar",
+"product": "Fixated Threat",
+"gwp": 2440.94,
+"revenue": 334.65
+},
+{
+"id": "BTD-2026-00925",
+"inception": "2026-06-16",
+"owner": "Marcus Ridley",
+"product": "Professional Indemnity",
+"gwp": 23190.0,
+"revenue": 1952.6
+},
+{
+"id": "BTD-2026-00935",
+"inception": "2026-06-17",
+"owner": "Priya Nandakumar",
+"product": "Product Recall",
+"gwp": 33343.02,
+"revenue": 6075.1
+}
+]
+}

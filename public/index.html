@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broking Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  // Apply a saved theme before first paint to avoid a flash of the wrong one.
+  try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+<header>
+  <h1>Broking Dashboard</h1>
+  <button id="theme-toggle" class="theme-toggle" type="button"></button>
+</header>
+<p class="note">Demo data — entirely fictitious. <span id="count"></span></p>
+
+<div class="kpis">
+  <div class="kpi"><div class="label">Total GWP</div><div class="value" id="gwp">…</div></div>
+  <div class="kpi"><div class="label">Total revenue</div><div class="value" id="revenue">…</div></div>
+</div>
+
+<div id="filters" class="filters"></div>
+
+<h2>Revenue by month (inception)</h2>
+<div id="by-month" class="months"></div>
+<div id="month-labels" class="month-labels"></div>
+<p id="month-readout" class="note"></p>
+
+<h2>Revenue by product line</h2>
+<div id="by-product" class="bars"></div>
+
+<h2>Revenue by account owner</h2>
+<div id="by-owner" class="bars"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

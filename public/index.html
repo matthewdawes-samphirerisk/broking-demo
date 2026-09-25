@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Broking Dashboard</title>
+<meta name="description" content="Revenue and GWP across the broking book, by month, product line and account owner.">
 <link rel="stylesheet" href="style.css">
 <script>
   // Apply a saved theme before first paint to avoid a flash of the wrong one.
@@ -11,30 +12,80 @@
 </script>
 </head>
 <body>
-<header>
-  <h1>Broking Dashboard</h1>
-  <button id="theme-toggle" class="theme-toggle" type="button"></button>
-</header>
-<p class="note">Demo data — entirely fictitious. <span id="count"></span></p>
+<div class="page">
 
-<div class="kpis">
-  <div class="kpi"><div class="label">Total GWP</div><div class="value" id="gwp">…</div></div>
-  <div class="kpi"><div class="label">Total revenue</div><div class="value" id="revenue">…</div></div>
+  <header class="top">
+    <div>
+      <p class="eyebrow">Broking book</p>
+      <h1>Revenue dashboard</h1>
+      <p class="sub" id="period">Demo data, entirely fictitious</p>
+    </div>
+    <button id="theme-toggle" class="btn ghost" type="button"></button>
+  </header>
+
+  <section class="tiles" aria-label="Headline figures">
+    <div class="tile hero">
+      <div class="tile-label">Total GWP</div>
+      <div class="tile-value" id="gwp">…</div>
+    </div>
+    <div class="tile hero">
+      <div class="tile-label">Total revenue</div>
+      <div class="tile-value" id="revenue">…</div>
+    </div>
+    <div class="tile">
+      <div class="tile-label">Policies</div>
+      <div class="tile-value" id="policies">…</div>
+    </div>
+    <div class="tile">
+      <div class="tile-label">Revenue as % of GWP</div>
+      <div class="tile-value" id="rate">…</div>
+    </div>
+  </section>
+
+  <div id="filters" class="filters" aria-live="polite"></div>
+
+  <section class="card" id="card-month">
+    <div class="card-head">
+      <div>
+        <h2>Revenue by month</h2>
+        <p class="card-sub">By inception month</p>
+      </div>
+      <button class="btn small" type="button" data-view="month">Table</button>
+    </div>
+    <div class="chart" id="by-month"></div>
+    <div class="table-wrap" id="table-month" hidden></div>
+  </section>
+
+  <div class="grid2">
+    <section class="card" id="card-product">
+      <div class="card-head">
+        <div>
+          <h2>Revenue by product line</h2>
+          <p class="card-sub">Largest first</p>
+        </div>
+        <button class="btn small" type="button" data-view="product">Table</button>
+      </div>
+      <div class="chart" id="by-product"></div>
+      <div class="table-wrap" id="table-product" hidden></div>
+    </section>
+
+    <section class="card" id="card-owner">
+      <div class="card-head">
+        <div>
+          <h2>Revenue by account owner</h2>
+          <p class="card-sub">Eleanor Voss shown in red</p>
+        </div>
+        <button class="btn small" type="button" data-view="owner">Table</button>
+      </div>
+      <div class="chart" id="by-owner"></div>
+      <div class="table-wrap" id="table-owner" hidden></div>
+    </section>
+  </div>
+
+  <footer class="foot">Click any bar to filter the rest of the page; click it again to clear. Demo data, entirely fictitious.</footer>
 </div>
 
-<div id="filters" class="filters"></div>
-
-<h2>Revenue by month (inception)</h2>
-<div id="by-month" class="months"></div>
-<div id="month-labels" class="month-labels"></div>
-<p id="month-readout" class="note"></p>
-
-<h2>Revenue by product line</h2>
-<div id="by-product" class="bars"></div>
-
-<h2>Revenue by account owner</h2>
-<div id="by-owner" class="bars"></div>
-
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
 <script src="app.js"></script>
 </body>
 </html>
